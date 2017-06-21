@@ -44,6 +44,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
 <body class="home">
 
+<h1> This is a test check-in</h1>
+
 <header class="row">
     <div class="header-image"><?= $this->Html->image('cake.logo.svg') ?></div>
     <div class="header-title">
