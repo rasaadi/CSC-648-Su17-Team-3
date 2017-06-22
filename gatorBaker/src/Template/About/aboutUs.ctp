@@ -1,7 +1,19 @@
+<?php
+/**
+* Created by PhpStorm.
+* User: rafsan
+* Date: 6/22/2017
+* Time: 3:08 AM
+*/
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About Team 3</title>
+        <?php
+        $title = 'About Team# 03';
+        $this->assign('title',$title);
+        ?>
     </head>
 
     <body>

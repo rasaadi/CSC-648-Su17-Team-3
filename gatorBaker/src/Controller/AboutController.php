@@ -17,6 +17,36 @@ class AboutController extends AppController
 
     }
 
+    public function brandon()
+    {
+
+    }
+
+    public function jizhou()
+    {
+
+    }
+
+    public function raghav()
+    {
+
+    }
+
+    public function todaka()
+    {
+
+    }
+
+    public function zach()
+    {
+
+    }
+
+    public function rafsan()
+    {
+
+    }
+
 
 }
 
