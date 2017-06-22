@@ -17,8 +17,15 @@
     </head>
 
     <body>
-        <h1> Welcome! We are CSC648/848 Team 03! </h1>
-        <p> Hello! Our team contains 6 members: </p>
+        <h1 style="text-align:center;"> Software Engineering Class SFSU <h1>
+        <h1 style="text-align:center;"> Summer 2017 <h1>
+        <h1 style="text-align:center;"> Section# 01 <h1>
+        <h1 style="text-align:center;"> Team# 03 <h1>
+
+        <br>
+
+        <h3> Welcome! We are CSC648/848 Team 03! </h3>
+        <p> Our team contains 6 members: </p>
 
         <p>
             <?php
@@ -73,5 +80,7 @@
             );
             ?>
         </p>
+
+        <br>
     </body>
 </html>
