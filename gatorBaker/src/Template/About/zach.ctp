@@ -1,10 +1,17 @@
+<?php
+/**/
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title class="text-center">Hi, I'm Zach!</title>
+        <?php
+            $title = 'Zach Melamed';
+            $this->assign('title', $title);
+        ?>
     </head>
     <body>
-        <h2>About me!</h2>
-        <p>Just your average undergrad student studying Computer Science here at SFSU.</p>
+        <h2>Hi, this is Zach from Team #03!</h2>
+        <p>Just your average undergrad student here at San Francisco State University.</p>
     </body>
 </html>
