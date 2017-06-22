@@ -13,7 +13,7 @@ use App\Controller\AppController;
 
 class AboutController extends AppController
 {
-    public function aboutUs(){
+    public function aboutus(){
 
     }
 

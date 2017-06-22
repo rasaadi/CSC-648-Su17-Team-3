@@ -49,12 +49,26 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
+
+
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+
+    /**
+     * Added Routing for the About pages(Note: not the best implementation but it works)
+     */
+    $routes->connect('/', ['controller' => 'About', 'action' => 'aboutus', 'aboutus']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'brandon', 'brandon']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'jizhou', 'jizhou']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'raghav', 'raghav']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'todaka', 'todaka']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'zach', 'zach']);
+    $routes->connect('/', ['controller' => 'About', 'action' => 'rafsan', 'rafsan']);
 
     /**
      * Connect catchall routes for all controllers.
