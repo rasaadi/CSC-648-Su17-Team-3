@@ -13,6 +13,9 @@ use App\Controller\AppController;
 
 class AboutController extends AppController
 {
+    public function home(){
+
+    }
     public function aboutus(){
 
     }
