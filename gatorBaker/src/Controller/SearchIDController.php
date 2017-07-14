@@ -11,7 +11,7 @@ class SearchIDController extends AppController{
 	
 	public function index(){
 
-        $in =  $this->request->getData('theTitle');
+        
 //		echo "$in"."<br/>";
 /*
 		echo "this is from controller2<br/>";
@@ -19,7 +19,7 @@ class SearchIDController extends AppController{
 		$this->set('newarray',$this->request->getData());
 */
 
-
+        $in =  $this->request->getData('theTitle');
 	    $connection = ConnectionManager::get('default');
 	    $results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
 		$this->set('res',$results);
