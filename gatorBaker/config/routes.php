@@ -62,6 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Added Routing for the About pages(Note: not the best implementation but it works)
      */
+    $routes->connect('/', ['controller' => 'About', 'action' => 'home', 'home']);
     $routes->connect('/', ['controller' => 'About', 'action' => 'aboutus', 'aboutus']);
     $routes->connect('/', ['controller' => 'About', 'action' => 'brandon', 'brandon']);
     $routes->connect('/', ['controller' => 'About', 'action' => 'jizhou', 'jizhou']);
