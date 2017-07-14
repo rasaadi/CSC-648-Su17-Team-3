@@ -1,3 +1,8 @@
+<?php
+    use Cake\Datasource\ConnectionManager;
+?>
+
+
 <!DOCTYPE html>
 <html>
 <body>
