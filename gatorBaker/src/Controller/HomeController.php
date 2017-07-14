@@ -22,7 +22,7 @@ class HomeController extends AppController
 
 	    $connection = ConnectionManager::get('default');
 //	    $results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
-        $results = $connection->find("all",array('condition' => array('title LIKE' => ('$in'))));
+//        $results = $connection->find("all",array('condition' => array('title LIKE' => ('$in'))));
         print_r($results);
         
         
