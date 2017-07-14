@@ -12,7 +12,7 @@
 <?php
 	$connection = ConnectionManager::get('default');
 
-	$results = $connection->execute('SELECT * FROM image')->fetchAll('assoc');
+	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
 
 	echo "<table style='border: 1px solid blue'>";
 	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
