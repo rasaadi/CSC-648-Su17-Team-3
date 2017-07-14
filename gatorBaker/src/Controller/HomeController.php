@@ -4,8 +4,6 @@ namespace App\Controller;
 use App\Controller\AppController;
 class HomeController extends AppController
 {
-    
-	
 	public function index(){
 /*
 		echo "this is from controller<br/>";
@@ -21,17 +19,11 @@ class HomeController extends AppController
 */
 
 
-	$connection = ConnectionManager::get('default');
-	$results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
-
-
-
+	    $connection = ConnectionManager::get('default');
+	    $results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
 		$this->set('res',$results);
-
-
-
 	}
 }
 
     
-}
+
