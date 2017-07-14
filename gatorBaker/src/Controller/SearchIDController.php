@@ -9,7 +9,7 @@ use Cake\Datasource\ConnectionManager;
 
 class SearchIDController extends AppController{
 	
-	public function searchid(){
+	public function index(){
 
         $in =  $this->request->getData('theTitle');
 //		echo "$in"."<br/>";
