@@ -9,13 +9,9 @@ use Cake\Datasource\ConnectionManager;
 
 class SearchIDController extends AppController{
 	
-	public function index(){
-/*
-		echo "this is from controller<br/>";
-		print_r($this->request->getData());
-		echo "<br/>";
-*/
-		$in =  $this->request->getData('theTitle');
+	public function searchid(){
+
+        $in =  $this->request->getData('theTitle');
 //		echo "$in"."<br/>";
 /*
 		echo "this is from controller2<br/>";
@@ -24,23 +20,8 @@ class SearchIDController extends AppController{
 */
 
 
-	$connection = ConnectionManager::get('default');
-	$results = $connection->execute("SELECT * FROM image where title=('$in')")->fetchAll('assoc');
-
-/*
-	echo "<table style='border: 1px solid blue'>";
-	echo "<tr> <td> user_id </td> <td> title </td> <td> author </td> <td> price </td> </tr>";
-	foreach($results as $arr){
-		echo "<tr>";
-		echo "<td>" .  $arr["id"] . "</td>";
-		echo "<td>" .  $arr["title"] . "</td>";
-		echo "<td>" .  $arr["author"] . "</td>";
-		echo "<td>" .  $arr["price"] . "</td>";
-		echo "</tr>";
-	}
-	echo "</table>";
-*/
-
+	    $connection = ConnectionManager::get('default');
+	    $results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
 		$this->set('res',$results);
 
 
