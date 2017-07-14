@@ -4,16 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 class HomeController extends AppController
 {
-    <?php
-namespace App\Controller;
-
-use Cake\Core\Configure;
-use Cake\Network\Exception\ForbiddenException;
-use Cake\Network\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
-use Cake\Datasource\ConnectionManager;
-
-class SearchIDController extends AppController{
+    
 	
 	public function index(){
 /*
