@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="search_page_style.css" />
+    <?php echo $this->Html->css('search_page_style'); ?>
 </head>
 
 <body>
@@ -10,9 +10,11 @@
 			<li class="nav"> <input class="search" type="text" name="term" placeholder="Enter your search terms"> </li>
 			<li class="nav"> <button class="search" type="button" onclick="alert('Hello world!')">SEARCH</button> </li>
 			<li class="nav"> </li>
-			<li class="nav"> <p class="welcome"> Welcome, Jizhou </p> </li>
+			<li class="nav"> <p class="welcome"> Welcome, team03 </p> </li>
 			<li class="nav" style="width:120px"> 
-				<img class="cart" src="picture/empty-cart-light.png"> </li>
+				<?php echo $this->Html->image('empty-cart-light.png', ['class' =>'cart'], ['alt' => 'cover_picture']); ?> 
+            </li>
+                
 		</ul>
 	</div>
 	<p class="show_result"> 1-10 of 30 results for images: "animals" </p>
@@ -29,30 +31,15 @@
 		</ul>
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
-	<table class="result" rules="rows">
-		<tr>
-			<td class="pic"> <img class="result" src="picture/slide09.jpg"> </td>
-			<td class="result"> <p class="description"> Title: Two dogs</br> Author: Artist</br> Price: $10.00</p> </td>
-			<td class="order"> <img class="order" src="picture/order_buttom.jpg"> </td>
-		</tr>
-		<tr>
-			<td class="pic"> <img class="result" src="picture/penguin.jpg"> </td>
-			<td class="result"> <p class="description"> Title: Five penguins</br> Author: Artist</br> Price: $10.00</p> </td>
-			<td class="order"> <img class="order" src="picture/order_buttom.jpg"> </td>
-		</tr>
-		<tr>
-			<td class="pic"> <img class="result" src="picture/7030094-cute-animals.jpg"> </td>
-			<td class="result"> <p class="description"> Title: chick</br> Author: Artist</br> Price: $10.00</p> </td>
-			<td class="order"> <img class="order" src="picture/order_buttom.jpg"> </td>
-		</tr>
-	</table>
+    <?php echo $this->Html->table(['class'=>'result',['rules'=>'rows'>;
+        foreach($res as $arr){
+            echo $this->Html->tableCells(['Jun 21st, 2007', 'Smart Cookies', 'Yes']);
+        }
+    ?>
 		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
 	</div>
-
-
-
 </body>
 
 </html>
