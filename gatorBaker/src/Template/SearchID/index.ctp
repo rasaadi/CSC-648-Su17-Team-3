@@ -42,10 +42,11 @@
 	}
         
     ?>
-		
+<!--		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
 	</div>
+-->
 </body>
 
 </html>
