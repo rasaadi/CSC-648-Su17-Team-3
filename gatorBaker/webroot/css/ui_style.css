@@ -101,7 +101,7 @@ div.pic {
 /*	border:red solid; */
 	background-color:white;
 	margin-right:5%;
-	
+    margin-bottom:5%;
 }
 
 img.cat {
@@ -141,6 +141,7 @@ div.End {
 	top:50px;
 	background-color:rgb(64,64,64);
 	padding:1%;
+    margin-bottom:10%;
 /*	border:yellow solid;  */
 	
 }
