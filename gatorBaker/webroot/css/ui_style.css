@@ -106,7 +106,7 @@ div.pic {
 
 img.cat {
 	margin:0%;
-	padding:0%;
+	padding-bottom:2%;
 	width:100%; 
 	height:25vh;
 }
@@ -140,7 +140,7 @@ div.End {
 	clear:both;
 	top:50px;
 	background-color:rgb(64,64,64);
-	padding:1%;
+/*	padding:1%;    */
     margin-bottom:10%;
 /*	border:yellow solid;  */
 	
@@ -150,5 +150,6 @@ p.End {
 	text-align:center;
 	font-size:18px;
 	color:white;
+    padding:3%
 /*	border:yellow solid;  */
 }
