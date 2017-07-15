@@ -9,11 +9,10 @@
 <body>
 <!--	<h1> CSC648/848 Team03 home page </h1>   -->
     <h1 class="Top"> Stock Media Marketplace </h1>
-    <?php echo $this->Html->image('images (1)', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
-	<img class="Top" src="images (1).jpg"/>
-	<img class="Top" src="picture/images.jpg"/>
-	<img class="Top" src="picture/Vintage-Photography-46-HD-Wallpaper.jpg"/>
-	<img class="Top" src="picture/wp1813232.jpg"/>
+    <?php echo $this->Html->image('images (1).jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
+    <?php echo $this->Html->image('images.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
+    <?php echo $this->Html->image('Vintage-Photography-46-HD-Wallpaper.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
+    <?php echo $this->Html->image('wp1813232.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
 	
 	<div class="Top">
 		<h1 class="aboutus"> Beautiful, high quality media marketplace </h1>
@@ -24,32 +23,32 @@
 	</div>
 	
 	<div class="pic">
-		<img class="cat" src="picture/BMW-M2-lead.jpg"/>
+        <?php echo $this->Html->image('BMW-M2-lead.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> Car </p>
 	</div>
 	
 	<div class="pic">
-		<img class="cat" src="picture/images (2).jpg"/>
+        <?php echo $this->Html->image('images (2).jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> View </p>
 	</div>
 	
 	<div class="pic">
-		<img class="cat" src="picture/Bay20Bridge20and20San20Francisco.jpg"/>
+        <?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> City </p>
 	</div>
 	
 	<div class="pic2">
-		<img class="cat" src="picture/pexels-photo-186077.jpeg"/>
+        <?php echo $this->Html->image('pexels-photo-186077.jpeg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> House </p>
 	</div>
 	
 	<div class="pic">
-		<img class="cat" src="picture/flower-purple-lical-blosso.jpg"/>
+        <?php echo $this->Html->image('flower-purple-lical-blosso.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> Flower </p>
 	</div>
 	
 	<div class="pic">
-		<img class="cat" src="picture/slide09.jpg"/>
+        <?php echo $this->Html->image('slide09.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
 		<p class="cat"> Animal </p>
 	</div>
 	
