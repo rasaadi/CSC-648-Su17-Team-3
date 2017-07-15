@@ -32,7 +32,7 @@
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
     <?php 
-        echo "<table>";
+        echo "<table class='result' rules='rows'>";
         foreach($res as $arr){
 		    echo "<tr>";
 		    echo "<td>" . "Title: " . $arr["title"] . "</td>";
