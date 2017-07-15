@@ -31,7 +31,7 @@
 		</ul>
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
-    <?php echo $this->Html->table(['class'=>'result',['rules'=>'rows'>;
+    <?php echo $this->Html->table(['class'=>'result'],['rules'=>'rows']);
         foreach($res as $arr){
             echo $this->Html->tableCells(['Jun 21st, 2007', 'Smart Cookies', 'Yes']);
         }
