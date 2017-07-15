@@ -21,7 +21,7 @@ class SearchIDController extends AppController{
 
         $in =  $this->request->getData('theTitle');
 	    $connection = ConnectionManager::get('default');
-	    $results = $connection->execute("SELECT * FROM media_info where title=('$in')")->fetchAll('assoc');
+	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' ")->fetchAll('assoc');
 		$this->set('res',$results);
 
 
