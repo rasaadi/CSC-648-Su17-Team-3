@@ -32,11 +32,15 @@
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
     <?php 
-        echo $this->Html->tableCells([
-            ['Jul 7th, 2007', 'Best Brownies', 'Yes'],
-            ['Jun 21st, 2007', 'Smart Cookies', 'Yes'],
-            ['Aug 1st, 2006', 'Anti-Java Cake', 'No'],
-        ]);
+        echo "<table>";
+        foreach($res as $arr){
+		    echo "<tr>";
+		    echo "<td>" . "Title: " . $arr["title"] . "</td>";
+            echo "<td>" . "Owner: " . $arr["owner"] . "</td>";
+            echo "<td>" . "Price: " . $arr["price"] . "</td>";
+		    echo "</tr>";
+	}
+        
     ?>
 		
 	<div class="End">
