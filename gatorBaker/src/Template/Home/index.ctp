@@ -9,8 +9,8 @@
 <body>
 <!--	<h1> CSC648/848 Team03 home page </h1>   -->
     <h1 class="Top"> Stock Media Marketplace </h1>
-    <?php echo $this->Html->image('images.jpg', array('url' => '/Home/picture')); ?>
-	<img class="Top" src="picture/images (1).jpg"/>
+    <?php /*echo $this->Html->image('images.jpg', array('url' => '/Home/picture'), array('escape' => false)); */?>
+	<img class="Top" src="images (1).jpg"/>
 	<img class="Top" src="picture/images.jpg"/>
 	<img class="Top" src="picture/Vintage-Photography-46-HD-Wallpaper.jpg"/>
 	<img class="Top" src="picture/wp1813232.jpg"/>
