@@ -35,6 +35,7 @@
         echo "<table class='result' rules='rows'>";
         foreach($res as $arr){
 		    echo "<tr>";
+            echo "<td class='pic'> <img class='result' src='slide09.jpg'> </td>";
 		    echo "<td>" . "Title: " . $arr["title"] . "</td>";
             echo "<td>" . "Owner: " . $arr["owner"] . "</td>";
             echo "<td>" . "Price: " . $arr["price"] . "</td>";
