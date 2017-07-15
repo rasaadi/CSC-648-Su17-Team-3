@@ -31,10 +31,12 @@
 		</ul>
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
-    <?php echo $this->Html->table(['class'=>'result'],['rules'=>'rows']);
-        foreach($res as $arr){
-            echo $this->Html->tableCells(['Jun 21st, 2007', 'Smart Cookies', 'Yes']);
-        }
+    <?php 
+        echo $this->Html->tableCells([
+            ['Jul 7th, 2007', 'Best Brownies', 'Yes'],
+            ['Jun 21st, 2007', 'Smart Cookies', 'Yes'],
+            ['Aug 1st, 2006', 'Anti-Java Cake', 'No'],
+        ]);
     ?>
 		
 	<div class="End">
