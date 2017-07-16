@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:70%">
+      <ul class="nav navbar-nav" style="width:75%">
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
@@ -94,7 +94,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<li>
         <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
     </li>
-    <li style="width:50%">
+    <li style="width:65%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
@@ -104,7 +104,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 -->        
         <?php
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left'));
    	        echo $this->Form->end();
