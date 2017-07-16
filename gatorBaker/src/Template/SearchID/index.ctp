@@ -36,9 +36,9 @@
         foreach($res as $arr){
 		    echo "<tr>";
             echo "<td class='pic'> <img class='result' src='slide09.jpg'> </td>";
-		    echo "<td>" . "Title: " . $arr["title"] . "</td>";
-            echo "<td>" . "Owner: " . $arr["owner"] . "</td>";
-            echo "<td>" . "Price: " . $arr["price"] . "</td>";
+		    echo "<td class='result'>" . "Title: " . $arr["title"] . "</td>";
+            echo "<td class='result'>" . "Owner: " . $arr["owner"] . "</td>";
+            echo "<td class='result'>" . "Price: " . $arr["price"] . "</td>";
 		    echo "</tr>";
 	}
         
