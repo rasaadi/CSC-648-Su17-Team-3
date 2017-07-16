@@ -50,7 +50,7 @@
 */  
             
             echo $this->Html->tableCells([
-                [($this->Html->image('not available', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), "Title: "]
+                [($this->Html->image('7030094-cute-animals.jpg', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), "Title: <br/> Owner: <br/> Price: "]
                 ]);
 	}
     ?>
