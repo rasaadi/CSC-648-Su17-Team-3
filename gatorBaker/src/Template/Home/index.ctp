@@ -103,10 +103,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
         <?php
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:12px;'));
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
    	        echo $this->Form->end();
         ?>	
     </li>
@@ -189,13 +189,15 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 
 <footer class="container-fluid text-center">
-  
-	<form class="form-inline">Search Stock Media:
-    <input type="search" class="form-control" size="50" placeholder="Enter name or category">
-    <button type="button" class="btn btn-danger">Search</button>
-  </form>  
+<?php    
+    echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
+   	echo $this->Form->input('theTitle',array('label'=>'Search Stock Media: ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'size'=>'50'));
+   	echo $this->Form->button('Search',array('class'=>'btn btn-danger'));
+   	echo $this->Form->end();
+?>	    
 </footer>
-	
+
+    
 <?php
 /*
 	$connection = ConnectionManager::get('default');
@@ -230,18 +232,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 */    
 ?>	
 
-<!--    
-<p> Our team contains 6 members: </p>
-
-        <p>
-            <?php
-            echo $this->Html->link(
-                'aboutus',
-                ['controller' => 'About', 'action' => 'aboutus', '_full' => true]
-            );
-            ?>
-        </p>
--->
   
 </body>
 </html>
