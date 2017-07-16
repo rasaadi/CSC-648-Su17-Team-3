@@ -94,7 +94,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<li>
         <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
     </li>
-    <li>
+    <li style="width:20%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
@@ -103,7 +103,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
         <?php
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline', 'style'=>'width:20%'));
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left'));
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left'));
