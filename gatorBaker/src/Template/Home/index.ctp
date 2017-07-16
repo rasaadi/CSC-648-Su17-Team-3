@@ -215,7 +215,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
     
 <?php
-
+/*
 	$connection = ConnectionManager::get('default');
 
 	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
@@ -245,7 +245,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
    	echo $this->Form->input('theTitle',array('label'=>'search by title: '));
    	echo $this->Form->button('Submit');
    	echo $this->Form->end();
-    
+*/    
 ?>	
 
   
