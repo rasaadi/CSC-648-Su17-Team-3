@@ -35,11 +35,15 @@
         echo "<table class='result' rules='rows'>";
         foreach($res as $arr){
 		    echo "<tr>";
-            echo "<td class='pic'> <img class='result' src='slide09.jpg'> </td>";
+            echo "<td class='result'>";
+            echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
+            echo "</td>";
 		    echo "<td class='result'>" . "Title: " . $arr["title"] . "</td>";
             echo "<td class='result'>" . "Owner: " . $arr["owner"] . "</td>";
             echo "<td class='result'>" . "Price: " . $arr["price"] . "</td>";
-		    echo "</tr>";
+            echo "<td class='order'>";
+            echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
+            echo "</td>";
 	}
         
     ?>
