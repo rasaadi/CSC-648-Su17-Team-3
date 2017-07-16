@@ -50,7 +50,7 @@
             echo $this->Html->image('not available', ['class' =>'order'], ['alt' => 'picture not availabe for now']);    
             echo "</td>";
 */  
-            $str1= '(Title: ' . '$arr["title"]' . '<br/> Owner: ' . '$arr["owner"]' . '<br/> Price: ' . '$arr["price"]';
+            $str1= '(Title: ' . $arr["title"] . '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"];
             echo $str1;
             echo $this->Html->tableCells([
                 [
