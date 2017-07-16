@@ -38,11 +38,11 @@
             echo '<td class="result" style="border:blue 1px;">';
             echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
             echo "</td>";
-		    echo '<td class="result" border="red solid">' . 
+		    echo '<td class="result" style="border:blue 1px;">' . 
                     "Title: " . $arr["title"] . "<br/>" . 
                     "Owner: " . $arr["owner"] . "<br/>" .
                     "Price: " . $arr["price"] . "</td>";
-            echo '<td class="order" border="red solid">';
+            echo '<td class="order" style="border:blue 1px;">';
             echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
             echo "</td>";
 	}
