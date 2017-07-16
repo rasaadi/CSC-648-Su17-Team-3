@@ -32,17 +32,17 @@
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
     <?php 
-        echo "<table class='result' rules='rows'>";
+        echo '<table class="result" rules="rows">';
         foreach($res as $arr){
 		    echo "<tr>";
-            echo "<td class='result'>";
+            echo '<td class="result">';
             echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
             echo "</td>";
-		    echo "<td class='result'>" . 
+		    echo '<td class="result">' . 
                     "Title: " . $arr["title"] . "<br/>" . 
                     "Owner: " . $arr["owner"] . "<br/>" .
                     "Price: " . $arr["price"] . "</td>";
-            echo "<td class='order'>";
+            echo '<td class="order">';
             echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
             echo "</td>";
 	}
