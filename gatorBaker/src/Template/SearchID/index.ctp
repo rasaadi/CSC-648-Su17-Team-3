@@ -54,14 +54,14 @@ img{
 		    echo "<tr>";
        //     echo '<td class="result" style="border:blue 1px;">';
             echo '<td>';
-            echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
+            echo $this->Html->image('not available', ['class' =>'result'], ['alt' => 'picture not availabe for now']);    
             echo "</td>";
 		    echo '<td class="result" style="border:blue 1px;">' . 
                     "Title: " . $arr["title"] . "<br/>" . 
                     "Owner: " . $arr["owner"] . "<br/>" .
                     "Price: " . $arr["price"] . "</td>";
             echo '<td class="order" style="border:blue 1px;">';
-            echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
+            echo $this->Html->image('not available', ['class' =>'order'], ['alt' => 'picture not availabe for now']);    
             echo "</td>";
 	}
     ?>
