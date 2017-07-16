@@ -50,8 +50,8 @@
             echo $this->Html->image('not available', ['class' =>'order'], ['alt' => 'picture not availabe for now']);    
             echo "</td>";
 */  
-            var $str1= '(Title: ' . '$arr["title"]' . '<br/> Owner: ' . '$arr["owner"]' . '<br/> Price: ' . '$arr["price"]';
-            echo $str1;
+            var str1= '(Title: ' . '$arr["title"]' . '<br/> Owner: ' . '$arr["owner"]' . '<br/> Price: ' . '$arr["price"]';
+            echo str1;
             echo $this->Html->tableCells([
                 [
                     [($this->Html->image('7030094-cute-animals.jpg', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
