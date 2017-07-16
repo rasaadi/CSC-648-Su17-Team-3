@@ -33,7 +33,7 @@
     
     
     
-    <table class="result" rules="rows" style="border:blue solid;">
+    <table class="result" rules="rows">
     <?php 
         foreach($res as $arr){
 /*
@@ -54,7 +54,7 @@
             echo $this->Html->tableCells([
                 [
                     [($this->Html->image('7030094-cute-animals.jpg', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
-                    ["Title: <br/> Owner: <br/> Price: ", ['class'=>'result'] ],
+                    ["Title: $arr["title"]<br/> Owner: $arr["owner"]<br/> Price: $arr["price"]", ['class'=>'result'] ],
                     [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
                 ]
                 ]);
