@@ -132,7 +132,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Image 1</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%')); ?>
         <div class="panel-footer">Media Category</div>
 	<div class="panel-footer">Media Title</div>
 	<div class="panel-footer">Media description</div>
