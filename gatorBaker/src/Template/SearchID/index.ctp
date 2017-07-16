@@ -3,24 +3,7 @@
 <head>
     <?php echo $this->Html->css('search_page_style'); ?>
 </head>
-<style type=”text/css”>
-td{
-	padding-top:25px;
-	font-size:22px;
-	vertical-align:top;
-    padding-bottom:15px;
-}
-
-
-img{
-	padding-left:40px;
-	padding-top:40px;
-	width:200px;
-	height:80px;
-}
-</style>
     
-
 <body>
 	<div class="Top">
 		<ul class="nav">
@@ -51,7 +34,8 @@ img{
     <table class="result" rules="rows" style="border:blue solid;">
     <?php 
         foreach($res as $arr){
-		    echo "<tr>";
+/*
+            echo "<tr>";
        //     echo '<td class="result" style="border:blue 1px;">';
             echo '<td>';
             echo $this->Html->image('not available', ['class' =>'result'], ['alt' => 'picture not availabe for now']);    
@@ -63,9 +47,20 @@ img{
             echo '<td class="order" style="border:blue 1px;">';
             echo $this->Html->image('not available', ['class' =>'order'], ['alt' => 'picture not availabe for now']);    
             echo "</td>";
+*/  
+            
+            echo $this->Html->tableCells([
+                [($this->Html->image('not available', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), "Title: "]
+                ]);
 	}
     ?>
     </table>
+    
+    echo $this->Html->tableCells([
+    ['Jul 7th, 2007', 'Best Brownies', 'Yes'],
+    ['Jun 21st, 2007', 'Smart Cookies', 'Yes'],
+    ['Aug 1st, 2006', 'Anti-Java Cake', 'No'],
+]);
 <!--		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
