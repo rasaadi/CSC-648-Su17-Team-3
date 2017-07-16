@@ -4,21 +4,15 @@
     <?php echo $this->Html->css('search_page_style'); ?>
 </head>
 <style type=”text/css”>
-td.result{
+td{
 	padding-top:25px;
 	font-size:22px;
 	vertical-align:top;
+    padding-bottom:15px;
 }
 
-td.pic{
-	padding-bottom:15px;
-}
 
-td.order{
-	vertical-align:top;
-}
-
-img.order{
+img{
 	padding-left:40px;
 	padding-top:40px;
 	width:200px;
