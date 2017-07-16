@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="width:60%">
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
