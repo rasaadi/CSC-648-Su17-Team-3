@@ -192,7 +192,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <?php    
     echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
    	echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'position:relative;float:left;size:50;width:30%;left:30%;'));
-   	echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'position:relative;float:left;margin-left:30px;'));
+   	echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'position:relative;float:left;margin-left:30px;left:30%'));
    	echo $this->Form->end();
 ?>	    
 </footer>
