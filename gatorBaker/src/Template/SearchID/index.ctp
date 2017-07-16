@@ -3,6 +3,29 @@
 <head>
     <?php echo $this->Html->css('search_page_style'); ?>
 </head>
+<style type=”text/css”>
+td.result{
+	padding-top:25px;
+	font-size:22px;
+	vertical-align:top;
+}
+
+td.pic{
+	padding-bottom:15px;
+}
+
+td.order{
+	vertical-align:top;
+}
+
+img.order{
+	padding-left:40px;
+	padding-top:40px;
+	width:200px;
+	height:80px;
+}
+</style>
+    
 
 <body>
 	<div class="Top">
@@ -35,7 +58,8 @@
     <?php 
         foreach($res as $arr){
 		    echo "<tr>";
-            echo '<td class="result" style="border:blue 1px;">';
+       //     echo '<td class="result" style="border:blue 1px;">';
+            echo '<td>';
             echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
             echo "</td>";
 		    echo '<td class="result" style="border:blue 1px;">' . 
