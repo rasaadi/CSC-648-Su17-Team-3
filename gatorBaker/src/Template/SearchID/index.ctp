@@ -32,8 +32,6 @@
 	</div>
     
     
-	<hr width="1" size="800" color="gray" style="float:left;">
-    
     
     <table class="result" rules="rows" style="border:blue solid;">
     <?php 
