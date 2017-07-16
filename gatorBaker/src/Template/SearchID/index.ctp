@@ -50,16 +50,16 @@
 */  
             
             echo $this->Html->tableCells([
-                [($this->Html->image('7030094-cute-animals.jpg', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), "Title: <br/> Owner: <br/> Price: "]
+                [[($this->Html->image('7030094-cute-animals.jpg', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'result']], "Title: <br/> Owner: <br/> Price: "]
                 ]);
 	}
     ?>
     </table>
     
-    echo $this->Html->tableCells([
-    ['Jul 7th, 2007', 'Best Brownies', 'Yes'],
+echo $this->Html->tableCells([
+    ['Jul 7th, 2007', ['Best Brownies', ['class' => 'highlight']] , 'Yes'],
     ['Jun 21st, 2007', 'Smart Cookies', 'Yes'],
-    ['Aug 1st, 2006', 'Anti-Java Cake', 'No'],
+    ['Aug 1st, 2006', 'Anti-Java Cake', ['No', ['id' => 'special']]],
 ]);
 <!--		
 	<div class="End">
