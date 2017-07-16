@@ -63,11 +63,11 @@
     ?>
     </table>
     
-<!--		
+		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
 	</div>
--->
+
 </body>
 
 </html>
@@ -77,6 +77,7 @@
 
 
 <?php
+/*
 	echo "<table>";
 	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
      <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>  
@@ -97,5 +98,5 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-
+*/
 ?>
