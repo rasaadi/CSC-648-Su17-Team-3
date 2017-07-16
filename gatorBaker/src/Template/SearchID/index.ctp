@@ -30,7 +30,11 @@
 			<li class="category"> flower </li>
 		</ul>
 	</div>
+    
+    
 	<hr width="1" size="800" color="gray" style="float:left;">
+    
+    
     <table class="result" rules="rows" style="border:blue solid;">
     <?php 
         foreach($res as $arr){
@@ -60,11 +64,6 @@
     ?>
     </table>
     
-echo $this->Html->tableCells([
-    ['Jul 7th, 2007', ['Best Brownies', ['class' => 'highlight']] , 'Yes'],
-    ['Jun 21st, 2007', 'Smart Cookies', 'Yes'],
-    ['Aug 1st, 2006', 'Anti-Java Cake', ['No', ['id' => 'special']]],
-]);
 <!--		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
@@ -79,10 +78,6 @@ echo $this->Html->tableCells([
 
 
 <?php
-	echo "this will be print to new page<br/>";
-
-
-
 	echo "<table>";
 	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
      <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>  
