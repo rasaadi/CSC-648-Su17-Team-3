@@ -103,8 +103,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
         <?php
-	        echo $this->Form->create("Registrations",array('url'=>'/SearchID', 'class'=>'form-inline'));
-   	        echo $this->Form->input('theTitle',array('label'=>'search by title: '));
+	        echo $this->Form->create("Registrations",array('url'=>'/SearchID'));
+   	        echo $this->Form->input('theTitle',array('class'=>'form-control'));
    	        echo $this->Form->button('Search');
    	        echo $this->Form->end();
         ?>	
