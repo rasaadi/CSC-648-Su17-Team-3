@@ -94,7 +94,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<li>
         <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
     </li>
-    <li style="width:20%">
+    <li style="width:100%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
