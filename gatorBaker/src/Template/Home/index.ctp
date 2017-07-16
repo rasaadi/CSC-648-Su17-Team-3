@@ -91,12 +91,24 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </ul>
       </li>
         <li><a href="#">Contact</a></li>
-	<li><a href="#">About Us</a></li>
-<li><form class="form-inline">Search Stock Media:
-    <input type="search" class="form-control" size="50" placeholder="Enter name or category">
-    <button type="button" class="btn btn-danger">Search</button>
-	<button type="button" class="btn btn-success">Upload</button>
-  </form>  </li>
+	<li>
+        <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
+    </li>
+    <li>
+<!--        
+        <form class="form-inline">Search Stock Media:
+        <input type="search" class="form-control" size="50" placeholder="Enter name or category">
+        <button type="button" class="btn btn-danger">Search</button>
+	    <button type="button" class="btn btn-success">Upload</button>
+        </form>  
+-->        
+        <?php
+	        echo $this->Form->create("Registrations",array('url'=>'/SearchID', 'class'=>'form-inline'));
+   	        echo $this->Form->input('theTitle',array('label'=>'search by title: '));
+   	        echo $this->Form->button('Search');
+   	        echo $this->Form->end();
+        ?>	
+    </li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
