@@ -131,31 +131,35 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">Image 1</div>
-	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%')); ?>
-        <div class="panel-footer">Media Category</div>
-	<div class="panel-footer">Media Title</div>
-	<div class="panel-footer">Media description</div>
-	<div class="panel-footer">Media Price</div>
+        <div class="panel-heading"> &nbsp</div>
+	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: Car</div>
+	<div class="panel-footer">Media Title: BMW</div>
+	<div class="panel-footer">Media description: a sports car</div>
+	<div class="panel-footer">Media Price: $1.02</div>
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
-        <div class="panel-heading">Image 2</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Media Category</div>
-	<div class="panel-footer">Media Title</div>
-	<div class="panel-footer">Media description</div>
-	<div class="panel-footer">Media Price</div>
+        <div class="panel-heading">&nbsp</div>
+	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: View</div>
+	<div class="panel-footer">Media Title: grassland</div>
+	<div class="panel-footer">Media description: a grassland and a lake</div>
+	<div class="panel-footer">Media Price: $1.03</div>
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
-        <div class="panel-heading">Image 3</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Image 3 description</div>
+        <div class="panel-heading">&nbsp</div>
+	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: City</div>
+	<div class="panel-footer">Media Title: San Francisco</div>
+	<div class="panel-footer">Media description: night view of SF</div>
+	<div class="panel-footer">Media Price: $1.01</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
   </div>
@@ -165,23 +169,35 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">Image 4</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Image 4 description</div>
+        <div class="panel-heading">&nbsp</div>
+	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: House</div>
+	<div class="panel-footer">Media Title: Nice house</div>
+	<div class="panel-footer">Media description: a big house</div>
+	<div class="panel-footer">Media Price: $1.04</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Image 5</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Image 5 description</div>
+        <div class="panel-heading">&nbsp</div>
+	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: Flower</div>
+	<div class="panel-footer">Media Title: Flower</div>
+	<div class="panel-footer">Media description: Pink Blossom</div>
+	<div class="panel-footer">Media Price: $1.05</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Image 6</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Image 6 description</div>
+        <div class="panel-heading">&nbsp</div>
+	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+        <div class="panel-footer">Media Category: Animal</div>
+	<div class="panel-footer">Media Title: Two dogs</div>
+	<div class="panel-footer">Media description: cute dogs</div>
+	<div class="panel-footer">Media Price: $1.06</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
   </div>
@@ -199,7 +215,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
     
 <?php
-/*
+
 	$connection = ConnectionManager::get('default');
 
 	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
@@ -229,7 +245,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
    	echo $this->Form->input('theTitle',array('label'=>'search by title: '));
    	echo $this->Form->button('Submit');
    	echo $this->Form->end();
-*/    
+    
 ?>	
 
   
