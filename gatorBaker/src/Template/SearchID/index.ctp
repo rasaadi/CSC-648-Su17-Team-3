@@ -17,7 +17,7 @@
                 
 		</ul>
 	</div>
-	<p class="show_result"> 1-10 of 30 results for images: "animals" </p>
+	<p class="show_result"> Total results: <?php echo sizeof($res); ?> </p>
 	<hr />
 
 	<div class="onleft">
