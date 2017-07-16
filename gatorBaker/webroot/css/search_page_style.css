@@ -147,6 +147,7 @@ table.result{
 	float:left;
 	margin-left:15px;
     width:70%;
+    border:none;
 	
 /*	border:solid blue; */
 }
