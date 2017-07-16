@@ -31,8 +31,8 @@
 		</ul>
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
+    <table class="result" rules="rows" style="border:blue 1px;">
     <?php 
-        echo '<table class="result" rules="rows" style="border:blue 1px;">';
         foreach($res as $arr){
 		    echo "<tr>";
             echo '<td class="result" style="border:blue 1px;">';
@@ -46,8 +46,8 @@
             echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
             echo "</td>";
 	}
-        
     ?>
+    </table>
 <!--		
 	<div class="End">
 		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
