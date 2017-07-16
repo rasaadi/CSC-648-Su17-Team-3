@@ -101,7 +101,8 @@ div.onleft{
 	position:relative;
 	float:left;
 	padding:10px;
-/*	border:blue solid;  */
+    height:1000px;
+	border-right:gray solid 1px;  
 }
 
 h3.result{
