@@ -38,9 +38,10 @@
             echo "<td class='result'>";
             echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
             echo "</td>";
-		    echo "<td class='result'>" . "Title: " . $arr["title"] . "</td>";
-            echo "<td class='result'>" . "Owner: " . $arr["owner"] . "</td>";
-            echo "<td class='result'>" . "Price: " . $arr["price"] . "</td>";
+		    echo "<td class='result'>" . 
+                    "Title: " . $arr["title"] . "<br/>" . 
+                    "Owner: " . $arr["owner"] . "<br/>" .
+                    "Price: " . $arr["price"] . "</td>";
             echo "<td class='order'>";
             echo $this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'cover_picture']);    
             echo "</td>";
