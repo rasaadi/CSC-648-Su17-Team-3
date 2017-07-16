@@ -32,10 +32,10 @@
 	</div>
 	<hr width="1" size="800" color="gray" style="float:left;">
     <?php 
-        echo '<table class="result" rules="rows" border="blue solid">';
+        echo '<table class="result" rules="rows" style="border:blue 1px;">';
         foreach($res as $arr){
 		    echo "<tr>";
-            echo '<td class="result" border="red solid">';
+            echo '<td class="result" style="border:blue 1px;">';
             echo $this->Html->image('slide09.jpg', ['class' =>'result'], ['alt' => 'cover_picture']);    
             echo "</td>";
 		    echo '<td class="result" border="red solid">' . 
