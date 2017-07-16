@@ -104,9 +104,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 -->        
         <?php
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
-   	        echo $this->Form->input('theTitle',array('label'=>'search by title: ','class'=>'form-control', 'placeholder'=>'Enter name or category'));
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success'));
+   	        echo $this->Form->input('theTitle',array('label'=>'search by title: ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left'));
    	        echo $this->Form->end();
         ?>	
     </li>
@@ -195,7 +195,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <button type="button" class="btn btn-danger">Search</button>
   </form>  
 </footer>
-	<h2> The table is shown as below: </h2>
 	
 <?php
 /*
