@@ -1,132 +1,191 @@
 <?php
-    use Cake\Datasource\ConnectionManager;
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+use Cake\Cache\Cache;
+use Cake\Core\Configure;
+use Cake\Core\Plugin;
+use Cake\Datasource\ConnectionManager;
+use Cake\Error\Debugger;
+use Cake\Network\Exception\NotFoundException;
+
+$this->layout = false;
+
+if (!Configure::read('debug')):
+    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
+endif;
+
+$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-  <?php echo $this->Html->css('ui_style'); ?>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
 </head>
 <body>
-<!--	<h1> CSC648/848 Team03 home page </h1>   -->
-    <h1 class="Top"> Stock Media Marketplace </h1>
-    <?php echo $this->Html->image('images (1).jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
-    <?php echo $this->Html->image('images.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
-    <?php echo $this->Html->image('Vintage-Photography-46-HD-Wallpaper.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
-    <?php echo $this->Html->image('wp1813232.jpg', ['class' =>'Top'], ['alt' => 'cover_picture']); ?>
-	
-	<div class="Top">
-		<h1 class="aboutus"> Beautiful, high quality media marketplace </h1>
-		<ul class="nav">
-			<li class="nav"> <input class="search" type="text" name="term" placeholder="Enter your search terms"> </li>
-			<li class="nav"> <button class="search" type="button" onclick="alert('Hello world!')">SEARCH</button> </li>
-		</ul>
-	</div>
 
-<!-- apply raghav's code -->    
-<nav class="navbar navbar-default">
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Stock Photo Marketplace</h1>      
+    <p>Team 03</p>
+<p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
+   <p>NOT A SERIOUS PRODUCT</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cars</a></li>
+          <li><a href="#">Cities</a></li>
+          <li><a href="#">People</a></li>
+	<li><a href="#">Animals</a></li>
+	<li><a href="#">Landscapes</a></li>
+        </ul>
+      </li>
+        <li><a href="#">Contact</a></li>
+	<li><a href="#">About Us</a></li>
+<li><form class="form-inline">Search Stock Media:
+    <input type="search" class="form-control" size="50" placeholder="Enter name or category">
+    <button type="button" class="btn btn-danger">Search</button>
+	<button type="button" class="btn btn-success">Upload</button>
+  </form>  </li>
+
       </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+	<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Login
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Create Account</a></li>
+          <li><a href="#">Register</a></li>
+        
+        </ul>
+
+        
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart and Checkout</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
-    
-    
-    
-    
-    
-    
-    
-	
-	<div class="pic">
-        <?php echo $this->Html->image('BMW-M2-lead.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> Car </p>
-	</div>
-	
-	<div class="pic">
-        <?php echo $this->Html->image('images (2).jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> View </p>
-	</div>
-	
-	<div class="pic">
-        <?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> City </p>
-	</div>
-	
-	<div class="pic2">
-        <?php echo $this->Html->image('pexels-photo-186077.jpeg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> House </p>
-	</div>
-	
-	<div class="pic">
-        <?php echo $this->Html->image('flower-purple-lical-blosso.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> Flower </p>
-	</div>
-	
-	<div class="pic">
-        <?php echo $this->Html->image('slide09.jpg', ['class' =>'cat'], ['alt' => 'cover_picture']); ?>
-		<p class="cat"> Animal </p>
-	</div>
-	
-	<div class="End">
-		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
-	</div>
-    
-    
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Image 1</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Media Category</div>
+	<div class="panel-footer">Media Title</div>
+	<div class="panel-footer">Media description</div>
+	<div class="panel-footer">Media Price</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+
+
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">Image 2</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Media Category</div>
+	<div class="panel-footer">Media Title</div>
+	<div class="panel-footer">Media description</div>
+	<div class="panel-footer">Media Price</div>
+	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">Image 3</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Image 3 description</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Image 4</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Image 4 description</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Image 5</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Image 5 description</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Image 6</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Image 6 description</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+
+<footer class="container-fluid text-center">
+  
+	<form class="form-inline">Search Stock Media:
+    <input type="search" class="form-control" size="50" placeholder="Enter name or category">
+    <button type="button" class="btn btn-danger">Search</button>
+  </form>  
+</footer>
 	<h2> The table is shown as below: </h2>
 	
 <?php
