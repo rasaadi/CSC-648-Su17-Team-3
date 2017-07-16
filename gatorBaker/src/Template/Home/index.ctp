@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:75%">
+      <ul class="nav navbar-nav" style="width:80%">
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
@@ -104,9 +104,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 -->        
         <?php
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;padding-top:2%'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;padding=left:3%;'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;padding-left:3%'));
    	        echo $this->Form->end();
         ?>	
     </li>
