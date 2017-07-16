@@ -121,8 +121,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
           <li><a href="#">Register</a></li>
         
         </ul>
-
-        
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart and Checkout</a></li>
       </ul>
     </div>
@@ -140,8 +138,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media description</div>
 	<div class="panel-footer">Media Price</div>
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
-
-
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -202,6 +198,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<h2> The table is shown as below: </h2>
 	
 <?php
+/*
 	$connection = ConnectionManager::get('default');
 
 	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
@@ -226,15 +223,15 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		echo "</tr>";
 	}
 	echo "</table>";
-?>
-    
-<?php
+
 	echo $this->Form->create("Registrations",array('url'=>'/SearchID'));
    	echo $this->Form->input('theTitle',array('label'=>'search by title: '));
    	echo $this->Form->button('Submit');
    	echo $this->Form->end();
+*/    
 ?>	
-    
+
+<!--    
 <p> Our team contains 6 members: </p>
 
         <p>
@@ -245,7 +242,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             );
             ?>
         </p>
-
+-->
   
 </body>
 </html>
