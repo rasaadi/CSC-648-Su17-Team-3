@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:60%">
+      <ul class="nav navbar-nav" style="width:70%">
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
@@ -94,7 +94,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<li>
         <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
     </li>
-    <li style="width:100%">
+    <li style="width:50%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
