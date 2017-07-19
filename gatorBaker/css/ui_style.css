@@ -134,7 +134,9 @@ div.pic2 {
 	margin-right:5%;
 	clear:left;
 }
-
+ul.dropdown-lr {
+  width: 300px;
+}
 div.End {
 	position:relative;
 	clear:both;
