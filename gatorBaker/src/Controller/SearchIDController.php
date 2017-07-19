@@ -45,6 +45,7 @@ class SearchIDController extends AppController{
 
 		$this->set('res',$results);
 
+    }
 }
 
 ?>
