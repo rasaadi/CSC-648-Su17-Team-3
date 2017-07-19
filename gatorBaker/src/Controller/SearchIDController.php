@@ -10,21 +10,18 @@ use Cake\Datasource\ConnectionManager;
 class SearchIDController extends AppController{
 	
 	public function index(){
+
 /*
 		echo "this is from controller<br/>";
 		print_r($this->request->getData());
 		echo "<br/>";
 */
-		$in =  $this->request->getData('theTitle');
-//		echo "$in"."<br/>";
-/*
-		echo "this is from controller2<br/>";
-		$this->set('newvalue',$this->request->getData('username'));
-		$this->set('newarray',$this->request->getData());
-*/
 
 
+      $in =  $this->request->getData('theTitle');
 	    $connection = ConnectionManager::get('default');
+	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' ")->fetchAll('assoc');
+
 //	$results = $connection->execute("SELECT * FROM image where title=('$in')")->fetchAll('assoc');
         $term = mysqli_real_escape_string($connection,$_REQUEST('in'));
         echo "$term"."<br/>";
@@ -45,10 +42,10 @@ class SearchIDController extends AppController{
 	echo "</table>";
 */
 
+
 		$this->set('res',$results);
 
-
-
-	}
 }
+
 ?>
+
