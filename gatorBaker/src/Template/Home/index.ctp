@@ -57,12 +57,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron" style="background-image: url(https://static.pexels.com/photos/481289/pexels-photo-481289.jpeg); background-size: 100%;">
+
   <div class="container text-center">
     <h1>Stock Photo Marketplace</h1>      
     <p>Team 03</p>
 <p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
-   <p>NOT A SERIOUS PRODUCT</p>
+   <p>NOT A SERIOUS PRODUCT..</p>
   </div>
 </div>
 
@@ -94,7 +95,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<li>
         <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
     </li>
-    <li style="width:60%">
+    <li style="width:50%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
@@ -112,17 +113,80 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </li>
 
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-	<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Login
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Create Account</a></li>
-          <li><a href="#">Register</a></li>
-        
-        </ul>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart and Checkout</a></li>
-      </ul>
+     <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="http://phpoll.com/register" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Register</b></h3></div>
+								<form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-xs-6 col-xs-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+											</div>
+										</div>
+									</div>
+                                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+								</form>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Log In</b></h3></div>
+                                <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-7">
+                                                <input type="checkbox" tabindex="3" name="remember" id="remember">
+                                                <label for="remember"> Remember Me</label>
+                                            </div>
+                                            <div class="col-xs-5 pull-right">
+                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-center">
+                                                    <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+                                </form>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
     </div>
   </div>
 </nav>
@@ -204,14 +268,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </div><br><br>
 
 
-<footer class="container-fluid text-center">
-<?php    
-    echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
-   	echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'position:relative;float:left;size:50;width:30%;left:30%;'));
-   	echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'position:relative;float:left;margin-left:30px;left:30%'));
-   	echo $this->Form->end();
-?>	    
-</footer>
 
     
 <?php
