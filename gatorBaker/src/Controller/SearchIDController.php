@@ -22,11 +22,6 @@ class SearchIDController extends AppController{
 	    $connection = ConnectionManager::get('default');
 	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' ")->fetchAll('assoc');
 
-//	$results = $connection->execute("SELECT * FROM image where title=('$in')")->fetchAll('assoc');
-        $term = mysqli_real_escape_string($connection,$_REQUEST('in'));
-        echo "$term"."<br/>";
-//        $results = $connection->execute("SELECT * FROM image where title like '%".$in."%' ")->fetchAll('assoc');
-        $results = $connection->execute("SELECT * FROM image where title like ('$in') ")->fetchAll('assoc');
 
 /*
 	echo "<table style='border: 1px solid blue'>";
