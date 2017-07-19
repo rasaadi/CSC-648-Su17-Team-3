@@ -100,25 +100,12 @@
     <table class="result" rules="rows">
     <?php 
         foreach($res as $arr){
-/*
-            echo "<tr>";
-       //     echo '<td class="result" style="border:blue 1px;">';
-            echo '<td>';
-            echo $this->Html->image('not available', ['class' =>'result'], ['alt' => 'picture not availabe for now']);    
-            echo "</td>";
-		    echo '<td class="result" style="border:blue 1px;">' . 
-                    "Title: " . $arr["title"] . "<br/>" . 
-                    "Owner: " . $arr["owner"] . "<br/>" .
-                    "Price: " . $arr["price"] . "</td>";
-            echo '<td class="order" style="border:blue 1px;">';
-            echo $this->Html->image('not available', ['class' =>'order'], ['alt' => 'picture not availabe for now']);    
-            echo "</td>";
-*/  
+
             $str1= 'Title: ' . $arr["title"] . '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"];
 //            echo $str1;
             echo $this->Html->tableCells([
                 [
-                    [($this->Html->image('notavailable', ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
+                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
                     [$str1, ['class'=>'result'] ],
                     [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
                 ]
