@@ -26,16 +26,16 @@ class SearchIDController extends AppController{
 		if(empty($field)){
 			echo "it is empty <br/>";
             $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' OR media_cat LIKE '%".$in."%' OR owner LIKE '%".$in."%'")->fetchAll('assoc');
-		} elseif($field=='Cars'){
+		} elseif($field==1'){
 			echo "it is Cars <br/>";
             $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' AND media_cat='cat' ")->fetchAll('assoc');
-		} elseif($field=='Cities'){
+		} elseif($field==2){
 			echo "it is Cities <br/>";
-		} elseif($field=='People'){
+		} elseif($field==3){
 			echo "it is People <br/>";
-		} elseif($field=='Animal'){
+		} elseif($field==4){
 			echo "it is Animal <br/>";
-		} elseif($field=='Animal'){
+		} elseif($field==5){
 			echo "it is LandScape <br/>";
 		} else{
 			echo "error!<br/>";
