@@ -87,7 +87,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <li><a href="#">Contact</a></li>
             
 
-        
+<!-- rewrite this li with php
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
         <span class="caret"></span></a>
@@ -99,7 +99,18 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	      <li><a href="#">Landscapes</a></li>
         </ul>
         </li>  
+-->
+        <li class="dropdown">
+<?php          
+          echo $this->Form->select(
+    		'field',
+    		['All','Cars', 'Cities', 'People', 'Animals','Landscapes']
+	      );
 
+?>            
+        </li>         
+          
+          
         <li style="width:50%">
 <!--        
         <form class="form-inline">Search Stock Media:
