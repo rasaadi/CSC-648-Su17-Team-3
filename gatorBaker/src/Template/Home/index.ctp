@@ -79,6 +79,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
+          
+        <li>
+            <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
+        </li>
+    
+        <li><a href="#">Contact</a></li>
+            
+
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
@@ -87,15 +95,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
           <li><a href="#">Cars</a></li>
           <li><a href="#">Cities</a></li>
           <li><a href="#">People</a></li>
-	<li><a href="#">Animals</a></li>
-	<li><a href="#">Landscapes</a></li>
+	      <li><a href="#">Animals</a></li>
+	      <li><a href="#">Landscapes</a></li>
         </ul>
-      </li>
-        <li><a href="#">Contact</a></li>
-	<li>
-        <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
-    </li>
-    <li style="width:50%">
+        </li>  
+
+        <li style="width:50%">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
