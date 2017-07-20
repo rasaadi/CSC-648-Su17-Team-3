@@ -79,7 +79,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
-          
+        <li class="active"><a href="#">Home</a></li>  
         <li>
             <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
         </li>
@@ -87,7 +87,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <li><a href="#">Contact</a></li>
             
 
-        <li class="active"><a href="#">Home</a></li>
+        
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
         <span class="caret"></span></a>
