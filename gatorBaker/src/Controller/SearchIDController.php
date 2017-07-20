@@ -41,7 +41,7 @@ class SearchIDController extends AppController{
 			echo "error!<br/>";
 		}
 
-	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' OR media_cat LIKE '%".$in."%' OR owner LIKE '%".$in."%'")->fetchAll('assoc');
+//	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' OR media_cat LIKE '%".$in."%' OR owner LIKE '%".$in."%'")->fetchAll('assoc');
         $this->set('res',$results);
 
 /*
