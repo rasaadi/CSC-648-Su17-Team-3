@@ -109,6 +109,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	    <button type="button" class="btn btn-success">Upload</button>
         </form>  
 -->        
+            <p> this is a test </p>    
         <?php
 // drop down list for category            
             echo $this->Form->select(
