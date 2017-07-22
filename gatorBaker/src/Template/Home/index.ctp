@@ -112,11 +112,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <li style='width:45%'>  
         <?php
 // drop down and search bar            
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:5px;'));
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;margin-right:10px')
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;margin-right:10px;margin-left:15%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:60%;'));
         ?>
