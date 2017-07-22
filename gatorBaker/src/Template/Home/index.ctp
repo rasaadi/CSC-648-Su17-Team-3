@@ -115,7 +115,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                ['class'=>'dropdown-menu'],
+                ['class'=>'dropdown-menu']
 	        );
         ?>    
         </li>
