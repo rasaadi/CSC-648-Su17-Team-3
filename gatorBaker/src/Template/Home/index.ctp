@@ -84,7 +84,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
         </li>
     
-        <li><a href="#">Contact</a></li>
+        <li style='margin-right:20%;'><a href="#">Contact</a></li>
             
 
 <!-- rewrite this li with php
@@ -109,7 +109,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
 
-        <li style='width:40%;margin-left:20%;'>  
+        <li style='width:40%;'>  
         <?php
 // drop down and search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
