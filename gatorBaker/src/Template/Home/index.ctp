@@ -109,10 +109,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
 
-        <li>  
+        <li style='width:50%'>  
         <?php
 // drop down and search bar            
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'width:50%;'));
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
