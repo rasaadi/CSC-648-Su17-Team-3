@@ -101,7 +101,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </li>  
 -->
    
-        <li style="width:50%">
+        <li class="dropdown">
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
@@ -117,13 +117,18 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 ['class'=>'dropdown-menu'],
                 ['style'=>'float:left;']
 	        );
+        ?>    
+        </li>
+            
+        <li style="width:50%">
+        <?php    
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
    	        echo $this->Form->end();
         ?>	
-    </li>
+        </li>
 
       </ul>
      <ul class="nav navbar-nav navbar-right">
