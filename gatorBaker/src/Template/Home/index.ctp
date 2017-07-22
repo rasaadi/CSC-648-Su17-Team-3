@@ -108,26 +108,18 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	    <button type="button" class="btn btn-success">Upload</button>
         </form>  
 -->        
-        <li class="dropdown">  
+
+        <li>  
         <?php
-// drop down list for category            
-            echo $this->Form->create("Search",array('url'=>'/SearchID'));
+// drop down and search bar            
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                ['action'=>'/~su17g03/CSC-648-Su17-Team-3/gatorBaker/SearchID'],
                 ['class'=>'dropdown'],
                 ['style'=>'float:left;']
 	        );
-            echo $this->Form->end();
-        ?>
-        </li>
-   
-        <li>  
-        <?php
-// search bar            
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'float:left;'));
         ?>
         </li>
         <li>
