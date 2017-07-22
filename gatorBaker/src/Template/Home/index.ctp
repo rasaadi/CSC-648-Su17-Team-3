@@ -116,14 +116,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                array('class'=>'form-control', 'style'=>'float:left;width:20%;')
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;padding:3%')
 	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'float:left;width:60%;'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:60%;padding:3%'));
         ?>
         </li>
         <li>
         <?php    
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'padding:3%;'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success'));
    	        echo $this->Form->end();
         ?>	
