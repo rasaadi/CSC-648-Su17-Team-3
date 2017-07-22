@@ -113,8 +113,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 // drop down list for category            
             echo $this->Form->select(
     		    'field',
-                ['url'=>'/SearchID'],
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
+                ['url'=>'/SearchID'],
                 ['class'=>'dropdown'],
                 ['style'=>'float:left;']
 	        );
