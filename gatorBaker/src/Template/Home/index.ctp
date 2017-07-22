@@ -114,16 +114,16 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                ['url'=>'/SearchID'],
+                ['action'=>'/~su17g03/CSC-648-Su17-Team-3/gatorBaker/SearchID'],
                 ['class'=>'dropdown'],
                 ['style'=>'float:left;']
 	        );
-            echo $this->Form->end();
         ?>
         </li>
-// search bar   
+   
         <li>  
         <?php
+// search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category'));
         ?>
