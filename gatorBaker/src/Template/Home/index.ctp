@@ -101,7 +101,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </li>  
 -->
    
-        <li class="dropdown">
+        <li>
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
