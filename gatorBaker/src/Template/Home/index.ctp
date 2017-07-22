@@ -112,19 +112,19 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <li style='width:50%'>  
         <?php
 // drop down and search bar            
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline'));
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;padding:3%')
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;margin-right:10px')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:60%;padding:3%'));
         ?>
         </li>
-        <li>
+        <li style='width:15%'>
         <?php    
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'padding:3%;'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'margin:10px;'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-success','style'=>'margin:10px;'));
    	        echo $this->Form->end();
         ?>	
         </li>
