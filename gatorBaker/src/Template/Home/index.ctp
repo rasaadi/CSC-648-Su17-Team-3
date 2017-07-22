@@ -114,8 +114,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             echo $this->Form->select(
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                ['class'=>'dropdown-menu'],
-                ['style'=>'float:left;']
+                ['class'=>'dropdown-menu']
+                //['style'=>'float:left;']
 	        );
 // search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
