@@ -117,9 +117,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
                 ['class'=>'dropdown'],
-                ['style'=>'float:left;']
+                ['style'=>'float:left;width:30%;']
 	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'float:left;'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'float:left;width:40%;'));
         ?>
         </li>
         <li>
