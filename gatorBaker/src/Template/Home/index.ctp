@@ -116,7 +116,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     		    'field',
     		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
                 ['class'=>'dropdown-menu'],
-                ['style'=>'float:left;']
 	        );
         ?>    
         </li>
