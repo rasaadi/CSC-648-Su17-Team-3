@@ -110,12 +110,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
         <?php
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
+// drop down list for category            
             echo $this->Form->select(
     		    'field',
-    		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes']
+    		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
+                ['class'=>'dropdown']
 	        );
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
    	        echo $this->Form->end();
