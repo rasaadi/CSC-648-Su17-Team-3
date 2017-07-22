@@ -108,7 +108,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	    <button type="button" class="btn btn-success">Upload</button>
         </form>  
 -->        
-        <li style="width:50%">  
+        <li class="dropdown">  
         <?php
 // drop down list for category            
             echo $this->Form->select(
@@ -117,7 +117,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 ['class'=>'dropdown'],
                 ['style'=>'float:left;']
 	        );
-// search bar            
+        ?>
+        </li>
+// search bar   
+        <li style="width:50%">  
+        <?php
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;width:40%;float:left;'));
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:90%;'));
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
