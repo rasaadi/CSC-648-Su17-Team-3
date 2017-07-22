@@ -117,6 +117,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 ['class'=>'dropdown'],
                 ['style'=>'float:left;']
 	        );
+            echo $this->Form->end();
         ?>
         </li>
 // search bar   
