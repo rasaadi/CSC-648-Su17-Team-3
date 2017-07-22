@@ -109,7 +109,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </form>  
 -->        
 
-        <li style='width:45%'>  
+        <li style='width:45%;margin-left:15%;'>  
         <?php
 // drop down and search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
