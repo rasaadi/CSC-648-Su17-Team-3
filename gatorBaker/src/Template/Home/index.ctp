@@ -119,7 +119,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
                             <div class="col-lg-12">
                                 <div class="text-center"><h3><b>Register</b></h3></div>
-								<form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+								<form id="ajax-register-form" action="http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home" method="post" role="form" autocomplete="off">
 									<div class="form-group">
 										<input type="text" name="r_username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
