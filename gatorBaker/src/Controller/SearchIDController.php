@@ -18,10 +18,10 @@ class SearchIDController extends AppController{
 */
 
 
-      $in =  $this->request->getData('theTitle');
+        $in =  $this->request->getData('theTitle');
 	    $connection = ConnectionManager::get('default');
 	    $results = $connection->execute("SELECT * FROM media_info where title LIKE '%".$in."%' ")->fetchAll('assoc');
-
+        $this->set('res',$results);
 
 /*
 	echo "<table style='border: 1px solid blue'>";
@@ -38,9 +38,8 @@ class SearchIDController extends AppController{
 */
 
 
-		$this->set('res',$results);
+		
 
-    }
 }
 
 ?>
