@@ -19,6 +19,11 @@ class UsersController extends AppController {
             'allowedActions'=>array('index','login','add')
         ));
 
+    public function index() {
+        $this->User->recursive = 0;
+        $this->set('users', $this->paginate());
+    }
+
     public function add() {
 
         // incase of post
