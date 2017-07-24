@@ -10,10 +10,35 @@ use Cake\Controller\Component\AuthComponent;
 class UsersController extends AppController
 {
 
+
     public function beforeFilter(Event $event)
     {
+
         parent::beforeFilter($event);
-        $this->Auth->allow(['add', 'logout']);
+        $components = array(
+            'Auth' => array(
+                //
+                'authenticate' => array(
+                    'Form' => array(
+                        // changing the default DB setting into test_user']]
+
+                        // change the field for use of authorization
+                        'fields' => array('username' => 'email' , 'password'=>'password'),
+                    ),
+                ),
+                //
+                'loginError' => 'Make sure email or password',
+                //
+                'authError' => 'It is necccesary to log in to use this function',
+                //
+                //  'loginAction' => array('action' => 'login'),
+                //
+                'loginRedirect' => array('controller' => 'posts', 'action' => '/home/index'),
+                //
+                'logoutRedirect' => array('action' => '/home/index'),
+            ),
+        );
+
     }
 
     public function login()

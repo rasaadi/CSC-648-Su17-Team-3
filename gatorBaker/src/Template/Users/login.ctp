@@ -7,5 +7,6 @@
         <?= $this->Form->input('password') ?>
     </fieldset>
 <?= $this->Form->button(__('Login')); ?>
+<li><a href="http://localhost/test/users/add" >Register here</a></li>
 <?= $this->Form->end() ?>
 </div>

@@ -13,7 +13,6 @@
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Controller;
-
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 
@@ -27,7 +26,6 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
     /**
      * Initialization hook method.
      *
@@ -38,58 +36,26 @@ class AppController extends Controller
      * @return void
      */
 
-    public $components = array(
-        'Auth' => array(
-            //
-            'authenticate' => array(
-                'Form' => array(
-                    // changing the default DB setting into test_user
-                    'userModel' => 'registered_users',
-                    // change the field for use of authorization
-                    'fields' => array('username' => 'email' , 'password'=>'password'),
-                ),
-            ),
-            //
-            'loginError' => 'Make sure email or password',
-            //
-            'authError' => 'It is necccesary to log in to use this function',
-            //
-            'loginAction' => array('action' => 'login'),
-            //
-            'loginRedirect' => array('controller' => 'posts', 'action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home'),
-            //
-            'logoutRedirect' => array('action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home'),
-        ),
-    );
     public function initialize()
     {
         parent::initialize();
-
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-/*
-        $this->loadComponent('Auth',[
-            'authenticate' => [
-                'Form' => [
-                    'fields' => [
-                        'username' => 'email',
-                        'password' => 'password'
+        $this->loadComponent('Auth', [
+                'authenticate' => [
+                    'Form' => [
+                        'fields' => ['username' => 'email', 'password' => 'password']
                     ]
-                ]
-            ],
-            'loginAction' => [
-                'controller' => 'Users',
-                'action' => 'login'
-            ]
-        ]);*/
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see http://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
+                ]]
+        //    'loginRedirect' => array('controller' => 'posts', 'action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home'),
+        //
+        //    'logoutRedirect' => array('action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home')
+        );
+        $this->Auth->allow();
+
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
-
     /**
      * Before render callback.
      *
@@ -103,5 +69,7 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+
+
     }
 }

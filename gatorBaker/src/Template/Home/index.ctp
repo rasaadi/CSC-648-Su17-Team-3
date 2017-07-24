@@ -37,17 +37,17 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
     }
-    
-    /* Remove the jumbotron's default bottom margin */ 
+
+    /* Remove the jumbotron's default bottom margin */
      .jumbotron {
       margin-bottom: 0;
     }
-   
+
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
@@ -60,7 +60,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <div class="jumbotron" style="background-image: url(https://static.pexels.com/photos/481289/pexels-photo-481289.jpeg); background-size: 100%;">
 
   <div class="container text-center">
-    <h1>Stock Photo Marketplace</h1>      
+    <h1>Stock Photo Marketplace</h1>
     <p>Team 03</p>
 <p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
    <p>NOT A SERIOUS PRODUCT..</p>
@@ -73,19 +73,19 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
-        <li class="active"><a href="#">Home</a></li>  
+        <li class="active"><a href="#">Home</a></li>
         <li>
             <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
         </li>
-    
+
         <li style='margin-right:20%;'><a href="#">Contact</a></li>
-            
+
 
 <!-- rewrite this li with php
         <li class="dropdown">
@@ -98,20 +98,20 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	      <li><a href="#">Animals</a></li>
 	      <li><a href="#">Landscapes</a></li>
         </ul>
-        </li>  
+        </li>
 -->
-   
-<!--        
+
+<!--
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter name or category">
         <button type="button" class="btn btn-danger">Search</button>
 	    <button type="button" class="btn btn-success">Upload</button>
-        </form>  
--->        
+        </form>
+-->
 
-        <li style='width:40%;'>  
+        <li style='width:40%;'>
         <?php
-// drop down and search bar            
+// drop down and search bar
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
@@ -122,93 +122,29 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         ?>
         </li>
         <li style='width:15%'>
-        <?php    
+        <?php
    	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'margin:10px;'));
             echo $this->Form->button('Upload',array('class'=>'btn btn-success','style'=>'margin:10px;'));
    	        echo $this->Form->end();
-        ?>	
+        ?>
         </li>
 
       </ul>
      <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
-                            <div class="col-lg-12">
-                                <div class="text-center"><h3><b>Register</b></h3></div>
-								<form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
-									<div class="form-group">
-										<input type="text" name="r_username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="email" name="r_email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="r_password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<input type="password" name="r_confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-xs-6 col-xs-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
-											</div>
-										</div>
-									</div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
-								</form>
-                            </div>
-                        </ul>
+
+												<input type="button" onclick="location.href='http://localhost/test/users/add'"value="Register">
+
                     </li>
                     <li class="dropdown">
-                        <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
-                            <div class="col-lg-12">
-                                <div class="text-center"><h3><b>Log In</b></h3></div>
-                                <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
-                                    <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-xs-7">
-                                                <input type="checkbox" tabindex="3" name="remember" id="remember">
-                                                <label for="remember"> Remember Me</label>
-                                            </div>
-                                            <div class="col-xs-5 pull-right">
-                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-center">
-                                                    <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
-                                </form>
-                            </div>
-                        </ul>
+                       <input type="button" onclick="location.href='http://localhost/test/users/login'"value="Login">
                     </li>
                 </ul>
     </div>
   </div>
 </nav>
 
-<div class="container">    
+<div class="container">
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
@@ -221,7 +157,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-danger">
         <div class="panel-heading">&nbsp</div>
 	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
@@ -232,7 +168,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-success">
         <div class="panel-heading">&nbsp</div>
 	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
@@ -246,7 +182,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   </div>
 </div><br>
 
-<div class="container">    
+<div class="container">
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
@@ -259,7 +195,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
 	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
@@ -270,7 +206,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
 	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
@@ -286,7 +222,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 
 
-    
+
 <?php
 /*
 	$connection = ConnectionManager::get('default');
@@ -294,8 +230,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
 
 	echo "<table style='border: 1px solid blue'>";
-	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
-     <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>  
+	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td>
+     <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>
       <td> data </td>  </tr>";
 	foreach($results as $arr){
 		echo "<tr>";
@@ -318,10 +254,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
    	echo $this->Form->input('theTitle',array('label'=>'search by title: '));
    	echo $this->Form->button('Submit');
    	echo $this->Form->end();
-*/    
-?>	
+*/
+?>
 
-  
+
 </body>
 </html>
 
