@@ -97,11 +97,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 
 
-<div class="jumbotron" style="background-image: url(https://static.pexels.com/photos/481289/pexels-photo-481289.jpeg); background-size: 100%;">
+<div class="jumbotron" style=" background-size: 20%;">
 
   <div class="container text-center">
     <h1>Stock Photo Marketplace</h1>      
-    <h2>Team 03</h2><br>
+    
 <p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
    <p>NOT A SERIOUS PRODUCT..</p>
   </div>
@@ -136,16 +136,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </ul>
         </li>  
 -->
-////query
-//$sql=mysql_query("SELECT id,name FROM table");
-//if(mysql_num_rows($sql)){
-//$select= '<select name="select">';
-//while($rs=mysql_fetch_array($sql)){
-//      $select.='<option value="'.$rs['id'].'">'.$rs['name'].'</option>';
-//  }
-//}
-$select.='</select>';
-echo $select;
+
+
    
 <!--        
         <form class="form-inline">Search Stock Media:
@@ -155,13 +147,13 @@ echo $select;
         </form>  
 -->        
 
-        <li style='width:40%;'>  
+        <li style='width:50%;'>  
         <?php
 // drop down and search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
-    		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
+    		    ['Filter Search By Category', 'All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
                 array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
