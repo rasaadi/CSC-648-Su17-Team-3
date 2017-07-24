@@ -100,10 +100,20 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </ul>
         </li>  
 -->
+////query
+//$sql=mysql_query("SELECT id,name FROM table");
+//if(mysql_num_rows($sql)){
+//$select= '<select name="select">';
+//while($rs=mysql_fetch_array($sql)){
+//      $select.='<option value="'.$rs['id'].'">'.$rs['name'].'</option>';
+//  }
+//}
+$select.='</select>';
+echo $select;
    
 <!--        
         <form class="form-inline">Search Stock Media:
-        <input type="search" class="form-control" size="50" placeholder="Enter name or category">
+        <input type="search" class="form-control" size="50" placeholder="Enter names or category">
         <button type="button" class="btn btn-danger">Search</button>
 	    <button type="button" class="btn btn-success">Upload</button>
         </form>  
@@ -136,7 +146,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
                             <div class="col-lg-12">
                                 <div class="text-center"><h3><b>Register</b></h3></div>
-								<form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+								<form id="ajax-register-form" action="" method="post" role="form" autocomplete="off">
 									<div class="form-group">
 										<input type="text" name="r_username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -151,8 +161,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-xs-6 col-xs-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+											<div class="button">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register">
 											</div>
 										</div>
 									</div>
@@ -162,11 +172,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
                             <div class="col-lg-12">
                                 <div class="text-center"><h3><b>Log In</b></h3></div>
-                                <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+                                <form id="ajax-login-form" action="" method="post" role="form" autocomplete="off">
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
@@ -183,17 +193,20 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                                 <input type="checkbox" tabindex="3" name="remember" id="remember">
                                                 <label for="remember"> Remember Me</label>
                                             </div>
-                                            <div class="col-xs-5 pull-right">
-                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
-                                            </div>
+                                            
                                         </div>
                                     </div>
+				<div class="form-group">
+                                      <div class="">
+                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                                            </div>
+</div>
 
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
-                                                    <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                    <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -218,7 +231,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: BMW</div>
 	<div class="panel-footer">Media description: a sports car</div>
 	<div class="panel-footer">Media Price: $1.02</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
+    
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -229,7 +243,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: grassland</div>
 	<div class="panel-footer">Media description: a grassland and a lake</div>
 	<div class="panel-footer">Media Price: $1.03</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
+
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -240,11 +255,42 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: San Francisco</div>
 	<div class="panel-footer">Media description: night view of SF</div>
 	<div class="panel-footer">Media Price: $1.01</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
+
       </div>
     </div>
   </div>
 </div><br>
+<div id="contactSeller" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal col-sm-12">
+          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="prependedtext">Media description</label>
+  <div class="col">
+    <div class="input-group">
+      <span class="input-group-addon">MediaID</span>
+      
+    </div>
+    
+  </div>
+</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="container">    
   <div class="row">
@@ -256,7 +302,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: Nice house</div>
 	<div class="panel-footer">Media description: a big house</div>
 	<div class="panel-footer">Media Price: $1.04</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
+
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -267,7 +314,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: Flower</div>
 	<div class="panel-footer">Media description: Pink Blossom</div>
 	<div class="panel-footer">Media Price: $1.05</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -278,7 +325,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	<div class="panel-footer">Media Title: Two dogs</div>
 	<div class="panel-footer">Media description: cute dogs</div>
 	<div class="panel-footer">Media Price: $1.06</div>
-	<div class="panel-footer">Owner <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Owner</a></div>
+<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
       </div>
     </div>
   </div>
