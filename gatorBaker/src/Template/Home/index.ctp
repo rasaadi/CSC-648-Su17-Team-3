@@ -59,9 +59,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
    
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2;
+      background-color: #8B7D6B;
       padding: 25px;
     }
+    table {
+	font georgi, serif;
+	}
   </style>
 </head>
 <body>
@@ -142,7 +145,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <!--        
         <form class="form-inline">Search Stock Media:
         <input type="search" class="form-control" size="50" placeholder="Enter names or category">
-        <button type="button" class="btn btn-danger">Search</button>
+        <button type="button" class="btn btn-warning">Search</button>
 	    <button type="button" class="btn btn-success">Upload</button>
         </form>  
 -->        
@@ -156,13 +159,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     		    ['Filter Search By Category', 'All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
                 array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'maxLength'=>'30', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
         ?>
         </li>
         <li style='width:15%'>
         <?php    
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'margin:10px;'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success','style'=>'margin:10px;'));
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-warning','style'=>'margin:10px;'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-primary','style'=>'margin:10px;'));
    	        echo $this->Form->end();
         ?>	
         </li>
@@ -302,7 +305,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
       </div>
       <div class="modal-body">
@@ -318,7 +321,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
     
   </div>
-</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">Â  The form is not valid. </p></div>
+</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">
@@ -331,14 +334,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">We'd Love to Hear From You</h3>
       </div>
       <div class="modal-body">
         <form class="form-horizontal col-sm-12">
           <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
           <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message to us here.." data-placement="top" data-trigger="manual"></textarea></div>
-         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">Â  The form is not valid. </p></div>
+         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">
