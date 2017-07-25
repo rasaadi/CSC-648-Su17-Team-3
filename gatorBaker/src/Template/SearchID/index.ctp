@@ -50,6 +50,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
         <li class="active"><a href="#">Home</a></li>
+<!--          
         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
         <span class="caret"></span></a>
@@ -57,30 +58,35 @@
           <li><a href="#">Cars</a></li>
           <li><a href="#">Cities</a></li>
           <li><a href="#">People</a></li>
-	<li><a href="#">Animals</a></li>
-	<li><a href="#">Landscapes</a></li>
+	      <li><a href="#">Animals</a></li>
+	      <li><a href="#">Landscapes</a></li>
         </ul>
-      </li>
-        <li><a href="#">Contact</a></li>
-	<li>
-        <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
-    </li>
-    <li style="width:60%">
-<!--        
-        <form class="form-inline">Search Stock Media:
-        <input type="search" class="form-control" size="50" placeholder="Enter name or category">
-        <button type="button" class="btn btn-danger">Search</button>
-	    <button type="button" class="btn btn-success">Upload</button>
-        </form>  
--->        
+        </li>
+-->
+        <li>
+            <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
+        </li>  
+        <li style='margin-right:20%;'><a href="#">Contact</a></li>
+	
+        <li style='width:40%;'>  
         <?php
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
+// drop down and search bar            
+	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
+            echo $this->Form->select(
+    		    'field',
+    		    ['All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
+	        );
+   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
+        ?>
+        </li>
+        <li style='width:15%'>
+        <?php    
+   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'margin:10px;'));
+            echo $this->Form->button('Upload',array('class'=>'btn btn-success','style'=>'margin:10px;'));
    	        echo $this->Form->end();
         ?>	
-    </li>
+        </li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -107,7 +113,9 @@
                 [
                     [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
                     [$str1, ['class'=>'result'] ],
-                    [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
+                    [($this->Html->image('order_buttom.jpg',  array('class' =>'order', 'alt' => 'cover_picture', 'style'=>'width:50px')))], 
+
+
                 ]
                 ]);
 	}
