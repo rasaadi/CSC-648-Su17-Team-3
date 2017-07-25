@@ -1,34 +1,84 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Takahiro
- * Date: 2017/07/19
- * Time: 6:54
- */
+
 namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Controller\Component\AuthComponent;
 
 
-class UsersController extends AppController {
+class UsersController extends AppController
+{
 
-    public function beforeFilter() {
-        parent::beforeFilter();
-        //
-        $this->Auth->allow('add', 'logout');
+
+    public function beforeFilter(Event $event)
+    {
+
+        parent::beforeFilter($event);
+        $components = array(
+            'Auth' => array(
+                //
+                'authenticate' => array(
+                    'Form' => array(
+                        // changing the default DB setting into test_user']]
+
+                        // change the field for use of authorization
+                        'fields' => array('username' => 'email' , 'password'=>'password'),
+                    ),
+                ),
+                //
+                'loginError' => 'Make sure email or password',
+                //
+                'authError' => 'It is necccesary to log in to use this function',
+                //
+                //  'loginAction' => array('action' => 'login'),
+                //
+                'loginRedirect' => array('controller' => 'posts', 'action' => '/home/index'),
+                //
+                'logoutRedirect' => array('action' => '/home/index'),
+            ),
+        );
+
+    }
+
+    public function login()
+    {
+        if($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home/index'));
+            }
+            $this->Flash->error('Your username or password is incorrect.');
+        }
+    }
+
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
+
+    public function isAuthorized($user)
+    {
+        return true;
     }
 
     public function index()
     {
-        $this->set('registered_users', $this->Users->find('all'));
+        $this->set('test_user', $this->Users->find('all'));
+    }
+
+    public function view($id)
+    {
+        $user = $this->Users->get($id);
+        $this->set(compact('user'));
     }
 
     public function add()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect(['action' => 'add']);
@@ -36,21 +86,6 @@ class UsersController extends AppController {
             $this->Flash->error(__('Unable to add the user.'));
         }
         $this->set('user', $user);
-    }
-
-
-    public function login() {
-        if ($this->request->is('post')) {
-            if ($this->Auth->login()) {
-                $this->redirect($this->Auth->redirect());
-            } else {
-                $this->Flash->error(__('Invalid username or password, try again'));
-            }
-        }
-    }
-
-    public function logout() {
-        $this->redirect($this->Auth->logout());
     }
 
 }
