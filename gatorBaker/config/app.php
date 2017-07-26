@@ -103,6 +103,7 @@ return [
             'duration' => '+1 years',
             'url' => env('CACHE_CAKECORE_URL', null),
             'mask' => 0666,
+
         ],
 
         /**

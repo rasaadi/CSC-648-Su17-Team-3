@@ -50,6 +50,7 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
+        $this->Auth->allow();
     }
 
     /**
@@ -73,7 +74,7 @@ class AppController extends Controller
             'authenticate' => array(
                 'Form' => array(
                     // select model for authorization
-                    'userModel' => 'registered_users',
+                   // 'userModel' => 'registered_users',
                     // select field for authorization
                     'fields' => array('username' => 'email' , 'password'=>'password'),
                 ),
