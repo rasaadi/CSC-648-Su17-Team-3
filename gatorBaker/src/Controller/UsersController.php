@@ -1,58 +1,91 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Takahiro
- * Date: 2017/07/19
- * Time: 6:54
- */
+
 namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Controller\Component\AuthComponent;
 
 
-class UsersController extends AppController {
+class UsersController extends AppController
+{
 
-    //
-    public $components = array(
-        'Auth'=>array(
-            'allowedActions'=>array('index','login','add')
-        ));
 
-    public function add() {
+    public function beforeFilter(Event $event)
+    {
 
-        // incase of post
-        if ($this->request->is('post')) {
+        parent::beforeFilter($event);
+        $components = array(
+            'Auth' => array(
+                //
+                'authenticate' => array(
+                    'Form' => array(
+                        // changing the default DB setting into test_user']]
 
-            // reset model
-            $this->registered_users->create();
-            // register data
-            $this->registered_users->save($this->request->registered_users);
+                        // change the field for use of authorization
+                        'fields' => array('username' => 'email' , 'password'=>'password'),
+                    ),
+                ),
+                //
+                'loginError' => 'Make sure email or password',
+                //
+                'authError' => 'It is necccesary to log in to use this function',
+                //
+                //  'loginAction' => array('action' => 'login'),
+                //
+                'loginRedirect' => array('controller' => 'posts', 'action' => '/home/index'),
+                //
+                'logoutRedirect' => array('action' => '/home/index'),
+            ),
+        );
 
-            //  goes to index
-            $this->redirect(array('action' => 'index'));
-
-        }
     }
 
-    public function login(){
-
-        if ($this->request->is('post')) {
-            // Authコンポーネントのログイン処理を呼び出す。
-            if($this->Auth->login()){
-                // ログイン処理成功
-                return $this->flash('Success to authorize', '/users/index');
-            }else{
-                // ログイン処理失敗
-                return $this->flash('Fail to authorize', '/users/index');
+    public function login()
+    {
+        if($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home/index'));
             }
+            $this->Flash->error('Your username or password is incorrect.');
         }
     }
-    public function logout(){
 
-        $this->Auth->logout();
-        return $this->flash('Logged out', '/users/index');
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
     }
 
+    public function isAuthorized($user)
+    {
+        return true;
+    }
+
+    public function index()
+    {
+        $this->set('test_user', $this->Users->find('all'));
+    }
+
+    public function view($id)
+    {
+        $user = $this->Users->get($id);
+        $this->set(compact('user'));
+    }
+
+    public function add()
+    {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->data);
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('The user has been saved.'));
+                return $this->redirect(['action' => 'add']);
+            }
+            $this->Flash->error(__('Unable to add the user.'));
+        }
+        $this->set('user', $user);
+    }
 
 }
