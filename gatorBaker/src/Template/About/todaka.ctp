@@ -18,7 +18,7 @@
 
 <body>
 <h1>Hi! This is Takahiro from Team# 03</h1>
-<p>I am a undergraduate student here at San Francisco State University.</p>
+<p>Hi, My name is Takahiro Odaka!! I am a undergraduate student here at San Francisco State University.</p>
 </body>
 </html>
 
