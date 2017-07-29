@@ -122,7 +122,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
-        <li class="active"><a href="#">Home</a></li>  
+        <li class="active" style="margin-right:25%;"><a href="#">Home</a></li>  
         
             
 
