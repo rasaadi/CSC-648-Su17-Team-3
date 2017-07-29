@@ -43,6 +43,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
+	background-size: 10% 10%;
     }
    
     /* Add a gray background color and some padding to the footer */
@@ -82,11 +83,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </script>
 
 
-
-
-
-
-<div class="jumbotron" style=" background-size: 10%;">
+<div class="jumbotron">
 
   <div class="container text-center">
     <h1>Stock Photo Marketplace</h1>      
@@ -108,14 +105,26 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="width:80%">
-        <li class="active" style="margin-right:25%;"><a href="Home">Home</a></li>  
-        
-            
-
-    
-
+        <li class="active"><a href="Home">Home</a></li>  
+		<li class="active">
+			<?php
+			echo $this->Html->link(
+				'Register',
+				'/users/add',
+				['class' => 'button', 'target' => '_blank']);
+			?>
+		</li>
+		<li class="active" style="margin-right:15%;">
+			<?php
+			echo $this->Html->link(
+				'Login',
+				'/users/login',
+				['class' => 'button', 'target' => '_blank']
+			);
+			?>
+        </li>
+		
         <li style='width:50%;'>
-	  
         <?php
 // drop down and search bar            
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
@@ -135,25 +144,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         ?>	
         </li>
 
-      </ul>
-     <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
+        
 
-						<?php
-						echo $this->Html->link(
-                            'Register',
-                            '/users/add',
-                            ['class' => 'button', 'target' => '_blank']);
-                            echo $this->Html->link(
-                                                        'Login',
-                                                        '/users/login',
-                                                        ['class' => 'button', 'target' => '_blank']
-                        );
-                        ?>
-
-                    </li>
-
-       </ul>
+    </ul>
 </div>
 </nav>
 
