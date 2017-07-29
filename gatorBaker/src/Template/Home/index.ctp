@@ -245,7 +245,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading"> &nbsp</div>
-	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
         <div class="panel-footer">Media Category: Car</div>
 	<div class="panel-footer">Media Title: BMW</div>
 	<div class="panel-footer">Media description: a sports car</div>
@@ -255,9 +255,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
+      <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
         <div class="panel-footer">Media Category: View</div>
 	<div class="panel-footer">Media Title: grassland</div>
 	<div class="panel-footer">Media description: a grassland and a lake</div>
@@ -267,9 +267,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-success">
+      <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
         <div class="panel-footer">Media Category: City</div>
 	<div class="panel-footer">Media Title: San Francisco</div>
 	<div class="panel-footer">Media description: night view of SF</div>
@@ -337,7 +337,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
         <div class="panel-footer">Media Category: House</div>
 	<div class="panel-footer">Media Title: Nice house</div>
 	<div class="panel-footer">Media description: a big house</div>
@@ -349,7 +349,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
         <div class="panel-footer">Media Category: Flower</div>
 	<div class="panel-footer">Media Title: Flower</div>
 	<div class="panel-footer">Media description: Pink Blossom</div>
@@ -360,7 +360,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
+	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
         <div class="panel-footer">Media Category: Animal</div>
 	<div class="panel-footer">Media Title: Two dogs</div>
 	<div class="panel-footer">Media description: cute dogs</div>
