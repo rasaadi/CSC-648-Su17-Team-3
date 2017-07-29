@@ -25,6 +25,44 @@ endif;
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
+
+<?php
+	$connection = ConnectionManager::get('default');
+	$results = $connection->execute('SELECT * FROM MediaInfo')->fetchAll('assoc');
+	Echo "<html>";
+	echo '<div class="container">';
+	echo '<div class="row">';
+	foreach($results as $arr){
+		Echo "<div class='col-sm-4'>";
+		Echo "<div class='panel panel-primary'>";
+		Echo "<div class='panel-heading'>&nbsp</div>";
+//			echo $arr["thumbnail"];
+		echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+		echo '<div class="panel-footer">Media Category: ';
+		echo $arr["media_category"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media Title: ';
+		echo $arr["title"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media description: ';
+		echo $arr["description"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media Price: ';
+		echo $arr["price"];
+		echo '</div>';
+		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+		echo "</div>";
+		echo "</div>";
+	}
+	echo "</div>";
+	echo "</div>";
+
+	
+	
+?>	
+	
+	
+<!--
 <html lang="en">
 
 <div class="container">    
@@ -109,7 +147,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   </div>
 </div><br><br>
 
-
+-->
 
     
 <?php
