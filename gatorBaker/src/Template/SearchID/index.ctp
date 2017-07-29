@@ -147,7 +147,41 @@ div.watermark p
 
     ?>
  </body>   
-
+<div id="contactSeller" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal col-sm-12">
+          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          <div class="form-group"><label>Owner:</label>
+		<div class="input-group">
+   		 <?php echo $arr["owner"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Media ID:</label>
+		<div class="input-group">
+   		 <?php echo $arr["id"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Price:</label>
+		<div class="input-group">
+   		 <?php echo $arr["price"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+	<div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>
 
