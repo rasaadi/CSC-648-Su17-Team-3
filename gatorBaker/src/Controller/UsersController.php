@@ -10,7 +10,6 @@ use Cake\Controller\Component\AuthComponent;
 class UsersController extends AppController
 {
 
-
     public function beforeFilter(Event $event)
     {
 
@@ -68,6 +67,10 @@ class UsersController extends AppController
         $this->set('test_user', $this->Users->find('all'));
     }
 
+    public function home()
+	{
+$this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home/index'));
+}
     public function view($id)
     {
         $user = $this->Users->get($id);
