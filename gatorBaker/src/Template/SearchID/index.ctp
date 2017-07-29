@@ -19,7 +19,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Network\Exception\NotFoundException;
 
-$this->layout = false;
+//$this->layout = false;
 
 if (!Configure::read('debug')):
     throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
@@ -45,7 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-<link rel="stylesheet" href="css/ui_style.css" />
+<?php echo $this->Html->css('search_page_style.css'); ?>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
       margin-bottom: 50px;
@@ -206,12 +206,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <table class="result" rules="rows">
 
     <?php 
-//	if ($res->num_rows > 0) 
-//	{
+	if (count($res) > 0) 
+	{
 
         foreach($res as $arr){
 
-            $str1= 'Title: ' . $arr["title"] . '<br/> Media ID: ' . $arr["id"] .  '<br/> Description: ' . $arr["description"] .'<br/> Category ' . $arr["media_cat"] .  '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"] . '<br/> Media Created: ' . $arr["media_created"];
+            $str1= 'Title: ' . $arr["title"] . '<br/> Media ID: ' . $arr["id"] .  '<br/> Description: ' . $arr["description"] .'<br/> Category: ' . $arr["media_category"] .  '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"] . '<br/> Media Created: ' . $arr["media_created"];
 //            echo $str1;
             echo $this->Html->tableCells([
                 [
@@ -220,9 +220,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
                 ]
                 ]);
-//	}
-//	} else {
-//		echo "0 results found please check spelling or try search again";
+	}
+	} else {
+		echo "0 results found please check spelling or try search again";
 	}
     ?>
 
@@ -238,7 +238,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?/button>
         <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
       </div>
       <div class="modal-body">
@@ -254,7 +254,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
     
   </div>
-</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
+</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">
@@ -267,14 +267,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?/button>
         <h3 id="myModalLabel">We'd Love to Hear From You</h3>
       </div>
       <div class="modal-body">
         <form class="form-horizontal col-sm-12">
           <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
           <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message to us here.." data-placement="top" data-trigger="manual"></textarea></div>
-         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
+         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">
@@ -369,6 +369,31 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </footer>
 </html>
 
+
+<?php
+/*
+	echo "<table>";
+	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
+     <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>  
+      <td> data </td>  </tr>";
+	foreach($res as $arr){
+		echo "<tr>";
+		echo "<td>" .  $arr["id"] . "</td>";
+		echo "<td>" .  $arr["title"] . "</td>";
+		echo "<td>" .  $arr["description"] . "</td>";
+		echo "<td>" .  $arr["media_cat"] . "</td>";
+        echo "<td>" .  $arr["media_type"] . "</td>";
+        echo "<td>" .  $arr["price"] . "</td>";
+        echo "<td>" .  $arr["owner"] . "</td>";
+        echo "<td>" .  $arr["media_created"] . "</td>";
+        echo "<td>" .  $arr["media_modified"] . "</td>";
+        echo "<td>" .  $arr["thumbnail"] . "</td>";
+        echo "<td>" .  $arr["data"] . "</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+*/
+?>
 
 
 
