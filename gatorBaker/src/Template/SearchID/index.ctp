@@ -30,6 +30,31 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <!DOCTYPE html>
 <html lang="en">
 <body>
+<style>
+div.watermark
+{
+   
+	
+	background-color: #fffffff;
+	border: 1px solid;
+	border-color: #CD853f;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+}
+
+div.watermark p
+{
+	
+	font-weight: bold;
+	color: #CD853f;
+}
+
+#image-display
+{
+ pointer-events: none;
+}
+
+</style>
 
     <?php 
 	
@@ -68,7 +93,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 			Echo "<div class='panel-heading'>&nbsp</div>";
 //			echo $arr["thumbnail"];
+			echo '<p id="image-display">';
 			echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+			echo '</p>';
+			echo '<div class="watermark">';
+			echo '<p>Stock Photo Marketplace';
+			echo 'Copyright 2017</p></div>';
 			echo '<div class="panel-footer">Media Category: ';
 			echo $arr["media_category"];
 			echo '</div>';
