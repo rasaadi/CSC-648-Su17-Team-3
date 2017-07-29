@@ -44,8 +44,30 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			
         foreach($res as $arr){
 			Echo "<div class='col-sm-4'>";
-			Echo "<div class='panel panel-primary'>";
+			
+			if ($arr["media_category"] ==1) {
+				Echo "<div class='panel panel-info'>";
+			}
+			
+			if ($arr["media_category"] ==2) {
+				Echo "<div class='panel panel-danger'>";
+			} 
+			
+			if ($arr["media_category"] ==3) {
+				Echo "<div class='panel panel-success'>";
+			} 
+			
+			if ($arr["media_category"] ==4) {
+				Echo "<div class='panel panel-primary'>";
+			}
+			
+			if ($arr["media_category"] ==5) {
+				Echo "<div class='panel panel-default'>";
+			} 
+  			
+
 			Echo "<div class='panel-heading'>&nbsp</div>";
+//			echo $arr["thumbnail"];
 			echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
 			echo '<div class="panel-footer">Media Category: ';
 			echo $arr["media_category"];
