@@ -30,30 +30,70 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <table class="result" rules="rows">
 
     <?php 
+	
+	
+	
 	if (count($res) > 0) 
 	{
-
+		Echo "<html>";
+		echo '<div class="container">';
+		echo '<div class="row">';
+			
+			
         foreach($res as $arr){
+			Echo "<div class='col-sm-4'>";
+			Echo "<div class='panel panel-primary'>";
+			Echo "<div class='panel-heading'>&nbsp</div>";
+			echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+			echo '<div class="panel-footer">Media Category: ';
+			echo $arr["media_category"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media Title: ';
+			echo $arr["title"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media description: ';
+			echo $arr["description"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media Price: ';
+			echo $arr["price"];
+			echo '</div>';
+			echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+			echo "</div>";
+			echo "</div>";
+
+
+			
+			
+			
+			
+			
+			
+/*  old php table cell format to display search results
 
             $str1= 'Title: ' . $arr["title"] . '<br/> Media ID: ' . $arr["id"] .  '<br/> Description: ' . $arr["description"] .'<br/> Category: ' . $arr["media_category"] .  '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"] . '<br/> Media Created: ' . $arr["media_created"];
 //            echo $str1;
             echo $this->Html->tableCells([
                 [
-                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
+                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic'], 'style'=>'width:100%;height:220px;'], 
                     [$str1, ['class'=>'result'] ],
                     [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
                 ]
                 ]);
-	}
+*/				
+		}
+		
+		echo "</div>";
+		echo "</div>";
+		
 	} else {
 		echo "0 results found please check spelling or try search again";
 	}
-    ?>
+	
+	
 
-    </table>
+    ?>
  </body>   
 
 
