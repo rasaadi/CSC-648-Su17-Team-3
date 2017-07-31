@@ -11952,3 +11952,838 @@ Stack Trace:
 2017-07-31 22:10:39 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2017-07-31 22:10:42 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2017-07-31 22:10:51 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:52:20 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:52:21 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:52:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 22:52:21 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:52:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 22:56:17 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:56:17 Warning: Warning (512): /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/tmp/cache/persistent/ is not writable in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 432]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_active() - CORE/src/Cache/Engine/FileEngine.php, line 432
+Cake\Cache\Engine\FileEngine::init() - CORE/src/Cache/Engine/FileEngine.php, line 105
+Cake\Cache\CacheRegistry::_create() - CORE/src/Cache/CacheRegistry.php, line 90
+Cake\Core\ObjectRegistry::load() - CORE/src/Core/ObjectRegistry.php, line 93
+Cake\Cache\Cache::_buildEngine() - CORE/src/Cache/Cache.php, line 147
+Cake\Cache\Cache::engine() - CORE/src/Cache/Cache.php, line 183
+Cake\I18n\I18n::translators() - CORE/src/I18n/I18n.php, line 79
+Cake\I18n\I18n::translator() - CORE/src/I18n/I18n.php, line 138
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Controller\Component\AuthComponent::_setDefaults() - CORE/src/Controller/Component/AuthComponent.php, line 496
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 295
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:17 Error: [RuntimeException] Cache engine Cake\Cache\Engine\FileEngine is not properly configured.
+Request URL: /Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Cache\CacheRegistry->_create('Cake\\Cache\\Engi...', '_cake_core_', Array)
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Cache.php(147): Cake\Core\ObjectRegistry->load('File', Array)
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Cache.php(183): Cake\Cache\Cache::_buildEngine('_cake_core_')
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/I18n/I18n.php(79): Cake\Cache\Cache::engine('_cake_core_')
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/I18n/I18n.php(138): Cake\I18n\I18n::translators()
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/I18n/functions.php(88): Cake\I18n\I18n::translator('cake')
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(496): __d('cake', 'You are not aut...')
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(295): Cake\Controller\Component\AuthComponent->_setDefaults()
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#13 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#14 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\HomeController))
+#15 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2017-07-31 22:56:42 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:56:42 Warning: Warning (512): SplFileInfo::openFile(/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s): failed to open stream: Permission denied in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 396]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 396
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 148
+Cake\I18n\I18n::translator() - CORE/src/I18n/I18n.php, line 145
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Controller\Component\AuthComponent::_setDefaults() - CORE/src/Controller/Component/AuthComponent.php, line 496
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 295
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (512): SplFileInfo::openFile(/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 396]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 396
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 148
+Aura\Intl\TranslatorLocator::get() - ROOT/vendor/aura/intl/src/TranslatorLocator.php, line 188
+Cake\I18n\TranslatorRegistry::_getFromLoader() - CORE/src/I18n/TranslatorRegistry.php, line 272
+Cake\I18n\TranslatorRegistry::_getTranslator() - CORE/src/I18n/TranslatorRegistry.php, line 176
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 150
+Cake\I18n\I18n::translator() - CORE/src/I18n/I18n.php, line 145
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Controller\Component\AuthComponent::_setDefaults() - CORE/src/Controller/Component/AuthComponent.php, line 496
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 295
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (512): SplFileInfo::openFile(/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 396]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 396
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 151
+Aura\Intl\TranslatorLocator::get() - ROOT/vendor/aura/intl/src/TranslatorLocator.php, line 188
+Cake\I18n\TranslatorRegistry::_getFromLoader() - CORE/src/I18n/TranslatorRegistry.php, line 272
+Cake\I18n\TranslatorRegistry::_getTranslator() - CORE/src/I18n/TranslatorRegistry.php, line 176
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 150
+Cake\I18n\I18n::translator() - CORE/src/I18n/I18n.php, line 145
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Controller\Component\AuthComponent::_setDefaults() - CORE/src/Controller/Component/AuthComponent.php, line 496
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 295
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (512): SplFileInfo::openFile(/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 396]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 396
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 151
+Cake\I18n\I18n::translator() - CORE/src/I18n/I18n.php, line 145
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Controller\Component\AuthComponent::_setDefaults() - CORE/src/Controller/Component/AuthComponent.php, line 496
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 295
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (512): Unable to emit headers. Headers sent in file=/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php line=822 in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 48]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php:822) in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 148]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php:822) in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 178]
+Request URL: /Home
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 178
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 22:56:42 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:56:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 22:56:42 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:56:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 22:57:13 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:57:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:57:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 22:57:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 22:57:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:01:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:01:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:01:17 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/SearchID
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:01:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:01:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/SearchID
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:01:26 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:03 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:03 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:13:03 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/Home
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:13:11 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:11 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/seven-mile-beach-grand.jpg
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/SearchID
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:13:11 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /img/test2
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/SearchID
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:13:24 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Upload could not be found.
+Exception Attributes: array (
+  'class' => 'Upload',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /Upload
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-07-31 23:13:30 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:30 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'su17g03.media_info' doesn't exist
+Request URL: /Uploads
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'media_info', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('media_info', Array)
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(531): Cake\Database\Schema\CachedCollection->describe('media_info')
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(588): Cake\ORM\Table->getSchema()
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/josegonzalez/cakephp-upload/src/Model/Behavior/UploadBehavior.php(41): Cake\ORM\Table->schema()
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Behavior.php(166): Josegonzalez\Upload\Model\Behavior\UploadBehavior->initialize(Array)
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/BehaviorRegistry.php(130): Cake\ORM\Behavior->__construct(Object(App\Model\Table\UploadsTable), Array)
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\ORM\BehaviorRegistry->_create('Josegonzalez\\Up...', 'Upload', Array)
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(825): Cake\Core\ObjectRegistry->load('Josegonzalez/Up...', Array)
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/src/Model/Table/UploadsTable.php(39): Cake\ORM\Table->addBehavior('Josegonzalez/Up...', Array)
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(290): App\Model\Table\UploadsTable->initialize(Array)
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(249): Cake\ORM\Table->__construct(Array)
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(216): Cake\ORM\Locator\TableLocator->_create(Array)
+#13 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(112): Cake\ORM\Locator\TableLocator->get('Uploads')
+#14 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Controller.php(358): Cake\Controller\Controller->loadModel('Uploads')
+#15 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/src/Controller/UploadsController.php(29): Cake\Controller\Controller->__get('Uploads')
+#16 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UploadsController->index()
+#17 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#18 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UploadsController))
+#19 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-07-31 23:13:39 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:13:39 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'su17g03.media_info' doesn't exist
+Request URL: /Uploads/index
+Stack Trace:
+#0 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'media_info', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('media_info', Array)
+#2 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(531): Cake\Database\Schema\CachedCollection->describe('media_info')
+#3 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(588): Cake\ORM\Table->getSchema()
+#4 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/josegonzalez/cakephp-upload/src/Model/Behavior/UploadBehavior.php(41): Cake\ORM\Table->schema()
+#5 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Behavior.php(166): Josegonzalez\Upload\Model\Behavior\UploadBehavior->initialize(Array)
+#6 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/BehaviorRegistry.php(130): Cake\ORM\Behavior->__construct(Object(App\Model\Table\UploadsTable), Array)
+#7 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\ORM\BehaviorRegistry->_create('Josegonzalez\\Up...', 'Upload', Array)
+#8 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(825): Cake\Core\ObjectRegistry->load('Josegonzalez/Up...', Array)
+#9 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/src/Model/Table/UploadsTable.php(39): Cake\ORM\Table->addBehavior('Josegonzalez/Up...', Array)
+#10 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Table.php(290): App\Model\Table\UploadsTable->initialize(Array)
+#11 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(249): Cake\ORM\Table->__construct(Array)
+#12 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(216): Cake\ORM\Locator\TableLocator->_create(Array)
+#13 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(112): Cake\ORM\Locator\TableLocator->get('Uploads')
+#14 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Controller.php(358): Cake\Controller\Controller->loadModel('Uploads')
+#15 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/src/Controller/UploadsController.php(29): Cake\Controller\Controller->__get('Uploads')
+#16 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UploadsController->index()
+#17 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#18 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UploadsController))
+#19 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-07-31 23:14:51 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:19 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:24 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:25 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:28 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:30 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:33 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:35 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:37 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:43 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:43 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:27:47 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:02 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:02 Warning: Warning (2): fopen(/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/webroot/files/Uploads/media_data/unnamed.jpg.temp): failed to open stream: Permission denied in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/league/flysystem/src/Adapter/Local.php, line 151]
+Request URL: /uploads/add
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/uploads/add
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+fopen - [internal], line ??
+League\Flysystem\Adapter\Local::writeStream() - ROOT/vendor/league/flysystem/src/Adapter/Local.php, line 151
+League\Flysystem\Filesystem::writeStream() - ROOT/vendor/league/flysystem/src/Filesystem.php, line 87
+Josegonzalez\Upload\File\Writer\DefaultWriter::writeFile() - ROOT/vendor/josegonzalez/cakephp-upload/src/File/Writer/DefaultWriter.php, line 122
+Josegonzalez\Upload\File\Writer\DefaultWriter::write() - ROOT/vendor/josegonzalez/cakephp-upload/src/File/Writer/DefaultWriter.php, line 81
+Josegonzalez\Upload\Model\Behavior\UploadBehavior::beforeSave() - ROOT/vendor/josegonzalez/cakephp-upload/src/Model/Behavior/UploadBehavior.php, line 99
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\ORM\Table::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\ORM\Table::_processSave() - CORE/src/ORM/Table.php, line 1789
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE/src/ORM/Table.php, line 1723
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE/src/ORM/Table.php, line 1446
+Cake\Database\Connection::transactional() - CORE/src/Database/Connection.php, line 678
+Cake\ORM\Table::_executeTransaction() - CORE/src/ORM/Table.php, line 1447
+Cake\ORM\Table::save() - CORE/src/ORM/Table.php, line 1724
+App\Controller\UploadsController::add() - APP/Controller/UploadsController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 440
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 119
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 23:30:02 Warning: Warning (512): Unable to emit headers. Headers sent in file=/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php line=822 in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 48]
+Request URL: /uploads/add
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/uploads/add
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 23:30:02 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php:822) in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 148]
+Request URL: /uploads/add
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/uploads/add
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 23:30:02 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Error/Debugger.php:822) in [/home/jyang15/public_html/CSC-648-Su17-Team-3/gatorBaker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 178]
+Request URL: /uploads/add
+Referer URL: http://sfsuse.com/~jyang15/CSC-648-Su17-Team-3/gatorBaker/uploads/add
+Client IP: 130.212.92.23
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 178
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-07-31 23:30:33 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:33 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:36 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:38 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:46 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:46 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:30:49 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:31:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-07-31 23:31:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
