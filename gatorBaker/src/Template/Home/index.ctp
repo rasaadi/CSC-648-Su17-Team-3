@@ -26,6 +26,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
 
+
+
+
 <?php
 	$connection = ConnectionManager::get('default');
 	$results = $connection->execute('SELECT * FROM MediaInfo')->fetchAll('assoc');
@@ -33,11 +36,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	echo '<div class="container">';
 	echo '<div class="row">';
 	foreach($results as $arr){
+		
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+		$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
 		Echo "<div class='col-sm-4'>";
 		Echo "<div class='panel panel-primary'>";
 		Echo "<div class='panel-heading'>&nbsp</div>";
-//			echo $arr["thumbnail"];
-		echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+		echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
 		echo '<div class="panel-footer">Media Category: ';
 		echo $arr["media_category"];
 		echo '</div>';
