@@ -90,11 +90,13 @@ div.watermark p
 				Echo "<div class='panel panel-default'>";
 			} 
   			
-
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+			$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+			
 			Echo "<div class='panel-heading'>&nbsp</div>";
 //			echo $arr["thumbnail"];
 			echo '<p id="image-display">';
-			echo $this->Html->image($arr["thumbnail"], array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+			echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
 			echo '</p>';
 			echo '<div class="watermark">';
 			echo '<p>Stock Photo Marketplace';
