@@ -42,8 +42,6 @@ class UploadsController extends AppController{
             throw new NotFoundException(__('Invalid Media'));
         }
 
-//        $this->set(compact('upload'));
-
         $this->set('upload', $upload);
 
     }
