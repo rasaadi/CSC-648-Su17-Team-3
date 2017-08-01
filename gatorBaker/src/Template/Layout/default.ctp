@@ -136,10 +136,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
         ?>
         </li>
-        <li style='width:15%'>
+        <li>
         <?php    
    	        echo $this->Form->button('Search',array('class'=>'btn btn-warning','style'=>'margin:10px;'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-primary','style'=>'margin:10px;'));
+			echo $this->Form->end();
+		?>
+		</li>
+		
+	
+		<li>
+		<?php
+// create another form for upload button			
+			echo $this->Form->create("Upload",array('url'=>'/Uploads','class'=>'form-inline','style'=>'margin:10px;'));
+		?>
+		</li>
+		<li>
+		<?php
+			echo $this->Form->button('Upload', array('class'=>'btn btn-primary','style'=>'margin:10px 10px 10px 0px;'));						
    	        echo $this->Form->end();
         ?>	
         </li>
