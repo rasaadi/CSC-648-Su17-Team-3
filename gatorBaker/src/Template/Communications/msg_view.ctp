@@ -11,6 +11,8 @@
 
     <h1> View Message </h1>
 
+    <button><?= $this->Html->link('Message List', ['action' => 'msgList']) ?></button>
+
     <h4> Sender: <?= h($communication->msg_sender) ?> </h4>
 
     <p> Recipient: <?= h($communication->msg_recipient) ?> </p>
