@@ -43,7 +43,14 @@ class CommunicationsController extends AppController
 
     public function msgList(){
 
-        $this->set('communications', $this->Communications->find('all'));
+//        $this->set('communications', $this->Communications->find('all'));
+//        $msgRecipient = $this->Auth->user('username');
+        $msgRecipient = $this->Auth->user('email');
+
+        $this->set('communications', $this->Communications->find('all', [
+//            'conditions' => ['Communications.msg_recipient' => 'rs']]
+                'conditions' => ['Communications.msg_recipient' => $msgRecipient]]
+        ));
 
     }
 
