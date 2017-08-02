@@ -14,7 +14,17 @@ class SearchValidatorTable extends Table
     {
         $validator
             ->requirePresence('theTitle')
-            ->notEmpty('title');
+	        ->notEmpty('theTitle', 'Please fill this field')
+            ->add('theTitle', [
+		        'length' => [
+			        'rule' => ['maxLength', 30],
+                    'message' => 'Maximum length of 30 characters.',
+                ]
+		        'custom' =>[
+				    'rule' => array('custom', '/^[a-z0-9 ]*$/i'),
+				    'message'  => 'Alphanumeric characters with spaces only'
+		        ]
+    ]);
         return $validator;
     }
 }
