@@ -46,7 +46,7 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home/index'));
+                return $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
@@ -69,8 +69,8 @@ class UsersController extends AppController
 
     public function home()
 	{
-        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home/index'));
-    }
+$this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+}
     public function view($id)
     {
         $user = $this->Users->get($id);
