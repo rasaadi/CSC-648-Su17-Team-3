@@ -16,8 +16,14 @@ use Cake\View\View;
 
 class SearchValidView extends View
 {
-    if($this->Session->check('SearchValidTable.errors')) {
-        $errors = $this->Session->read('SearchValidTable.errors');
-        $this->Session->delete('SearchValidTable.errors);
+
+    public function initialize()
+    {
+        if ($this->Session->check('SearchValidTable.errors')) {
+            $errors = $this->Session->read('SearchValidTable.errors');
+            $this->Session->delete('SearchValidTable.errors');
+        }
+    }
 }
+
 ?>
