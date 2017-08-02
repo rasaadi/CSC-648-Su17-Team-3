@@ -135,14 +135,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
-        $validator = new Validator();
+     //   $validator = new Validator();
 
-$validator
-    ->requirePresence('theTitle')
-    ->add('theTitle', [
-				'rule' => array('custom', '/^[a-z0-9 ]*$/i'),
-				'message'  => 'Alphanumeric characters with spaces only'
-    ]);
+// $validator
+   // ->requirePresence('theTitle')
+    //->add('theTitle', [
+		//		'rule' => array('custom', '/^[a-z0-9 ]*$/i'),
+		//		'message'  => 'Alphanumeric characters with spaces only'
+    //]);
 
             ?>
         </li>
