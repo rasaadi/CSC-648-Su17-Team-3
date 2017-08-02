@@ -25,6 +25,60 @@ endif;
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+<link rel="stylesheet" href="css/ui_style.css" />
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-103017358-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script>
+(function(w,d,s,g,js,fs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+  js.src='https://apis.google.com/js/platform.js';
+  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+}(window,document,'script'));
+</script>
 
 
 
@@ -61,107 +115,17 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 	}
 	echo "</div>";
 	echo "</div>";
-
-	
-	
 ?>	
 	
 	
-<!--
-<html lang="en">
 
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading"> &nbsp</div>
-	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: Car</div>
-	<div class="panel-footer">Media Title: BMW</div>
-	<div class="panel-footer">Media description: a sports car</div>
-	<div class="panel-footer">Media Price: $1.02</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-    
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: View</div>
-	<div class="panel-footer">Media Title: grassland</div>
-	<div class="panel-footer">Media description: a grassland and a lake</div>
-	<div class="panel-footer">Media Price: $1.03</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: City</div>
-	<div class="panel-footer">Media Title: San Francisco</div>
-	<div class="panel-footer">Media description: night view of SF</div>
-	<div class="panel-footer">Media Price: $1.01</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: House</div>
-	<div class="panel-footer">Media Title: Nice house</div>
-	<div class="panel-footer">Media description: a big house</div>
-	<div class="panel-footer">Media Price: $1.04</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: Flower</div>
-	<div class="panel-footer">Media Title: Flower</div>
-	<div class="panel-footer">Media description: Pink Blossom</div>
-	<div class="panel-footer">Media Price: $1.05</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: Animal</div>
-	<div class="panel-footer">Media Title: Two dogs</div>
-	<div class="panel-footer">Media description: cute dogs</div>
-	<div class="panel-footer">Media Price: $1.06</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-  </div>
-</div><br><br>
-
--->
-
-    
 <?php
 /*
 	$connection = ConnectionManager::get('default');
 	$results = $connection->execute('SELECT * FROM media_info')->fetchAll('assoc');
 	echo "<table style='border: 1px solid blue'>";
-	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td> 
-     <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>  
+	echo "<tr> <td> ID </td> <td> title </td> <td> description </td> <td> media_cat </td>  <td> media_type </td>
+     <td> price </td>  <td> owner </td>  <td> media_created </td>  <td> media_modified </td>  <td> thumbnail </td>
       <td> data </td>  </tr>";
 	foreach($results as $arr){
 		echo "<tr>";
@@ -183,10 +147,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
    	echo $this->Form->input('theTitle',array('label'=>'search by title: '));
    	echo $this->Form->button('Submit');
    	echo $this->Form->end();
-*/    
-?>	
+*/
+?>
 
-  
-</body>
+
 </html>
 

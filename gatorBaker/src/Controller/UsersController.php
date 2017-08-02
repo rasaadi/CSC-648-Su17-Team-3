@@ -67,10 +67,12 @@ class UsersController extends AppController
         $this->set('test_user', $this->Users->find('all'));
     }
 
+
     public function home()
-	{
-$this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
-}
+	  {
+        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+    }
+
     public function view($id)
     {
         $user = $this->Users->get($id);

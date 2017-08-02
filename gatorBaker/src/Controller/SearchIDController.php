@@ -46,6 +46,6 @@ class SearchIDController extends AppController{
 	echo "</table>";
 */
     }
-}
 ?>
+
 

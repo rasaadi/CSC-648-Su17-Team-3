@@ -4,8 +4,8 @@
         <legend><?= __('Add User') ?></legend>
         <?= $this->Form->control('email') ?>
         <?= $this->Form->control('password') ?>
-	<?= $this->Form->control('Confirm password') ?>
+	      <?= $this->Form->control('Confirm password') ?>
    </fieldset>
 <?= $this->Form->button(__('Submit')); ?>
 <?= $this->Form->end() ?>
- </div>
+</div>
