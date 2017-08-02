@@ -1,6 +1,6 @@
 <?php
 /**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ *cakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
@@ -18,7 +18,7 @@ use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Network\Exception\NotFoundException;
-$this->layout = false;
+
 if (!Configure::read('debug')):
     throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
 endif;
@@ -27,13 +27,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-
-
-
-
 
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -90,242 +83,41 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 
 
-
-
-<div class="jumbotron" style=" background-size: 20%;">
-
-  <div class="container text-center">
-    <h1>Stock Photo Marketplace</h1>
-
-<p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
-   <p>NOT A SERIOUS PRODUCT..</p>
-  </div>
-</div>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:80%">
-        <li class="active"><a href="#">Home</a></li>
-
-
-
-<!-- rewrite this li with php
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Cars</a></li>
-          <li><a href="#">Cities</a></li>
-          <li><a href="#">People</a></li>
-	      <li><a href="#">Animals</a></li>
-	      <li><a href="#">Landscapes</a></li>
-        </ul>
-        </li>
--->
-
-
-
-<!--
-        <form class="form-inline">Search Stock Media:
-        <input type="search" class="form-control" size="50" placeholder="Enter names or category">
-        <button type="button" class="btn btn-danger">Search</button>
-	    <button type="button" class="btn btn-success">Upload</button>
-        </form>
--->
-
-        <li style='width:50%;'>
-        <?php
-// drop down and search bar
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
-            echo $this->Form->select(
-    		    'field',
-    		    ['Filter Search By Category', 'All','Cars', 'Cities', 'People', 'Animals','Landscapes'],
-                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
-	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
-        ?>
-        </li>
-        <li style='width:15%'>
-        <?php
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger','style'=>'margin:10px;'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success','style'=>'margin:10px;'));
-   	        echo $this->Form->end();
-        ?>
-        </li>
-
-      </ul>
-     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-
-    												<input type="button" onclick="location.href='http://localhost/test/users/add'"value="Register">
-
-                        </li>
-                        <li class="dropdown">
-                           <input type="button" onclick="location.href='http://localhost/test/users/login'"value="Login">
-                        </li>
-</div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-center">
-                                                    <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
-                                </form>
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading"> &nbsp</div>
-	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: Car</div>
-	<div class="panel-footer">Media Title: BMW</div>
-	<div class="panel-footer">Media description: a sports car</div>
-	<div class="panel-footer">Media Price: $1.02</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: View</div>
-	<div class="panel-footer">Media Title: grassland</div>
-	<div class="panel-footer">Media description: a grassland and a lake</div>
-	<div class="panel-footer">Media Price: $1.03</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: City</div>
-	<div class="panel-footer">Media Title: San Francisco</div>
-	<div class="panel-footer">Media description: night view of SF</div>
-	<div class="panel-footer">Media Price: $1.01</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-  </div>
-</div><br>
-<div id="contactSeller" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
-          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
-<div class="form-group">
-  <label class="col-md-4 control-label" for="prependedtext">Media description</label>
-  <div class="col">
-    <div class="input-group">
-      <span class="input-group-addon">MediaID</span>
-
-    </div>
-
-  </div>
-</div>          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="contactUs" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
-          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message to us here.." data-placement="top" data-trigger="manual"></textarea></div>
-         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: House</div>
-	<div class="panel-footer">Media Title: Nice house</div>
-	<div class="panel-footer">Media description: a big house</div>
-	<div class="panel-footer">Media Price: $1.04</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: Flower</div>
-	<div class="panel-footer">Media Title: Flower</div>
-	<div class="panel-footer">Media description: Pink Blossom</div>
-	<div class="panel-footer">Media Price: $1.05</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:30%')); ?>
-        <div class="panel-footer">Media Category: Animal</div>
-	<div class="panel-footer">Media Title: Two dogs</div>
-	<div class="panel-footer">Media description: cute dogs</div>
-	<div class="panel-footer">Media Price: $1.06</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-  </div>
-</div><br><br>
-
-
-
+<?php
+	$connection = ConnectionManager::get('default');
+	$results = $connection->execute('SELECT * FROM MediaInfo')->fetchAll('assoc');
+	Echo "<html>";
+	echo '<div class="container">';
+	echo '<div class="row">';
+	foreach($results as $arr){
+		
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+		$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+		Echo "<div class='col-sm-4'>";
+		Echo "<div class='panel panel-primary'>";
+		Echo "<div class='panel-heading'>&nbsp</div>";
+		echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+		echo '<div class="panel-footer">Media Category: ';
+		echo $arr["media_category"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media Title: ';
+		echo $arr["title"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media description: ';
+		echo $arr["description"];
+		echo '</div>';
+		echo '<div class="panel-footer">Media Price: ';
+		echo $arr["price"];
+		echo '</div>';
+		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+		echo "</div>";
+		echo "</div>";
+	}
+	echo "</div>";
+	echo "</div>";
+?>	
+	
+	
 
 <?php
 /*
@@ -359,136 +151,5 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 
 
-</body>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<footer class="mt-5">
-  <div class="container-fluid bg-faded mt-5">
-    <div class="container">
-      <div class="row py-3">
-        <!-- footer column 1 start -->
-        <div class="col-md-4">
-          <!-- row start -->
-                    <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-
-              <a class="bg-circle bg-info" href=About/aboutus>
-                <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Info</h4>
-              About us.
-            </div>
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- footer column 1 end -->
-        <!-- footer column 2 start -->
-        <div class="col-md-4">
-          <!-- row start -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-info" href="#">
-                <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-9">
-	<h4><a href="#contactUs" data-toggle="modal">Contact Us</a></h4>
-              <p>Please send any comments or concerns to the devs?</p>
-            </div>
-          </div>
-          <!-- row end -->
-          <!-- row start -->
-
-          <!-- row end -->
-        </div>
-        <!-- footer column 2 end -->
-        <!-- footer column 3 start -->
-        <div class="col-md-4">
-          <!-- row starting  -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-danger" href="# ">
-                <i class="fa fa-2x fa-fw fa-file-pdf-o" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Terms of Agreement</h4>
-              <a href="http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/Milestones/Milestone2/CSC648-848%20Section%2001%20Summer%202017%20Milestone2%20Team03.pdf" target="_blank">Download PDF</a>
-
-            </div>
-          </div>
-          <!-- row ended -->
-          <!-- row starting  -->
-
-          <!-- row ended -->
-        </div>
-        <!-- footer column 3 end -->
-      </div>
-    </div>
-  </div>
-<div id="embed-api-auth-container"></div>
-<div id="chart-container"></div>
-<div id="view-selector-container"></div>
-
-  <div class="container-fluid bg-primary py-3">
-    <div class="container">
-      <div class="row py-3">
-        <div class="col-md-9">
-          <p class="text-white">Not a serious Product. For educational use only.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</footer>
-<script>
-gapi.analytics.ready(function() {
-  /**
-   * Authorize the user immediately if the user has already granted access.
-   * If no access has been created, render an authorize button inside the
-   * element with the ID "embed-api-auth-container".
-   */
-  gapi.analytics.auth.authorize({
-    container: 'embed-api-auth-container',
-    clientid: 'UA-103017358-1'
-  });
-  /**
-   * Create a new ViewSelector instance to be rendered inside of an
-   * element with the id "view-selector-container".
-   */
-  var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector-container'
-  });
-  // Render the view selector to the page.
-  viewSelector.execute();
-  /**
-   * Create a new DataChart instance with the given query parameters
-   * and Google chart options. It will be rendered inside an element
-   * with the id "chart-container".
-   */
-  var dataChart = new gapi.analytics.googleCharts.DataChart({
-    query: {
-      metrics: 'ga:sessions',
-      dimensions: 'ga:date',
-      'start-date': '30daysAgo',
-      'end-date': 'yesterday'
-    },
-    chart: {
-      container: 'chart-container',
-      type: 'LINE',
-      options: {
-        width: '100%'
-      }
-    }
-  });
-  /**
-   * Render the dataChart on the page whenever a new view is selected.
-   */
-  viewSelector.on('change', function(ids) {
-    dataChart.set({query: {ids: ids}}).execute();
-  });
-});
-</script>
 </html>
+

@@ -1,130 +1,191 @@
+<?php
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+use Cake\Cache\Cache;
+use Cake\Core\Configure;
+use Cake\Core\Plugin;
+use Cake\Datasource\ConnectionManager;
+use Cake\Error\Debugger;
+use Cake\Network\Exception\NotFoundException;
+
+//$this->layout = false;
+
+if (!Configure::read('debug')):
+    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
+endif;
+
+$cakeDescription = 'CakePHP: the rapid development PHP framework';
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-    
-    /* Remove the jumbotron's default bottom margin */ 
-     .jumbotron {
-      margin-bottom: 0;
-    }
-   
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
-</head>
 <body>
+<style>
+div.watermark
+{
+   
+	
+	background-color: #fffffff;
+	border: 1px solid;
+	border-color: #CD853f;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+}
 
+div.watermark p
+{
+	
+	font-weight: bold;
+	color: #CD853f;
+}
 
-<div class="jumbotron" style="background-image: url(https://static.pexels.com/photos/481289/pexels-photo-481289.jpeg); background-size: 100%;">  <div class="container text-center">
-    <h1>Stock Photo Marketplace</h1>      
-    <p>Team 03</p>
-<p>THIS IS A CLASS PROJECT FOR SOFTWARE ENGINEERING SFSU 648</p>
-   <p>NOT A SERIOUS PRODUCT..</p>
-  </div>
-</div>
+#image-display
+{
+ pointer-events: none;
+}
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:80%">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Cars</a></li>
-          <li><a href="#">Cities</a></li>
-          <li><a href="#">People</a></li>
-	<li><a href="#">Animals</a></li>
-	<li><a href="#">Landscapes</a></li>
-        </ul>
-      </li>
-        <li><a href="#">Contact</a></li>
-	<li>
-        <?php echo $this->Html->link('About us', ['controller' => 'About', 'action' => 'aboutus', '_full' => true]); ?>
-    </li>
-    <li style="width:60%">
-<!--        
-        <form class="form-inline">Search Stock Media:
-        <input type="search" class="form-control" size="50" placeholder="Enter name or category">
-        <button type="button" class="btn btn-danger">Search</button>
-	    <button type="button" class="btn btn-success">Upload</button>
-        </form>  
--->        
-        <?php
-	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'padding-top:10px;'));
-   	        echo $this->Form->input('theTitle',array('label'=>' ','class'=>'form-control', 'placeholder'=>'Enter name or category', 'style'=>'float:left;width:60%;'));
-   	        echo $this->Form->button('Search',array('class'=>'btn btn-danger', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
-            echo $this->Form->button('Upload',array('class'=>'btn btn-success', 'style'=>'float:left;margin-left:15px;margin-top:0px'));
-   	        echo $this->Form->end();
-        ?>	
-    </li>
+</style>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-	<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Login
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Create Account</a></li>
-          <li><a href="#">Register</a></li>
-        
-        </ul>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart and Checkout</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <table class="result" rules="rows">
     <?php 
+	
+	
+	
+	if (count($res) > 0) 
+	{
+		Echo "<html>";
+		echo '<div class="container">';
+		echo '<div class="row">';
+			
+			
         foreach($res as $arr){
+			Echo "<div class='col-sm-4'>";
+			
+			if ($arr["media_category"] ==1) {
+				Echo "<div class='panel panel-info'>";
+			}
+			
+			if ($arr["media_category"] ==2) {
+				Echo "<div class='panel panel-danger'>";
+			} 
+			
+			if ($arr["media_category"] ==3) {
+				Echo "<div class='panel panel-success'>";
+			} 
+			
+			if ($arr["media_category"] ==4) {
+				Echo "<div class='panel panel-primary'>";
+			}
+			
+			if ($arr["media_category"] ==5) {
+				Echo "<div class='panel panel-default'>";
+			} 
+  			
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+			$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+			
+			Echo "<div class='panel-heading'>&nbsp</div>";
+//			echo $arr["thumbnail"];
+			echo '<p id="image-display">';
+			echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+			echo '</p>';
+			echo '<div class="watermark">';
+			echo '<p>Stock Photo Marketplace';
+			echo 'Copyright 2017</p></div>';
+			echo '<div class="panel-footer">Media Category: ';
+			echo $arr["media_category"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media Title: ';
+			echo $arr["title"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media description: ';
+			echo $arr["description"];
+			echo '</div>';
+			echo '<div class="panel-footer">Media Price: ';
+			echo $arr["price"];
+			echo '</div>';
+			echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+			echo "</div>";
+			echo "</div>";
 
-            $str1= 'Title: ' . $arr["title"] . '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"];
+
+			
+			
+			
+			
+			
+			
+/*  old php table cell format to display search results
+
+            $str1= 'Title: ' . $arr["title"] . '<br/> Media ID: ' . $arr["id"] .  '<br/> Description: ' . $arr["description"] .'<br/> Category: ' . $arr["media_category"] .  '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"] . '<br/> Media Created: ' . $arr["media_created"];
 //            echo $str1;
             echo $this->Html->tableCells([
                 [
-                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic']], 
+                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic'], 'style'=>'width:100%;height:220px;'], 
                     [$str1, ['class'=>'result'] ],
                     [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
                 ]
                 ]);
-	}
-    ?>
-    </table>
-    
+*/				
+		}
 		
-	<div class="End">
-		<p class="End"> <span style="font-weight:bold" >&#169 &nbsp </span> Summer 2017 CSC648/848 Team03, San Francisco State University </p> </div>
-	</div>
+		echo "</div>";
+		echo "</div>";
+		
+	} else {
+		echo "0 results found please check spelling or try search again";
+	}
+	
+	
 
-</body>
+    ?>
+ </body>   
+<div id="contactSeller" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal col-sm-12">
+          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          <div class="form-group"><label>Owner:</label>
+		<div class="input-group">
+   		 <?php echo $arr["owner"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Media ID:</label>
+		<div class="input-group">
+   		 <?php echo $arr["id"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Price:</label>
+		<div class="input-group">
+   		 <?php echo $arr["price"]; ?>
+   		 </div>
+		</div>
+	<div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+	<div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>
-
-
-
 
 
 <?php
@@ -151,3 +212,6 @@
 	echo "</table>";
 */
 ?>
+
+
+

@@ -27,12 +27,7 @@ class HomeController extends AppController
 //        $results = $connection->find("all",array('condition' => array('title LIKE' => ('$in'))));
 //        print_r($results);
 
-//        $this->set('res', $results);
-
-    }
-
-
-
+	  }
 }
 
     
