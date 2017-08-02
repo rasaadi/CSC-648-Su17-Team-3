@@ -55,7 +55,9 @@ class UploadsController extends AppController{
 
         if ($this->request->is('post')) {
 
-            $upload = $this->Uploads->patchEntity($upload, $this->request->data);
+            $upload = $this->Uploads->patchEntity($upload, $this->request->getData());
+
+            $upload->owner = $this->Auth->user('email'); //This track the login user as the owner of the upload
 
             if ($this->Uploads->save($upload)) {
 

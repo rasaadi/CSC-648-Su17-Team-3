@@ -27,7 +27,7 @@ class CommunicationsController extends AppController
 
             $communication = $this->Communications->patchEntity($communication, $this->request->getData());
 
-            $communication->msg_sender = $this->Auth->user('username'); //This track the login user as the sender
+            $communication->msg_sender = $this->Auth->user('email'); //This track the login user as the sender
 
             if ($this->Communications->save($communication)) {
 
