@@ -19,7 +19,7 @@ class SearchValidTable extends Table
 		        'length' => [
 			        'rule' => ['maxLength', 30],
                     'message' => 'Maximum length of 30 characters.',
-                ]
+                ],
 		        'custom' =>[
 				    'rule' => array('custom', '/^[a-z0-9 ]*$/i'),
 				    'message'  => 'Alphanumeric characters with spaces only'
