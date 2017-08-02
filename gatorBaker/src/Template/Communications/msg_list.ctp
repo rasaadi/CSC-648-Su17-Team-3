@@ -40,7 +40,7 @@
             </td>
 
             <td>
-                <?= $communication->created->format(DATE_RFC850) // Created Date?>
+                <?= $communication->created->format("l, d-M-y") // Created Date?>
             </td>
 
             <td>
