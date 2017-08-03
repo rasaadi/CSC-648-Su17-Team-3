@@ -13,7 +13,7 @@
 	echo $this->Form->end();
 	
 //generate link to message page
-	echo $this->Form->create("Message",array('url'=>'/Communications'));
+	echo $this->Form->create("Message",array('url'=>'/Communications/msgList'));
 	echo $this->Form->button('Message',array('class'=>'btn btn-warning'));
 	echo $this->Form->end();
 
