@@ -55,7 +55,7 @@ class AppController extends Controller
         
         // set a global variable userme for the logged in user.
         $currUser = $this->Auth->user('email');
-        echo $currUser;
+ //       echo $currUser;
         $GLOBALS['userme'] = $currUser;
         
 
