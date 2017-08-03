@@ -1,6 +1,6 @@
 <?php
 
-	echo "Welcome " . $ThisUser . "</br>";
+	echo "Welcome " . $GLOBALS['userme'] . "</br>";
 	
 
 
