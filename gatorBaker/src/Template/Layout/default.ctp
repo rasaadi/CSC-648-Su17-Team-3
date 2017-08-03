@@ -119,7 +119,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		    }
 			if(isset($ThisUser)){
         			echo '<li class="active" style="margin-right:15%;">';
-        			echo '<a href="Home">MyProfile</a></li>';
+					echo $this->Html->link('MyProfile', ['controller' => 'Profile', 'action' => 'index']);
+//        			echo '<a href="Home">MyProfile</a></li>';
         	} 
 		?>        
 <!--        
