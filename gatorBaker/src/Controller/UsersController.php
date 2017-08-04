@@ -46,7 +46,7 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+                return $this->redirect($this->Auth->redirectUrl('/home/index'));
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
@@ -54,7 +54,8 @@ class UsersController extends AppController
 
     public function logout()
     {
-        return $this->redirect($this->Auth->logout());
+		$this->Auth->logout();
+		return $this->redirect($this->Auth->redirectUrl('/home/index'));
     }
 
     public function isAuthorized($user)
@@ -82,12 +83,8 @@ class UsersController extends AppController
     public function add()
     {
         $user = $this->Users->newEntity();
-        $user->created = date("Y-m-d H:i:s");
-        $user->modified = date("Y-m-d H:i:s");
-
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-
+            $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect(['action' => 'add']);
