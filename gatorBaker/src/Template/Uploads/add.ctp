@@ -19,8 +19,6 @@
 
         echo $this->Form->input('media_category', ['label' => 'Category ']);
 
-        echo $this->Form->input('owner', ['label' => 'Owner']);
-
         echo $this->Form->input('price', ['label' => 'Price($)']);
 
         // Following is the upload field (photo)
@@ -29,10 +27,6 @@
             'label' => 'Select Media ',
             'type' => 'file'
         ]);
-
-        echo $this->Form->input('thumbnail', ['label' => 'Thumbnail']);
-
-//        echo $this->Form->input('data', ['label' => 'Data']); // NOTE: This field needs to migrated to media_data
 
         echo $this->Form->button(__('Save Media'));
 

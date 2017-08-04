@@ -23,5 +23,5 @@
 
 <h4> Owner: <?= h($upload->owner) ?> </h4>
 
-<p> <small> Created: <?php echo $upload->media_created->format(DATE_RFC850) ?> </small> </p>
+<p> <small> Created: <?php echo $upload->media_created->format("l, d-M-y") ?> </small> </p>
 

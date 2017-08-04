@@ -42,7 +42,7 @@
         </td>
 
         <td>
-            <?= $upload->media_created->format(DATE_RFC850) // Created Date?>
+            <?= $upload->media_created->format("l, d-M-y") // Created Date?>
         </td>
 
         <td>
