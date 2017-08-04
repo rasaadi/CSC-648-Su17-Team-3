@@ -20,6 +20,8 @@
         echo $this->Form->input('media_category', ['label' => 'Category ']);
 
         echo $this->Form->input('price', ['label' => 'Price($)']);
+		
+		echo $this->Form->input('thumbnail', ['label' => 'thumbnail']);
 
         // Following is the upload field (photo)
         //echo $this->Form->file('submittedfile');
