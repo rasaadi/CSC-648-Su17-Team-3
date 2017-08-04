@@ -16,7 +16,7 @@
 	echo $this->Html->link(
 				'Click here to register',
 				'/users/add',
-				['class' => 'button', 'target' => '_blank']);
+				['class' => 'button']);
 
 ?>
 
