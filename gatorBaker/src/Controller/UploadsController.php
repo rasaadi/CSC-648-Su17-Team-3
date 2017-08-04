@@ -26,7 +26,13 @@ class UploadsController extends AppController{
 
     public function index()
     {
-        $this->set('uploads', $this->Uploads->find('all'));
+        //        $this->set('uploads', $this->Uploads->find('all'));
+
+        $mediaOwner = $this->Auth->user('email');
+
+        $this->set('uploads', $this->Uploads->find('all', [
+                'conditions' => ['MediaInfo.owner' => $mediaOwner]]
+        ));
 
     }
 
