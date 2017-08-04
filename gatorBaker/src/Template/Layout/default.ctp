@@ -176,7 +176,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         		echo $this->Html->link(
 					'Login',
 					'/users/login',
-					['class' => 'button', 'target' => '_blank']
+					['class' => 'button']
 				);  
 				echo "</li>";
 		    } else{
@@ -184,7 +184,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		    	echo $this->Html->link(
                         'Logout',
                         '/users/logout',
-                        ['class' => 'button', 'target' => '_blank']
+                        ['class' => 'button']
                 );
                 echo "</li>";
 		    }
@@ -209,7 +209,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 echo $this->Html->link(
                         'Logout',
                         '/users/logout',
-                        ['class' => 'button', 'target' => '_blank']
+                        ['class' => 'button']
                 );
                 ?>
         </li>
