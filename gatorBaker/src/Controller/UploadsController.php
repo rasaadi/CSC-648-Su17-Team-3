@@ -31,7 +31,7 @@ class UploadsController extends AppController{
         $mediaOwner = $this->Auth->user('email');
 
         $this->set('uploads', $this->Uploads->find('all', [
-                'conditions' => ['MediaInfo.owner' => $mediaOwner]]
+                'conditions' => ['owner' => $mediaOwner]]
         ));
 
     }
