@@ -146,7 +146,61 @@ div.watermark p
 		echo "</div>";
 		
 		} else {
-			echo "<h2> 0 results found please check spelling or try search again </h2>";
+			echo "<h2> Sorry, 0 results found. But you may be interested in the following: </h2>";
+// Then show everything we have in the database
+			$connection = ConnectionManager::get('default');
+			$results = $connection->execute('SELECT * FROM MediaInfo')->fetchAll('assoc');
+			Echo "<html>";
+			echo '<div class="container">';
+			echo '<div class="row">';
+			foreach($results as $arr){
+				Echo "<div class='col-sm-4'>";
+				if ($arr["media_category"] ==1) {
+					Echo "<div class='panel panel-info'>";
+				}
+			
+				if ($arr["media_category"] ==2) {
+					Echo "<div class='panel panel-danger'>";
+				} 
+				
+				if ($arr["media_category"] ==3) {
+					Echo "<div class='panel panel-success'>";
+				} 
+			
+				if ($arr["media_category"] ==4) {
+					Echo "<div class='panel panel-primary'>";
+				}
+			
+				if ($arr["media_category"] ==5) {
+					Echo "<div class='panel panel-default'>";
+				} 
+
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+				$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+				Echo "<div class='panel-heading'>&nbsp</div>";
+				echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+				echo '<div class="panel-footer">Media Category: ';
+				echo $arr["media_category"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Title: ';
+				echo $arr["title"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media description: ';
+				echo $arr["description"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Price: ';
+				echo $arr["price"];
+				echo '</div>';
+				echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+				echo '<h2 class="text-center"><a href="';
+				$full_path2 = '~su17g03' . $full_path;
+				echo substr($full_path2,9);
+				echo '"class="btn btn-success" target="_blank"	>DOWNLOAD</a>';
+				echo "</div>";
+				echo "</div>";
+			}
+			echo "</div>";
+			echo "</div>";
 		}
 	}
 	
