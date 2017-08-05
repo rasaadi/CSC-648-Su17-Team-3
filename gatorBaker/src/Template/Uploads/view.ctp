@@ -7,21 +7,22 @@
  */
 ?>
 
-<h1> View Media </h1>
+<div class="View Media">
 
-<h4> Title: <?= h($upload->title) ?> </h4>
 
-<p> Description: <?= h($upload->description) ?> </p>
+        <legend>View Media</legend>
 
-<p> Category: <?= h($upload->media_category) ?> </p>
+            <h4> <strong>Title:</strong> <?= h($upload->title) ?> </h4>
 
-<p> Price($): <?= h($upload->price) ?> </p>
+            <p> <strong>Description:</strong> <?= h($upload->description) ?> </p>
 
-<p> Media Data: <?= h($upload->media_data) ?> </p>
+            <p> <strong>Category:</strong> <?= h($upload->media_category) ?> </p>
 
-<p> Thumbnail: <?= h($upload->thumbnail) ?> </p>
+            <p> <strong>Price($):</strong> <?= h($upload->price) ?> </p>
 
-<h4> Owner: <?= h($upload->owner) ?> </h4>
+            <p> <strong>Media Data:</strong> <?= h($upload->media_data) ?> </p>
 
-<p> <small> Created: <?php echo $upload->media_created->format(DATE_RFC850) ?> </small> </p>
+            <p> <strong>Owner:</strong> <?= h($upload->owner) ?> </p>
 
+            <p> <small> Created: <?php echo $upload->media_created->format(DATE_RFC850) ?> </small> </p>
+</div>
