@@ -86,7 +86,7 @@ class AppController extends Controller
                 ),
             ),
             //
-            'loginError' => 'Incalid password and email',
+            'loginError' => 'Invalid password and email',
             //
 
         ),
