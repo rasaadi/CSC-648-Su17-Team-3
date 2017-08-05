@@ -60,6 +60,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     table {
 	font: 60px, arial, serif;
 	}
+
+	.navbar-brand {
+  padding: 0px; 
+ 
+
+}
   </style>
 </head>
 <body>
@@ -134,7 +140,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 					echo $this->Html->link('MyProfile', ['controller' => 'Profile', 'action' => 'index']);
 //        			echo '<a href="Home">MyProfile</a></li>';
         	} 
-		?>        
+		?>
+		<a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand"><img src="http://i.imgur.com/VMJC1sB.png"></a>        
 <!--        
 		<li class="active">
 			<?php
@@ -148,14 +155,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <li style='width:40%;'>
         <?php
-// drop down and search bar            
+// drop down and search bar    
+/*   if($errors){
+      foreach($errors as $error)
+      foreach($error as $msg)
+      
+      echo '<font color = "red">'.$msg.'</font>l';
+   } else {
+      echo "No errors.";
+   }
+*/        
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
-    		    ['Category', 'view', 'nature', 'house', 'car'],
+    		    ['Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
                 array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
+   	        echo $this->Form->input('theTitle',array('label'=>' ', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>
         </li>
 	
@@ -163,10 +179,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php    
    	        echo $this->Form->button('Search',array('class'=>'btn btn-warning','style'=>'margin:10px;'));
 			echo $this->Form->end();
-
 		?>
 		</li>
-	
 		
 <!--	upload function is shown only in the user profile
 		<li>
