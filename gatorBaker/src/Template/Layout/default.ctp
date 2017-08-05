@@ -36,8 +36,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-	background-size: 10% 10%;
+	max-height: 100px;
+	background-image:url('https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+	 background-size: auto 100%, 100%;
+	background-opacity: 0.5;
     }
+
+	.jumbotron h2 {
+      margin-top: -50px;
+	    }
+	.jumbotron h3 {
+      margin-top: -2px;
+	    }
+	.jumbotron h4 {
+      margin-top: -10px;
+	    }
    
     /* Add a gray background color and some padding to the footer */
     footer {
@@ -79,10 +92,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <div class="jumbotron">
 
   <div class="container text-center">
-    <h1>Stock Photo Marketplace</h1>      
-    
-<p>SFSU 648 TEAM 03</p>
-   <p>For Educational Use Only.</p>
+    <h2>Stock Photo Marketplace</h2>      
+    <h3>SFSU Computer Science 648 Project Team 03</h3>
+   <h4>For Educational Use Only.</h4>
   </div>
 </div>
 
@@ -146,12 +158,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>
         </li>
+	
         <li style="margin-right:20%">
         <?php    
    	        echo $this->Form->button('Search',array('class'=>'btn btn-warning','style'=>'margin:10px;'));
 			echo $this->Form->end();
+
 		?>
 		</li>
+	
 		
 <!--	upload function is shown only in the user profile
 		<li>
@@ -167,12 +182,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </li>
 -->
 
-
+ 
 <!-- if login, show logout button; else show login button.	-->	
 
 		<?php 
         	if(!isset($ThisUser)){
         		echo '<li class="active">';
+			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
         		echo $this->Html->link(
 					'Login',
 					'/users/login',
@@ -181,6 +197,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				echo "</li>";
 		    } else{
 		    	echo '<li class="active">';
+			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
+
 		    	echo $this->Html->link(
                         'Logout',
                         '/users/logout',
