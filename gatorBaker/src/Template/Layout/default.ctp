@@ -131,7 +131,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
-    		    ['Filter Search By Category', 'view', 'nature', 'house', 'car'],
+    		    ['Filter Search By Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
                 array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
