@@ -9,52 +9,76 @@
 <!-- $this->Html is the form helper object that contain code snippets for html elements like forms, links etc
     link() method generate html link
 -->
-<h1> Media Library </h1>
-<button><?= $this->Html->link('Upload Media', ['action' => 'add']) ?></button>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Media Data</th>
-        <th>Price($)</th>
-        <th>Created On</th>
-        <th>Actions</th>
-    </tr>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-    <!-- Here's where we loop through our $uploads query object, printing out upload info -->
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
 
-    <?php foreach ($uploads as $upload): ?>
-    <tr>
-        <td>
-            <?= $upload->id //ID ?>
-        </td>
+            tr:hover{background-color:#f5f5f5}
+        </style>
+    </head>
+    <body>
+        <br class="mediaLibrary">
 
-        <td>
-            <?= $this->Html->link($upload->title, ['action' => 'view', $upload->id]) // Title?>
-        </td>
+            <legend> Media Library </legend>
 
-        <td>
-            <?= $upload->media_data ?>
-        </td>
+            <button><?= $this->Html->link('Upload Media', ['action' => 'add']) ?></button>
+            <br></br>
+            <table>
+                <tr>
+<!--                    <th>Id</th>-->
+                    <th>Title</th>
+                    <th>Media Data</th>
+                    <th>Price($)</th>
+                    <th>Created On</th>
+                    <th>Actions</th>
+                </tr>
 
-        <td>
-            <?= $upload->price ?>
-        </td>
+                <!-- Here's where we loop through our $uploads query object, printing out upload info -->
 
-        <td>
-            <?= $upload->media_created->format(DATE_RFC850) // Created Date?>
-        </td>
+                <?php foreach ($uploads as $upload): ?>
+                <tr>
 
-        <td>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $upload->id]) // Edit action?>
 
-            <?= $this->Form->postLink(
-                'Delete',
-                ['action' => 'delete', $upload->id],
-                ['confirm' => 'Are you sure?']) // Delete action
-            ?>
-        </td>
-    </tr>
-    <?php endforeach ?>
-</table>
+                    <td>
+                        <?= $this->Html->link($upload->title, ['action' => 'view', $upload->id]) // Title?>
+                    </td>
+
+                    <td>
+                        <?= $upload->media_data ?>
+                    </td>
+
+                    <td>
+                        <?= $upload->price ?>
+                    </td>
+
+                    <td>
+                        <?= $upload->media_created->format("l, d-M-y") // Created Date?>
+                    </td>
+
+                    <td>
+                        <?= $this->Html->link('Edit', ['action' => 'edit', $upload->id]) // Edit action?>
+
+                        <?= $this->Form->postLink(
+                            'Delete',
+                            ['action' => 'delete', $upload->id],
+                            ['confirm' => 'Are you sure?']) // Delete action
+                        ?>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            </table>
+        </div>
+    </body>
+</html>
 
