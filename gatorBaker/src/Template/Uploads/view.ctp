@@ -6,13 +6,22 @@
  * Time: 11:57 PM
  */
 ?>
+<!---->
+<!--<label class="col-sm-2 control-label" for="mediaView">-->
+<!--    <style>-->
+<!--        mediaView{-->
+<!--            display: inline;-->
+<!--        }-->
+<!--    </style>-->
+<!--<label>-->
 
-<div class="View Media">
-
+<div class="view media">
+    <fieldset>
 
         <legend>View Media</legend>
+<!--        <label class="col-sm-2 control-label" for="mediaView">-->
 
-            <h4> <strong>Title:</strong> <?= h($upload->title) ?> </h4>
+            <p> <strong>Title:</strong> <?= h($upload->title) ?> </p>
 
             <p> <strong>Description:</strong> <?= h($upload->description) ?> </p>
 
@@ -25,4 +34,5 @@
             <p> <strong>Owner:</strong> <?= h($upload->owner) ?> </p>
 
             <p> <small> Created: <?php echo $upload->media_created->format(DATE_RFC850) ?> </small> </p>
+    </fieldset>
 </div>
