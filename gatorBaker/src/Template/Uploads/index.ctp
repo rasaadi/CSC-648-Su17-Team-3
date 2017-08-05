@@ -28,15 +28,15 @@
         </style>
     </head>
     <body>
-        <br class="mediaLibrary">
+        <div class="mediaLibrary">
 
             <legend> Media Library </legend>
 
             <button><?= $this->Html->link('Upload Media', ['action' => 'add']) ?></button>
             <br></br>
+
             <table>
                 <tr>
-<!--                    <th>Id</th>-->
                     <th>Title</th>
                     <th>Media Data</th>
                     <th>Price($)</th>
@@ -48,8 +48,6 @@
 
                 <?php foreach ($uploads as $upload): ?>
                 <tr>
-
-
                     <td>
                         <?= $this->Html->link($upload->title, ['action' => 'view', $upload->id]) // Title?>
                     </td>

@@ -33,6 +33,6 @@
 
             <p> <strong>Owner:</strong> <?= h($upload->owner) ?> </p>
 
-            <p> <small> Created: <?php echo $upload->media_created->format(DATE_RFC850) ?> </small> </p>
+            <p> <small> Created: <?php echo $upload->media_created->format("l, d-M-y") ?> </small> </p>
     </fieldset>
 </div>
