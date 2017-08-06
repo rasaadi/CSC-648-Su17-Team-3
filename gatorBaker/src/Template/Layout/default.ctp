@@ -36,20 +36,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-	max-height: 100px;
-	background-image:url('https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
-	 background-size: auto 100%, 100%;
-	background-opacity: 0.5;
+/*	max-height: 100px;  */
+	  background-image:url('http://sfsuse.com/~su17g03/files/Uploads/media_data/jumbotron.jpg');
+	 background-size: cover;
+/*	background-opacity: 0.5;  */
     }
 
 	.jumbotron h2 {
-      margin-top: -50px;
+ /*     margin-top: -50px;  */
 	    }
 	.jumbotron h3 {
-      margin-top: -2px;
+ /*     margin-top: -2px;   */
 	    }
 	.jumbotron h4 {
-      margin-top: -10px;
+ /*     margin-top: -10px;  */
 	    }
    
     /* Add a gray background color and some padding to the footer */
