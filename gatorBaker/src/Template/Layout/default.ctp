@@ -169,7 +169,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             echo $this->Form->select(
     		    'field',
     		    ['Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
-                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
+            array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>

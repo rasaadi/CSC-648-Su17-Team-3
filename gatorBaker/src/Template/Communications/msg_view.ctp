@@ -8,19 +8,19 @@
 ?>
 
 <div class="View Message">
+        <fieldset>
+            <legend>View Message</legend>
 
-    <h1> View Message </h1>
+            <button><?= $this->Html->link('Message List', ['action' => 'msgList']) ?></button>
 
-    <button><?= $this->Html->link('Message List', ['action' => 'msgList']) ?></button>
+            <h4> Sender: <?= h($communication->msg_sender) ?> </h4>
 
-    <h4> Sender: <?= h($communication->msg_sender) ?> </h4>
+            <p> Recipient: <?= h($communication->msg_recipient) ?> </p>
 
-    <p> Recipient: <?= h($communication->msg_recipient) ?> </p>
+            <p> Subject: <?= h($communication->msg_subject) ?> </p>
 
-    <p> Subject: <?= h($communication->msg_subject) ?> </p>
+            <p> Message Body: <?= h($communication->msg_body) ?> </p>
 
-    <p> Message Body: <?= h($communication->msg_body) ?> </p>
-
-    <p> Sent Data: <?= $communication->created->format(DATE_RFC850) ?> </p>
-
+            <p> Sent Data: <?= $communication->created->format("l, d-M-y") ?> </p>
+        </fieldset>
 </div>

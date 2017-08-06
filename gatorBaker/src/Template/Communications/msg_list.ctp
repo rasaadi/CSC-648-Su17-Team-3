@@ -7,46 +7,68 @@
  */
 ?>
 
-<h1> Message List </h1>
-<button><?= $this->Html->link('Send Message', ['action' => 'msgSend']) ?></button>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Sender</th>
-        <th>Recipient</th>
-        <th>Subject</th>
-        <th>Sent On</th>
-        <th>Actions</th>
-    </tr>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-    <!-- Here's where we loop through our $communicationsManager query object, printing out message info -->
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
 
-    <?php foreach ($communications as $communication): ?>
-        <tr>
-            <td>
-                <?= $communication->id //ID ?>
-            </td>
+            tr:hover{background-color:#f5f5f5}
+        </style>
+    </head>
+    <body>
+        <div class="messageList">
 
-            <td>
-                <?= $communication->msg_sender ?>
-            </td>
+            <legend> Message List </legend>
 
-            <td>
-                <?= $communication->msg_recipient ?>
-            </td>
+            <button><?= $this->Html->link('Send Message', ['action' => 'msgSend']) ?></button>
+            <br></br>
 
-            <td>
-                <?= $communication->msg_subject ?>
-            </td>
+            <table>
+                <tr>
+                    <th>Sender</th>
+                    <th>Recipient</th>
+                    <th>Subject</th>
+                    <th>Sent On</th>
+                    <th>Actions</th>
+                </tr>
 
-            <td>
-                <?= $communication->created->format("l, d-M-y") // Created Date?>
-            </td>
+                <!-- Here's where we loop through our $communicationsManager query object, printing out message info -->
 
-            <td>
-                <?= $this->Html->link('View Message', ['action' => 'msgView', $communication->id]) // View Message action?>
-            </td>
+                <?php foreach ($communications as $communication): ?>
+                    <tr>
+                        <td>
+                            <?= $communication->msg_sender ?>
+                        </td>
 
-        </tr>
-    <?php endforeach ?>
-</table>
+                        <td>
+                            <?= $communication->msg_recipient ?>
+                        </td>
+
+                        <td>
+                            <?= $communication->msg_subject ?>
+                        </td>
+
+                        <td>
+                            <?= $communication->created->format("l, d-M-y") // Created Date?>
+                        </td>
+
+                        <td>
+                            <?= $this->Html->link('View Message', ['action' => 'msgView', $communication->id]) // View Message action?>
+                        </td>
+
+                    </tr>
+                <?php endforeach ?>
+            </table>
+        </div>
+    </body>
+</html>

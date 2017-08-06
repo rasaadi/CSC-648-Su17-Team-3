@@ -9,6 +9,7 @@
 <!-- $this->Html is the form helper object that contain code snippets for html elements like forms, links etc
     link() method generate html link
 -->
+
 <h1> Media Library </h1>
 <button><?= $this->Html->link('Upload Media', ['action' => 'add']) ?></button>
 <table>
@@ -57,4 +58,5 @@
     </tr>
     <?php endforeach ?>
 </table>
+
 

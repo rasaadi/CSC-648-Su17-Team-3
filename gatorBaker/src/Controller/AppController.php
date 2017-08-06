@@ -75,7 +75,24 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
-
-
     }
+      
+    public $components = array(
+        'Session',
+        'Auth' => array(
+            // setting for authorization
+            'authenticate' => array(
+                'Form' => array(
+                    // select model for authorization
+                   // 'userModel' => 'registered_users',
+                    // select field for authorization
+                    'fields' => array('username' => 'email' , 'password'=>'password'),
+                ),
+            ),
+            //
+            'loginError' => 'Invalid password and email',
+            //
+
+        ),
+    );
 }
