@@ -18,7 +18,12 @@ class CommunicationsController extends AppController
 
     }
 
-    public function msgSend(){
+    public function msgSend($ownerInfo,$mediaTitle ){
+
+        if (!($ownerInfo or $mediaTitle)) {
+            throw new NotFoundException(__('Recipient or Subject not found.'));
+        }
+
         $communication = $this->Communications->newEntity();
         $communication->created = date("Y-m-d H:i:s");
         $communication->modified = date("Y-m-d H:i:s");
@@ -27,7 +32,9 @@ class CommunicationsController extends AppController
 
             $communication = $this->Communications->patchEntity($communication, $this->request->getData());
 
-            $communication->msg_sender = $this->Auth->user('email'); //This track the login user as the sender
+            $communication->msg_sender = $this->Auth->user('email');
+            $communication->msg_recipient = $ownerInfo;
+            $communication->msg_subject = $mediaTitle;
 
             if ($this->Communications->save($communication)) {
 
@@ -44,7 +51,6 @@ class CommunicationsController extends AppController
     public function msgList(){
 
 //        $this->set('communications', $this->Communications->find('all'));
-//        $msgRecipient = $this->Auth->user('username');
         $msgRecipient = $this->Auth->user('email');
 
         $this->set('communications', $this->Communications->find('all', [
@@ -69,22 +75,4 @@ class CommunicationsController extends AppController
 
     }
 
-
-//    public function isAuthorized($user)
-//    {
-//        // All registered users can add articles
-//        if ($this->request->getParam('action') === 'msgSend') {
-//            return true;
-//        }
-//
-//        // The owner of an article can edit and delete it
-//        if (in_array($this->request->getParam('action'), ['msgList', 'msgView'])) {
-//            $communicationId = (int)$this->request->getParam('pass.0');
-//            if ($this->Communications->isOwnedBy($communicationId, $user['username'])) {
-//                return true;
-//            }
-//        }
-//
-//        return parent::isAuthorized($user);
-//    }
 }

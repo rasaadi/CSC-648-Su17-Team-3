@@ -55,8 +55,18 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		echo '<div class="panel-footer">Media Price: ';
 		echo $arr["price"];
 		echo '</div>';
-		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
-		echo "</div>";
+//		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+
+        $ownerInfo = $arr["owner"];
+        $mediaTitle = $arr["title"];
+        $mediaId = $arr["id"];
+        echo  $this->Html->Link(
+            'Concat Seller',
+            ['controller' => 'Communications', 'action' => 'msgSend', $ownerInfo, $mediaTitle],
+            ['class'=>"btn btn-success btn"]
+        );
+
+        echo "</div>";
 		echo "</div>";
 	}
 	echo "</div>";
