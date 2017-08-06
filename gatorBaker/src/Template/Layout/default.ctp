@@ -98,7 +98,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <div class="jumbotron">
 
   <div class="container text-center">
-    <h2>Stock Photo Marketplace</h2>      
+    <h2> <a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand" style="align:center;vertical-align:middle;">
+    	<img src="http://i.imgur.com/VMJC1sB.png"></a>
+    	Stock Photo Marketplace
+    </h2>      
     <h3>SFSU Computer Science 648 Project Team 03</h3>
    <h4>For Educational Use Only.</h4>
   </div>
@@ -118,7 +121,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-left:0px;padding-left:0px">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -127,7 +130,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </button>
       <a class="navbar-brand" href="#"></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar" style="margin-left:0px;padding-left:0px">
       <ul class="nav navbar-nav" style="width:100%">
         <?php 
         	if(isset($ThisUser)){
@@ -141,7 +144,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 //        			echo '<a href="Home">MyProfile</a></li>';
         	} 
 		?>
-		<a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand"><img src="http://i.imgur.com/VMJC1sB.png"></a>        
+		        
 <!--        
 		<li class="active">
 			<?php
@@ -200,9 +203,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!-- if login, show logout button; else show login button.	-->	
 
 		<?php 
+        	echo '<li class="active"><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
         	if(!isset($ThisUser)){
         		echo '<li class="active">';
-			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
         		echo $this->Html->link(
 					'Login',
 					'/users/login',
@@ -211,8 +214,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				echo "</li>";
 		    } else{
 		    	echo '<li class="active">';
-			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
-
 		    	echo $this->Html->link(
                         'Logout',
                         '/users/logout',
