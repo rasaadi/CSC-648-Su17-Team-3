@@ -19,14 +19,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-
-
-
-
-
   <title>CSC648 2017 summer team03 project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,8 +36,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-	background-size: 10% 10%;
+	max-height: 100px;
+	background-image:url('https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+	 background-size: auto 100%, 100%;
+	background-opacity: 0.5;
     }
+
+	.jumbotron h2 {
+      margin-top: -50px;
+	    }
+	.jumbotron h3 {
+      margin-top: -2px;
+	    }
+	.jumbotron h4 {
+      margin-top: -10px;
+	    }
    
     /* Add a gray background color and some padding to the footer */
     footer {
@@ -55,6 +60,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     table {
 	font: 60px, arial, serif;
 	}
+
+	.navbar-brand {
+  padding: 0px; 
+ 
+
+}
   </style>
 </head>
 <body>
@@ -87,12 +98,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <div class="jumbotron">
 
   <div class="container text-center">
-    <h1>Stock Photo Marketplace</h1>      
-    
-<p>SFSU 648 TEAM 03</p>
-   <p>For Educational Use Only.</p>
+    <h2>Stock Photo Marketplace</h2>      
+    <h3>SFSU Computer Science 648 Project Team 03</h3>
+   <h4>For Educational Use Only.</h4>
   </div>
 </div>
+
+<?php
+
+	if($GLOBALS['userme']){
+//		echo $GLOBALS['userme'] . "<br/>";
+		$ThisEmail = $GLOBALS['userme'];
+		$ThisUser = strstr($ThisEmail,'@',true);
+//		echo $ThisUser;
+	}
+
+?>
+
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -105,8 +128,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" style="width:80%">
-        <li class="active"><a href="Home">Home</a></li>  
+      <ul class="nav navbar-nav" style="width:100%">
+        <?php 
+        	if(isset($ThisUser)){
+        		echo '<li class="active"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';  
+		    } else{
+		    	echo '<li class="active" style="margin-right:20%;"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';
+		    }
+			if(isset($ThisUser)){
+        			echo '<li class="active" style="margin-right:15%;">';
+					echo $this->Html->link('MyProfile', ['controller' => 'Profile', 'action' => 'index']);
+//        			echo '<a href="Home">MyProfile</a></li>';
+        	} 
+		?>
+		<a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand"><img src="http://i.imgur.com/VMJC1sB.png"></a>        
+<!--        
 		<li class="active">
 			<?php
 			echo $this->Html->link(
@@ -115,48 +151,40 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				['class' => 'button', 'target' => '_blank']);
 			?>
 		</li>
-		<li class="active" style="margin-right:15%;">
-			<?php
-			echo $this->Html->link(
-				'Login',
-				'/users/login',
-				['class' => 'button', 'target' => '_blank']
-			);
-			?>
-        </li>
-		
-        <li style='width:50%;'>
+-->		
+
+        <li style='width:40%;'>
         <?php
-// drop down and search bar            
+// drop down and search bar    
+/*   if($errors){
+      foreach($errors as $error)
+      foreach($error as $msg)
+      
+      echo '<font color = "red">'.$msg.'</font>l';
+   } else {
+      echo "No errors.";
+   }
+*/        
 	        echo $this->Form->create("Search",array('url'=>'/SearchID','class'=>'form-inline','style'=>'margin:10px;'));
             echo $this->Form->select(
     		    'field',
-    		    ['Filter Search By Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
-                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
+    		    ['Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
+            array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
-   	        echo $this->Form->input('theTitle',array('label'=>' ', 'maxlength'=>'30', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
-     //   $validator = new Validator();
-
-// $validator
-   // ->requirePresence('theTitle')
-    //->add('theTitle', [
-		//		'rule' => array('custom', '/^[a-z0-9 ]*$/i'),
-		//		'message'  => 'Alphanumeric characters with spaces only'
-    //]);
-
+   	        echo $this->Form->input('theTitle',array('label'=>' ', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>
         </li>
-        <li>
+	
+        <li style="margin-right:20%">
         <?php    
    	        echo $this->Form->button('Search',array('class'=>'btn btn-warning','style'=>'margin:10px;'));
 			echo $this->Form->end();
 		?>
 		</li>
 		
-	
+<!--	upload function is shown only in the user profile
 		<li>
-		<?php
-// create another form for upload button			
+		<?php			
 			echo $this->Form->create("Upload",array('url'=>'/Uploads','class'=>'form-inline','style'=>'margin:10px;'));
 		?>
 		</li>
@@ -166,8 +194,58 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    	        echo $this->Form->end();
         ?>	
         </li>
+-->
 
-        
+ 
+<!-- if login, show logout button; else show login button.	-->	
+
+		<?php 
+        	if(!isset($ThisUser)){
+        		echo '<li class="active">';
+			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
+        		echo $this->Html->link(
+					'Login',
+					'/users/login',
+					['class' => 'button']
+				);  
+				echo "</li>";
+		    } else{
+		    	echo '<li class="active">';
+			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
+
+		    	echo $this->Html->link(
+                        'Logout',
+                        '/users/logout',
+                        ['class' => 'button']
+                );
+                echo "</li>";
+		    }
+		?>  
+
+
+<!--
+		<li class="active">
+			<?php
+			echo $this->Html->link(
+				'Login',
+				'/users/login',
+				['class' => 'button', 'target' => '_blank']
+			);
+			?>
+        </li>    
+-->        
+
+<!-- add a logout button        
+        <li class="active" style="margin-right:5%;">
+                <?php
+                echo $this->Html->link(
+                        'Logout',
+                        '/users/logout',
+                        ['class' => 'button']
+                );
+                ?>
+        </li>
+-->             
 
     </ul>
 </div>

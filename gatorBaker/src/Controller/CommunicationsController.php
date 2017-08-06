@@ -27,7 +27,7 @@ class CommunicationsController extends AppController
 
             $communication = $this->Communications->patchEntity($communication, $this->request->getData());
 
-            $communication->msg_sender = $this->Auth->user('username'); //This track the login user as the sender
+            $communication->msg_sender = $this->Auth->user('email'); //This track the login user as the sender
 
             if ($this->Communications->save($communication)) {
 
@@ -43,7 +43,14 @@ class CommunicationsController extends AppController
 
     public function msgList(){
 
-        $this->set('communications', $this->Communications->find('all'));
+//        $this->set('communications', $this->Communications->find('all'));
+//        $msgRecipient = $this->Auth->user('username');
+        $msgRecipient = $this->Auth->user('email');
+
+        $this->set('communications', $this->Communications->find('all', [
+//            'conditions' => ['Communications.msg_recipient' => 'rs']]
+                'conditions' => ['Communications.msg_recipient' => $msgRecipient]]
+        ));
 
     }
 

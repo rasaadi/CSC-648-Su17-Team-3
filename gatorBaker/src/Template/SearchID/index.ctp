@@ -58,93 +58,151 @@ div.watermark p
 
     <?php 
 	
-	
-	
-	if (count($res) > 0) 
-	{
-		Echo "<html>";
-		echo '<div class="container">';
-		echo '<div class="row">';
+// check if not valid, $res will not be set
+//	echo $cdt2;
+	if($cdt2==0){
+		echo '<h2> The input cannot be empty, please try again! </h2>';
+	} else if($cdt2==1){
+		echo '<h2> The input can only be alphanumberic characters with spaces, please try again! </h2>';
+	} else if($cdt2==2){
+		echo '<h2> The maximum length is 30 characters, please try again! </h2>';
+	} else{
+		if (count($res) > 0) 
+		{
+			Echo "<html>";
+			echo '<div class="container">';
+			echo '<div class="row">';
+        	foreach($res as $arr){
+				Echo "<div class='col-sm-4'>";
+				if ($arr["media_category"] ==1) {
+					Echo "<div class='panel panel-info'>";
+				}
+				if ($arr["media_category"] ==2) {
+					Echo "<div class='panel panel-danger'>";
+				} 
 			
+				if ($arr["media_category"] ==3) {
+					Echo "<div class='panel panel-success'>";
+				} 
 			
-        foreach($res as $arr){
-			Echo "<div class='col-sm-4'>";
+				if ($arr["media_category"] ==4) {
+					Echo "<div class='panel panel-primary'>";
+				}
 			
-			if ($arr["media_category"] ==1) {
-				Echo "<div class='panel panel-info'>";
-			}
-			
-			if ($arr["media_category"] ==2) {
-				Echo "<div class='panel panel-danger'>";
-			} 
-			
-			if ($arr["media_category"] ==3) {
-				Echo "<div class='panel panel-success'>";
-			} 
-			
-			if ($arr["media_category"] ==4) {
-				Echo "<div class='panel panel-primary'>";
-			}
-			
-			if ($arr["media_category"] ==5) {
-				Echo "<div class='panel panel-default'>";
-			} 
+				if ($arr["media_category"] ==5) {
+					Echo "<div class='panel panel-default'>";
+				} 
   			
 // construct the full path to the image, use substr function to remove the 'webroot\'		
-			$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+				$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
 			
-			Echo "<div class='panel-heading'>&nbsp</div>";
+				Echo "<div class='panel-heading'>&nbsp</div>";
 //			echo $arr["thumbnail"];
-			echo '<p id="image-display">';
-			echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
-			echo '</p>';
-			echo '<div class="watermark">';
-			echo '<p>Stock Photo Marketplace';
-			echo 'Copyright 2017</p></div>';
-			echo '<div class="panel-footer">Media Category: ';
-			echo $arr["media_category"];
-			echo '</div>';
-			echo '<div class="panel-footer">Media Title: ';
-			echo $arr["title"];
-			echo '</div>';
-			echo '<div class="panel-footer">Media description: ';
-			echo $arr["description"];
-			echo '</div>';
-			echo '<div class="panel-footer">Media Price: ';
-			echo $arr["price"];
-			echo '</div>';
-			echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
-			echo "</div>";
-			echo "</div>";
+				echo '<p id="image-display">';
+				echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+				echo '</p>';
+				echo '<div class="watermark">';
+				echo '<p>Stock Photo Marketplace';
+				echo 'Copyright 2017</p></div>';
+				echo '<div class="panel-footer">Media Category: ';
+				echo $arr["media_category"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Title: ';
+				echo $arr["title"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media description: ';
+				echo $arr["description"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Price: ';
+				echo $arr["price"];
+				echo '</div>';
+	//		echo '<h2 class="text-center"><a href="/~su17g03/communications/msg-send" role="button" class="btn btn-primary btn-lg" ">Contact Seller</a></h1>';
+				echo '<h2 class="text-center">';
+				echo $this->Html->link('Contact Seller', "/communications/msg-send",['class'=>"btn btn-primary btn-lg"]);
+				echo '</h2>';
+				echo '<h2 class="text-center">';
 
+// make an invisible form to pass the owner information to message system.
 
-			
-			
-			
-			
-			
-			
-/*  old php table cell format to display search results
+/*			 
+			echo $this->Form->create('Message',array('action'=>'/communications/msg-send'));
+			echo $this->Form->input('msg_recipient', array('label' => 'Recipient'));
+			echo $this->Form->input('msg_subject', array('label' => 'Subject'));
+			echo $this->Form->input('msg_body', array('label' => 'Message Body', 'rows' => '10'));
+			echo $this->Form->button('Contact Seller');
+			echo $this->Form->end();
+*/
+				echo '</h2>';
+				echo '<h2 class="text-center"><a href="';
+				$full_path2 = '~su17g03' . $full_path;
+				echo substr($full_path2,9);
+				echo '"class="btn btn-success" target="_blank">DOWNLOAD</a>';
+				echo "</div>";
+				echo "</div>";
 
-            $str1= 'Title: ' . $arr["title"] . '<br/> Media ID: ' . $arr["id"] .  '<br/> Description: ' . $arr["description"] .'<br/> Category: ' . $arr["media_category"] .  '<br/> Owner: ' . $arr["owner"] . '<br/> Price: ' . $arr["price"] . '<br/> Media Created: ' . $arr["media_created"];
-//            echo $str1;
-            echo $this->Html->tableCells([
-                [
-                    [($this->Html->image($arr["thumbnail"], ['class' =>'result'], ['alt' => 'picture not availabe for now'])), ['class' => 'pic'], 'style'=>'width:100%;height:220px;'], 
-                    [$str1, ['class'=>'result'] ],
-                    [($this->Html->image('order_buttom.jpg', ['class' =>'order'], ['alt' => 'picture not availabe for now'])), ['class' => 'order']], 
-                ]
-                ]);
-*/				
 		}
 		
 		echo "</div>";
 		echo "</div>";
 		
-	} else {
-		echo "0 results found please check spelling or try search again";
+		} else {
+			echo "<h2> Sorry, 0 results found. But you may be interested in the following: </h2>";
+// Then show everything we have in the database
+			$connection = ConnectionManager::get('default');
+			$results = $connection->execute('SELECT * FROM MediaInfo')->fetchAll('assoc');
+			Echo "<html>";
+			echo '<div class="container">';
+			echo '<div class="row">';
+			foreach($results as $arr){
+				Echo "<div class='col-sm-4'>";
+				if ($arr["media_category"] ==1) {
+					Echo "<div class='panel panel-info'>";
+				}
+			
+				if ($arr["media_category"] ==2) {
+					Echo "<div class='panel panel-danger'>";
+				} 
+				
+				if ($arr["media_category"] ==3) {
+					Echo "<div class='panel panel-success'>";
+				} 
+			
+				if ($arr["media_category"] ==4) {
+					Echo "<div class='panel panel-primary'>";
+				}
+			
+				if ($arr["media_category"] ==5) {
+					Echo "<div class='panel panel-default'>";
+				} 
+
+// construct the full path to the image, use substr function to remove the 'webroot\'		
+				$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
+				Echo "<div class='panel-heading'>&nbsp</div>";
+				echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
+				echo '<div class="panel-footer">Media Category: ';
+				echo $arr["media_category"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Title: ';
+				echo $arr["title"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media description: ';
+				echo $arr["description"];
+				echo '</div>';
+				echo '<div class="panel-footer">Media Price: ';
+				echo $arr["price"];
+				echo '</div>';
+				echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+				echo '<h2 class="text-center"><a href="';
+				$full_path2 = '~su17g03' . $full_path;
+				echo substr($full_path2,9);
+				echo '"class="btn btn-success" target="_blank"	>DOWNLOAD</a>';
+				echo "</div>";
+				echo "</div>";
+			}
+			echo "</div>";
+			echo "</div>";
+		}
 	}
-	
 	
 
     ?>

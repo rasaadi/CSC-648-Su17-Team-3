@@ -52,10 +52,15 @@ class AppController extends Controller
         //    'logoutRedirect' => array('action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home')
         );
         $this->Auth->allow();
+        
+        // set a global variable userme for the logged in user.
+        $currUser = $this->Auth->user('email');
+ //       echo $currUser;
+        $GLOBALS['userme'] = $currUser;
+        
 
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
-        $this->Auth->allow();
     }
     /**
      * Before render callback.
@@ -71,8 +76,7 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
-
-
+      
     public $components = array(
         'Session',
         'Auth' => array(
@@ -92,4 +96,3 @@ class AppController extends Controller
         ),
     );
 }
-

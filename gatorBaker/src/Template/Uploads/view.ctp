@@ -31,8 +31,9 @@
 
             <p> <strong>Media Data:</strong> <?= h($upload->media_data) ?> </p>
 
-            <p> <strong>Owner:</strong> <?= h($upload->owner) ?> </p>
+            <h4> Owner: <?= h($upload->owner) ?> </h4>
 
             <p> <small> Created: <?php echo $upload->media_created->format("l, d-M-y") ?> </small> </p>
+
     </fieldset>
 </div>
