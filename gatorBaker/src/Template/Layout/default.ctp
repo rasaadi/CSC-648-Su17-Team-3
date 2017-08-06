@@ -97,7 +97,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <div class="jumbotron">
   <div class="container">
-    <h2 style="text-align:center"> <img src="http://i.imgur.com/VMJC1sB.png"> Stock Photo Marketplace </h2>      
+    <h2 style="text-align:center"> <img src="http://i.imgur.com/ZFfGqQy.png" align="bottom"> 
+    	&nbsp
+    	Stock Photo Marketplace
+    	&nbsp
+    	<img src="http://i.imgur.com/ZFfGqQy.png" align="bottom">
+    </h2>      
     <h3 style="text-align:center">SFSU Computer Science 648 Project Team 03</h3>
    <h4 style="text-align:center">For Educational Use Only.</h4>
   </div>
