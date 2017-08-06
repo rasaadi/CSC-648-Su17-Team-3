@@ -96,14 +96,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 <div class="jumbotron">
-
-  <div class="container text-center">
-    <h2> <a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand" style="align:center;vertical-align:middle;">
-    	<img src="http://i.imgur.com/VMJC1sB.png"></a>
-    	Stock Photo Marketplace
-    </h2>      
-    <h3>SFSU Computer Science 648 Project Team 03</h3>
-   <h4>For Educational Use Only.</h4>
+  <div class="container">
+    <h2 style="text-align:center"> <img src="http://i.imgur.com/VMJC1sB.png"> Stock Photo Marketplace </h2>      
+    <h3 style="text-align:center">SFSU Computer Science 648 Project Team 03</h3>
+   <h4 style="text-align:center">For Educational Use Only.</h4>
   </div>
 </div>
 
