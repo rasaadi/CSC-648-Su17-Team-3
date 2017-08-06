@@ -169,7 +169,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             echo $this->Form->select(
     		    'field',
     		    ['Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
-            array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>
@@ -312,7 +312,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div class="col-sm-9">
               <h4>Terms of Agreement</h4>
-              <a href="http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/Milestones/Milestone2/CSC648-848%20Section%2001%20Summer%202017%20Milestone2%20Team03.pdf" target="_blank">Download PDF</a>
+              <a href="https://github.com/rasaadi/CSC-648-Su17-Team-3/blob/master/Milestones/Milestone4/CSC648-848%20Section%2001%20Summer%202017%20Milestone4%20Team03.pdf" target="_blank">Download PDF</a>
 
             </div>
           </div>
@@ -345,7 +345,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?/button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         <h3 id="myModalLabel">We'd Love to Hear From You</h3>
       </div>
       <div class="modal-body">
