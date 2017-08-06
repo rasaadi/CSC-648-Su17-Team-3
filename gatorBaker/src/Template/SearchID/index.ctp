@@ -70,6 +70,7 @@ div.watermark p
 		if (count($res) > 0) 
 		{
 			Echo "<html>";
+            echo "<div style = 'font-size:250%'; color:#000000'>" . count($res) . " Results found. </div>";
 			echo '<div class="container">';
 			echo '<div class="row">';
         	foreach($res as $arr){
