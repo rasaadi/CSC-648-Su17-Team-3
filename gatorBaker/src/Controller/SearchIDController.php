@@ -20,10 +20,11 @@ class SearchIDController extends AppController{
         //       echo "$in"."<br/>";
 //		echo "$field"."<br/>";
 	$cdt = -1;
-	if(strlen($in) == 0){
+	$arrayCount = 0;
+	if(strlen($in) == 0 && empty($field)){
 		$cdt = 0;
 	}		
-       	else if((!preg_match("/^([-a-z\-0-9_ ])+$/i", $in))) {
+       	else if((!preg_match("/^([-a-z\-0-9_ ])+$/i", $in) && strlen($in) > 0)) {
 		$cdt = 1;
         }
 	elseif(strlen($in)>30){
