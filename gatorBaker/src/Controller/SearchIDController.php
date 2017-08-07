@@ -15,6 +15,7 @@ class SearchIDController extends AppController{
                 echo "<br/>";
         */
         $in =  $this->request->getData('theTitle');
+		$in = trim($in);
         $field = $this->request->getData('field');
         $connection = ConnectionManager::get('default');
         //       echo "$in"."<br/>";
