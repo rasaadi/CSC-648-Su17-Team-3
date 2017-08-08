@@ -36,7 +36,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-/*	max-height: 100px;  */
+	max-height: 25%;  
 	  background-image:url('http://sfsuse.com/~su17g03/files/Uploads/media_data/jumbotron.jpg');
 	 background-size: cover;
 /*	background-opacity: 0.5;  */
@@ -141,7 +141,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		    }
 			if(isset($ThisUser)){
         			echo '<li class="active" style="margin-right:15%;">';
-					echo $this->Html->link('MyProfile', ['controller' => 'Profile', 'action' => 'index']);
+					echo $this->Html->link('Dashboard', ['controller' => 'Profile', 'action' => 'index']);
 //        			echo '<a href="Home">MyProfile</a></li>';
         	} 
 		?>
@@ -271,13 +271,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <div class="row py-2">
             <div class="col-sm-3 hidden-md-down">
 
-              <a class="bg-circle bg-info" href=About/aboutus>
+              <a class="bg-circle bg-info" href="http://sfsuse.com/~su17g03/about/aboutus">
                 <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-sm-9">
-              <h4>Info</h4>
-              About us.
+             <h4><a href="http://sfsuse.com/~su17g03/about/aboutus" data-toggle="modal">About Us</a></h4>
             </div>
           </div>
           <!-- row end -->
@@ -294,7 +293,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div class="col-sm-9">
 	<h4><a href="#contactUs" data-toggle="modal">Contact Us</a></h4>
-              <p>Please send any comments or concerns to the devs?</p>
+              <p>Please send any comments or concerns to the devs</p>
             </div>
           </div>
           <!-- row end -->
@@ -343,26 +342,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   </div>
 <br>
 
-<div id="contactUs" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
-          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message to us here.." data-placement="top" data-trigger="manual"></textarea></div>
-         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 </footer>
 <script>
 gapi.analytics.ready(function() {
