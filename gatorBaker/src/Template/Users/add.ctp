@@ -1,12 +1,43 @@
-<div class="users form">
-<?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('Add User') ?></legend>
-        <?= $this->Form->control('email') ?>
-        <?= $this->Form->control('password') ?>
-	      <?= $this->Form->control('confirm_password',['type' => 'password']) ?>
-        <?= $this->Form->input('accept_terms', array('type'=>'checkbox', 'label'=>'By accessing the Site, you agree to engage in only personal, noncommercial uses of Site Content or uses of Site Content for instructional purposes.')) ?>
-   </fieldset>
-<?= $this->Form->button(__('Submit')); ?>
-<?= $this->Form->end() ?>
-</div>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: rafsan
+ * Date: 7/21/2017
+ * Time: 11:56 PM
+ */
+?>
+
+<style>
+uploadform{
+    display: inline;
+}
+</style>
+    <h1> Upload Media </h1>
+	<label class="col-sm-2 control-label" for="uploadform">
+
+<?php
+
+    echo $this->Form->create($upload, ['enctype' => 'multipart/form-data']);
+
+        echo $this->Form->input('title', ['label' => 'Title']);
+
+        echo $this->Form->input('description', ['label' => 'Description', 'rows' => '3']);
+
+        echo $this->Form->input('media_category', ['label' => 'Category ']);
+
+        echo $this->Form->input('price', ['label' => 'Price($)']);
+		
+		echo $this->Form->input('thumbnail', ['label' => 'thumbnail']);
+
+        // Following is the upload field (photo)
+        //echo $this->Form->file('submittedfile');
+        echo $this->Form->control('media_data', [
+            'label' => 'Select Media ',
+            'type' => 'file'
+        ]);
+
+        echo $this->Form->button(__('Save Media'));
+
+    echo $this->Form->end();
+
+?>
