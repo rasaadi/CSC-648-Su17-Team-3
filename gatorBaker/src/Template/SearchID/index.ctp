@@ -125,10 +125,10 @@ div.watermark p
 					Echo "Landscape";
 				}
 				if ($arr["media_category"] ==2) {
-					Echo "Background";
+					Echo "Nature";
 				} 
 				if ($arr["media_category"] ==3) {
-					Echo "Nature";
+					Echo "Background";
 				} 
 	
 				if ($arr["media_category"] ==4) {
