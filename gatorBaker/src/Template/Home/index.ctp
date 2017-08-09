@@ -84,10 +84,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			Echo "Landscape";
 		}
 		if ($arr["media_category"] ==2) {
-			Echo "Background";
+			Echo "Nature";
 		} 
 		if ($arr["media_category"] ==3) {
-			Echo "Nature";
+			Echo "Background";
 		} 
 	
 		if ($arr["media_category"] ==4) {
@@ -122,9 +122,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         );
 	echo '</div>';
 	
+
 	echo '</h2>';
 	echo '<h2 class="text-center"><a href="';
-	$full_path2 = '~su17g03' . $full_path;
+	$full_path2 = '~su17g03'  . $full_path;
 	echo substr($full_path2,9);
 	echo '"class="btn btn-success" target="_blank">DOWNLOAD</a>';
         }
