@@ -216,7 +216,24 @@ div.watermark p
 				Echo "<div class='panel-heading'>&nbsp</div>";
 				echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
 				echo '<div class="panel-footer">Media Category: ';
-				echo $arr["media_category"];
+//				echo $arr["media_category"];
+				
+				if ($arr["media_category"] ==1) 
+				{
+					Echo "Landscape";
+				}
+				if ($arr["media_category"] ==2) {
+					Echo "Nature";
+				} 
+				if ($arr["media_category"] ==3) {
+					Echo "Background";
+				} 
+	
+				if ($arr["media_category"] ==4) {
+					Echo "Portrait";
+				}
+				
+
 				echo '</div>';
 				echo '<div class="panel-footer">Media Title: ';
 				echo $arr["title"];
