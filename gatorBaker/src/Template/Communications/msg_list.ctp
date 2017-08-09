@@ -29,6 +29,9 @@
         <div class="messageList">
 
             <legend> Message List </legend>
+
+ <!--           <button><?= $this->Html->link('Send Message', ['action' => 'msgSend']) ?></button>  -->
+
             <table>
                 <tr>
                     <th>Sender</th>
