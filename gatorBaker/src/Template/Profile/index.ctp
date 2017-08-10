@@ -9,12 +9,12 @@
 	
 // generate link to upload page	
 	echo $this->Form->create("Uploads",array('url'=>'/Uploads'));
-	echo $this->Form->button('Manage my media',array('class'=>'btn btn-warning'));
+	echo $this->Form->button('Media Manager',array('class'=>'btn btn-warning'));
 	echo $this->Form->end();
 	
 //generate link to message page
 	echo $this->Form->create("Message",array('url'=>'/Communications/msgList'));
-	echo $this->Form->button('Message',array('class'=>'btn btn-warning'));
+	echo $this->Form->button('Message Manager',array('class'=>'btn btn-warning'));
 	echo $this->Form->end();
 
 ?>

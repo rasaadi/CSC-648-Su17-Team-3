@@ -6,34 +6,22 @@
  * Time: 11:57 PM
  */
 ?>
-<!---->
-<!--<label class="col-sm-2 control-label" for="mediaView">-->
-<!--    <style>-->
-<!--        mediaView{-->
-<!--            display: inline;-->
-<!--        }-->
-<!--    </style>-->
-<!--<label>-->
 
-<div class="view media">
-    <fieldset>
+<h1> View Media </h1>
 
-        <legend>View Media</legend>
-<!--        <label class="col-sm-2 control-label" for="mediaView">-->
+<h4> Title: <?= h($upload->title) ?> </h4>
 
-            <p> <strong>Title:</strong> <?= h($upload->title) ?> </p>
+<p> Description: <?= h($upload->description) ?> </p>
 
-            <p> <strong>Description:</strong> <?= h($upload->description) ?> </p>
+<p> Category: <?= h($upload->media_category) ?> </p>
 
-            <p> <strong>Category:</strong> <?= h($upload->media_category) ?> </p>
+<p> Price($): <?= h($upload->price) ?> </p>
 
-            <p> <strong>Price($):</strong> <?= h($upload->price) ?> </p>
+<p> Media Data: <?= h($upload->media_data) ?> </p>
 
-            <p> <strong>Media Data:</strong> <?= h($upload->media_data) ?> </p>
+<p> Thumbnail: <?= h($upload->thumbnail) ?> </p>
 
-            <h4> Owner: <?= h($upload->owner) ?> </h4>
+<h4> Owner: <?= h($upload->owner) ?> </h4>
 
-            <p> <small> Created: <?php echo $upload->media_created->format("l, d-M-y") ?> </small> </p>
+<p> <small> Created: <?php echo $upload->media_created->format("l, d-M-y") ?> </small> </p>
 
-    </fieldset>
-</div>

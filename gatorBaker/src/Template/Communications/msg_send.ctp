@@ -7,12 +7,11 @@
  */
 ?>
 
-<div class="Send Message">
+<div class="Send Message" xmlns:here="http://www.w3.org/1999/xhtml">
     <?= $this->Form->create($communication) ?>
     <fieldset>
         <legend><?= __('Send Message') ?></legend>
-        <?= $this->Form->input('msg_recipient', ['label' => 'Recipient']); ?>
-        <?= $this->Form->input('msg_subject', ['label' => 'Subject']); ?>
+        <p><strong> Please write your message here:</strong></p>
         <?= $this->Form->input('msg_body', ['label' => 'Message Body', 'rows' => '10']); ?>
     </fieldset>
     <?= $this->Form->button(__('Send')); ?>

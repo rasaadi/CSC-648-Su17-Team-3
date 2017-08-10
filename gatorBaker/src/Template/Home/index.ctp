@@ -25,8 +25,23 @@ endif;
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
+<style>
+#image-display
+{
+ pointer-events: none;
+}
+</style>
 
+<?php
 
+	if($GLOBALS['userme']){
+//		echo $GLOBALS['userme'] . "<br/>";
+		$ThisEmail = $GLOBALS['userme'];
+		$ThisUser = strstr($ThisEmail,'@',true);
+//		echo $ThisUser;
+	}
+
+?>
 
 
 <?php
@@ -40,11 +55,49 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 // construct the full path to the image, use substr function to remove the 'webroot\'		
 		$full_path = substr($arr["media_dir"],7) . $arr["media_data"];
 		Echo "<div class='col-sm-4'>";
-		Echo "<div class='panel panel-primary'>";
+		if ($arr["media_category"] ==1) 
+		{
+			Echo "<div class='panel panel-info'>";
+		}
+		if ($arr["media_category"] ==2) {
+			Echo "<div class='panel panel-danger'>";
+		} 
+		if ($arr["media_category"] ==3) {
+			Echo "<div class='panel panel-success'>";
+		} 
+	
+		if ($arr["media_category"] ==4) {
+			Echo "<div class='panel panel-primary'>";
+		}
+			
+		if ($arr["media_category"] ==5) {
+			Echo "<div class='panel panel-default'>";
+		}
+
 		Echo "<div class='panel-heading'>&nbsp</div>";
+		echo '<p id="image-display">';
+
 		echo $this->Html->image($full_path, array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px'));
 		echo '<div class="panel-footer">Media Category: ';
-		echo $arr["media_category"];
+		if ($arr["media_category"] ==1) 
+		{
+			Echo "Landscape";
+		}
+		if ($arr["media_category"] ==2) {
+			Echo "Background";
+		} 
+		if ($arr["media_category"] ==3) {
+			Echo "Nature";
+		} 
+	
+		if ($arr["media_category"] ==4) {
+			Echo "Portrait";
+		}
+			
+		
+
+
+		
 		echo '</div>';
 		echo '<div class="panel-footer">Media Title: ';
 		echo $arr["title"];
@@ -55,10 +108,31 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		echo '<div class="panel-footer">Media Price: ';
 		echo $arr["price"];
 		echo '</div>';
-		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
-		echo "</div>";
-		echo "</div>";
+//		echo '<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>';
+	if(isset($ThisUser))
+	{
+        $ownerInfo = $arr["owner"];
+        $mediaTitle = $arr["title"];
+        $mediaId = $arr["id"];
+	echo '<div class="text-center">';
+        echo  $this->Html->Link(
+            'Contact Seller',
+            ['controller' => 'Communications', 'action' => 'msgSend', $ownerInfo, $mediaTitle],
+            ['class'=>"btn btn-success btn"]
+        );
+	echo '</div>';
+	
+
+	echo '</h2>';
+	echo '<h2 class="text-center"><a href="';
+	$full_path2 = '~su17g03'  . $full_path;
+	echo substr($full_path2,9);
+	echo '"class="btn btn-success" target="_blank">DOWNLOAD</a>';
+        }
+	echo "</div>";
+	echo "</div>";
 	}
+
 	echo "</div>";
 	echo "</div>";
 
@@ -67,92 +141,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>	
 	
 	
-<!--
-<html lang="en">
 
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading"> &nbsp</div>
-	<?php echo $this->Html->image('BMW-M2-lead.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: Car</div>
-	<div class="panel-footer">Media Title: BMW</div>
-	<div class="panel-footer">Media description: a sports car</div>
-	<div class="panel-footer">Media Price: $1.02</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-    
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('images (2).jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: View</div>
-	<div class="panel-footer">Media Title: grassland</div>
-	<div class="panel-footer">Media description: a grassland and a lake</div>
-	<div class="panel-footer">Media Price: $1.03</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('Bay20Bridge20and20San20Francisco.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px')); ?>
-        <div class="panel-footer">Media Category: City</div>
-	<div class="panel-footer">Media Title: San Francisco</div>
-	<div class="panel-footer">Media description: night view of SF</div>
-	<div class="panel-footer">Media Price: $1.01</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('pexels-photo-186077.jpeg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: House</div>
-	<div class="panel-footer">Media Title: Nice house</div>
-	<div class="panel-footer">Media description: a big house</div>
-	<div class="panel-footer">Media Price: $1.04</div>
-	<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('flower-purple-lical-blosso.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: Flower</div>
-	<div class="panel-footer">Media Title: Flower</div>
-	<div class="panel-footer">Media description: Pink Blossom</div>
-	<div class="panel-footer">Media Price: $1.05</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">&nbsp</div>
-	<?php echo $this->Html->image('slide09.jpg', array('class' =>'img-responsive', 'alt' => 'cover_picture', 'style'=>'width:100%;height:220px;')); ?>
-        <div class="panel-footer">Media Category: Animal</div>
-	<div class="panel-footer">Media Title: Two dogs</div>
-	<div class="panel-footer">Media description: cute dogs</div>
-	<div class="panel-footer">Media Price: $1.06</div>
-<h1 class="text-center"><a href="#contactSeller" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Seller</a></h1>
-      </div>
-    </div>
-  </div>
-</div><br><br>
-
--->
 
     
 <?php
@@ -188,40 +177,5 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
   
 </body>
-<div id="contactSeller" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h3 id="myModalLabel">Please contact your seller directly about your order</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
-          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-          <div class="form-group"><label>Owner:</label>
-		<div class="input-group">
-   		 <?php echo $arr["owner"]; ?>
-   		 </div>
-		</div>
-	<div class="form-group"><label>Media ID:</label>
-		<div class="input-group">
-   		 <?php echo $arr["id"]; ?>
-   		 </div>
-		</div>
-	<div class="form-group"><label>Price:</label>
-		<div class="input-group">
-   		 <?php echo $arr["price"]; ?>
-   		 </div>
-		</div>
-	<div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
-	<div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
 </html>
 

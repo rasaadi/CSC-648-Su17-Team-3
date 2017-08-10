@@ -30,8 +30,7 @@
 
             <legend> Message List </legend>
 
-            <button><?= $this->Html->link('Send Message', ['action' => 'msgSend']) ?></button>
-            <br></br>
+ <!--           <button><?= $this->Html->link('Send Message', ['action' => 'msgSend']) ?></button>  -->
 
             <table>
                 <tr>

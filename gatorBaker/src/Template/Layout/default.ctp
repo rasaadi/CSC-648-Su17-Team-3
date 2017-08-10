@@ -36,20 +36,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-	max-height: 100px;
-	background-image:url('https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
-	 background-size: auto 100%, 100%;
-	background-opacity: 0.5;
+	max-height: 25%;  
+	  background-image:url('http://sfsuse.com/~su17g03/files/Uploads/media_data/jumbotron.jpg');
+	 background-size: cover;
+/*	background-opacity: 0.5;  */
     }
 
 	.jumbotron h2 {
-      margin-top: -50px;
+      margin-top: 0px;  
+		color:white;
 	    }
 	.jumbotron h3 {
-      margin-top: -2px;
+ /*     margin-top: -2px;   */
+ 		color:white;
 	    }
 	.jumbotron h4 {
-      margin-top: -10px;
+      margin-bottom: 0px;  
+ 		color:white;
 	    }
    
     /* Add a gray background color and some padding to the footer */
@@ -96,11 +99,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 <div class="jumbotron">
-
-  <div class="container text-center">
-    <h2>Stock Photo Marketplace</h2>      
-    <h3>SFSU Computer Science 648 Project Team 03</h3>
-   <h4>For Educational Use Only.</h4>
+  <div class="container">
+    <h2 style="text-align:center"> <img src="http://i.imgur.com/ZFfGqQy.png" align="bottom"> </h2>
+    <h2 style="text-align:center">	Stock Photo Marketplace  </h2>
+    </h2>      
+    <h3 style="text-align:center">SFSU Computer Science 648 Project Team 03</h3>
+   <h4 style="text-align:center">For Educational Use Only.</h4>
   </div>
 </div>
 
@@ -118,7 +122,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-left:0px;padding-left:0px">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -127,7 +131,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </button>
       <a class="navbar-brand" href="#"></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar" style="margin-left:0px;padding-left:0px">
       <ul class="nav navbar-nav" style="width:100%">
         <?php 
         	if(isset($ThisUser)){
@@ -137,11 +141,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		    }
 			if(isset($ThisUser)){
         			echo '<li class="active" style="margin-right:15%;">';
-					echo $this->Html->link('MyProfile', ['controller' => 'Profile', 'action' => 'index']);
+					echo $this->Html->link('Dashboard', ['controller' => 'Profile', 'action' => 'index']);
 //        			echo '<a href="Home">MyProfile</a></li>';
         	} 
 		?>
-		<a href="http://sfsuse.com/~su17g03/Home" class="navbar-brand"><img src="http://i.imgur.com/VMJC1sB.png"></a>        
+		        
 <!--        
 		<li class="active">
 			<?php
@@ -169,7 +173,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             echo $this->Form->select(
     		    'field',
     		    ['Category', 'Landscape', 'Nature', 'Background', 'Portrait'],
-            array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
+                array('class'=>'form-control', 'style'=>'position:relative;float:left;width:20%;')
 	        );
    	        echo $this->Form->input('theTitle',array('label'=>' ', 'class'=>'form-control', 'placeholder'=>'Enter name or category','style'=>'position:relative;float:left;width:80%;'));
             ?>
@@ -200,9 +204,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!-- if login, show logout button; else show login button.	-->	
 
 		<?php 
+        	echo '<li class="active"><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
         	if(!isset($ThisUser)){
         		echo '<li class="active">';
-			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
         		echo $this->Html->link(
 					'Login',
 					'/users/login',
@@ -211,8 +215,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				echo "</li>";
 		    } else{
 		    	echo '<li class="active">';
-			echo '<li><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
-
 		    	echo $this->Html->link(
                         'Logout',
                         '/users/logout',
@@ -269,13 +271,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <div class="row py-2">
             <div class="col-sm-3 hidden-md-down">
 
-              <a class="bg-circle bg-info" href=About/aboutus>
+              <a class="bg-circle bg-info" href="http://sfsuse.com/~su17g03/about/aboutus">
                 <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-sm-9">
-              <h4>Info</h4>
-              About us.
+             <h4><a href="http://sfsuse.com/~su17g03/about/aboutus" data-toggle="modal">About Us</a></h4>
             </div>
           </div>
           <!-- row end -->
@@ -292,7 +293,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div class="col-sm-9">
 	<h4><a href="#contactUs" data-toggle="modal">Contact Us</a></h4>
-              <p>Please send any comments or concerns to the devs?</p>
+              <p>Please send any comments or concerns to the devs</p>
             </div>
           </div>
           <!-- row end -->
@@ -312,7 +313,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div class="col-sm-9">
               <h4>Terms of Agreement</h4>
-              <a href="http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/Milestones/Milestone2/CSC648-848%20Section%2001%20Summer%202017%20Milestone2%20Team03.pdf" target="_blank">Download PDF</a>
+              <a href="https://github.com/rasaadi/CSC-648-Su17-Team-3/blob/master/Milestones/Milestone4/CSC648-848%20Section%2001%20Summer%202017%20Milestone4%20Team03.pdf" target="_blank">Download PDF</a>
 
             </div>
           </div>
@@ -341,26 +342,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   </div>
 <br>
 
-<div id="contactUs" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?/button>
-        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
-          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message to us here.." data-placement="top" data-trigger="manual"></textarea></div>
-         <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">?The form is not valid. </p></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 </footer>
 <script>
 gapi.analytics.ready(function() {

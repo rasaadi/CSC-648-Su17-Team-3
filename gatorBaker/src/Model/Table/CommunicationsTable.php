@@ -19,16 +19,12 @@ class CommunicationsTable extends Table{
         $this->setPrimaryKey('id');
     }
 
-    public function validationDefault(Validator $validator)
-    {
-        return $validator
-            ->notEmpty('msg_sender', 'A Sender is required')
-            ->notEmpty('msg_recipient', 'A Recipient is required');
-
-    }
-
-//    public function isOwnedBy($communicationId, $userId)
+//    public function validationDefault(Validator $validator)
 //    {
-//        return $this->exists(['id' => $communicationId, 'recipient_id' => $userId]);
+//        return $validator
+//            ->notEmpty('msg_sender', 'A Sender is required');
+//            ->notEmpty('msg_recipient', 'A Recipient is required');
+//
 //    }
+
 }
