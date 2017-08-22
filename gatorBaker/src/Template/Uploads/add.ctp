@@ -27,7 +27,7 @@ uploadform{
 
         echo $this->Form->input('price', ['label' => 'Price($)']);
 		
-		echo $this->Form->input('thumbnail', ['label' => 'thumbnail']);
+//		echo $this->Form->input('thumbnail', ['label' => 'thumbnail']);
 
         // Following is the upload field (photo)
         //echo $this->Form->file('submittedfile');
@@ -35,6 +35,8 @@ uploadform{
             'label' => 'Select Media ',
             'type' => 'file'
         ]);
+
+        echo "</br>";
 
         echo $this->Form->button(__('Save Media'));
 
