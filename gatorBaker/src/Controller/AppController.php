@@ -40,27 +40,22 @@ class AppController extends Controller
     {
         parent::initialize();
         $this->loadComponent('RequestHandler');
+
         $this->loadComponent('Flash');
+
         $this->loadComponent('Auth', [
                 'authenticate' => [
                     'Form' => [
                         'fields' => ['username' => 'email', 'password' => 'password']
                     ]
                 ]]
-        //    'loginRedirect' => array('controller' => 'posts', 'action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home'),
-        //
-        //    'logoutRedirect' => array('action' => 'http://sfsuse.com/~su17g03/CSC-648-Su17-Team-3/gatorBaker/home')
         );
         $this->Auth->allow();
-        
+
         // set a global variable userme for the logged in user.
         $currUser = $this->Auth->user('email');
- //       echo $currUser;
         $GLOBALS['userme'] = $currUser;
-        
 
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
     }
     /**
      * Before render callback.

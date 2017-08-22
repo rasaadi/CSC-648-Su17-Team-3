@@ -71,7 +71,8 @@ class UsersController extends AppController
 
     public function home()
 	  {
-        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+//        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+        $this->redirect($this->Auth->redirectUrl('/Home'));
     }
 
     public function view($id)
@@ -88,10 +89,10 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Congratulations! User is created.'));
                 return $this->redirect(['action' => 'add']);
             }
-            $this->Flash->error(__('Unable to add the user.'));
+            $this->Flash->error(__('Sorry! Unable to create user.'));
         }
         $this->set('user', $user);
     }

@@ -1,7 +1,10 @@
-er: Brandon
+<?php
+/**
+  *  er: Brandon
  * Date: 2017/08/01
  * Time: 6:50
  */
+
 
 namespace App\Model\Table;
 
