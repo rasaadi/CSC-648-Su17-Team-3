@@ -57,11 +57,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2f;
+      background-color: #f2f2f2;
       padding: 25px;
     }
     table {
-	font: 60px, arial, serif;
+	font: 60px, arial, serife;
 	}
 
 	.navbar-brand {
@@ -135,9 +135,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       <ul class="nav navbar-nav" style="width:100%">
         <?php 
         	if(isset($ThisUser)){
-        		echo '<li class="active"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';  
-		    } else{
-		    	echo '<li class="active" style="margin-right:20%;"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';
+//        		echo '<li class="active"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';
+                echo '<li class="active"><a href="http://localhost/stockPhotoMedia/gatorBaker/Home">Home</a></li>';
+            } else{
+//		    	echo '<li class="active" style="margin-right:20%;"><a href="http://sfsuse.com/~su17g03/Home">Home</a></li>';
+                echo '<li class="active" style="margin-right:20%;"><a href="http://localhost/stockPhotoMedia/gatorBaker/Home">Home</a></li>';
 		    }
 			if(isset($ThisUser)){
         			echo '<li class="active" style="margin-right:15%;">';
@@ -204,7 +206,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!-- if login, show logout button; else show login button.	-->	
 
 		<?php 
-        	echo '<li class="active"><a href="http://sfsuse.com/~su17g03/about/aboutus">About Us</a></li>';
+        	echo '<li class="active"><a href="http://localhost/stockPhotoMedia/gatorBaker/about/aboutus">About Us</a></li>';
         	if(!isset($ThisUser)){
         		echo '<li class="active">';
         		echo $this->Html->link(
@@ -271,12 +273,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <div class="row py-2">
             <div class="col-sm-3 hidden-md-down">
 
-              <a class="bg-circle bg-info" href="http://sfsuse.com/~su17g03/about/aboutus">
+              <a class="bg-circle bg-info" href="http://localhost/stockPhotoMedia/gatorBaker/about/aboutus">
                 <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-sm-9">
-             <h4><a href="http://sfsuse.com/~su17g03/about/aboutus" data-toggle="modal">About Us</a></h4>
+             <h4><a href="http://localhost/stockPhotoMedia/gatorBaker/about/aboutus" data-toggle="modal">About Us</a></h4>
             </div>
           </div>
           <!-- row end -->

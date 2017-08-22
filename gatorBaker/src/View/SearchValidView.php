@@ -1,4 +1,6 @@
-akePHP(tm) : Rapid Development Framework (http://cakephp.org)
+<?php
+/**
+*akePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
