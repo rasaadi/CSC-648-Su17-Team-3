@@ -28,7 +28,7 @@ class UsersController extends AppController
                 //
                 'loginError' => 'Make sure email or password',
                 //
-                'authError' => 'It is necccesary to log in to use this function',
+                'authError' => 'It is necessary to log in to use this function',
                 //
                 //  'loginAction' => array('action' => 'login'),
                 //
@@ -70,8 +70,9 @@ class UsersController extends AppController
 
 
     public function home()
-	  {
-        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+    {
+//        $this->redirect($this->Auth->redirectUrl('http://sfsuse.com/~su17g03/Home'));
+        $this->redirect($this->Auth->redirectUrl('/home'));
     }
 
     public function view($id)
@@ -88,10 +89,10 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Thank you! User is created successfully.'));
                 return $this->redirect(['action' => 'add']);
             }
-            $this->Flash->error(__('Unable to add the user.'));
+            $this->Flash->error(__('Sorry! User creation failed.'));
         }
         $this->set('user', $user);
     }

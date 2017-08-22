@@ -67,11 +67,11 @@ class UploadsController extends AppController{
 
             if ($this->Uploads->save($upload)) {
 
-                $this->Flash->success(__('Your media has been saved.'));
+                $this->Flash->success(__('Your media has been uploaded.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Unable to add your media.'));
+            $this->Flash->error(__('Unable to upload your media.'));
         }
         $this->set('upload', $upload);
 
